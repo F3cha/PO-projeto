@@ -1,4 +1,4 @@
-package hva.core.exception;
+package hva.core;
 
 abstract class Employee {
     private String _idEmployee;
