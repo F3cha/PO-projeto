@@ -4,5 +4,10 @@ abstract class Employee {
     private String _idEmployee;
     private String _nameEmployee;
 
-    abstract int satisfacao();
+    public Employee(String idEmployee, String nameEmployee) {
+        _idEmployee = idEmployee;
+        _nameEmployee = nameEmployee;
+    }
+
+    abstract int satisfaction();
 }
