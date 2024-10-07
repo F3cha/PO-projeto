@@ -8,4 +8,8 @@ public class Animals {
         _idAnimal = idAnimal;
         _nameAnimal = nameAnimal;
     }
+
+    public String getAnimalId() {
+        return _idAnimal;
+    }
 }
