@@ -9,5 +9,9 @@ abstract class Employee {
         _nameEmployee = nameEmployee;
     }
 
+    public String getEmployeeId() {
+        return _idEmployee;
+    }
+
     abstract int satisfaction();
 }
