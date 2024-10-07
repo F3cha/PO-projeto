@@ -3,6 +3,7 @@ package hva.core;
 import hva.core.exception.*;
 import java.io.*;
 import java.util.*;
+import javax.lang.model.util.ElementScanner14;
 // FIXME import classes
 
 public class Hotel implements Serializable {
@@ -16,6 +17,8 @@ public class Hotel implements Serializable {
   private List<Species> speciesList;
   private List<Animals> animalList;
   private List<Employee> employeesList;
+  private List<Habitat> habitatsList;
+  private List<Tree> treeList;
 
   // FIXME define contructor(s)
 
@@ -23,6 +26,9 @@ public class Hotel implements Serializable {
     this.name = name;
     this.speciesList = new ArrayList<>();
     this.animalList = new ArrayList<>();
+    this.employeesList = new ArrayList<>();
+    this.habitatsList = new ArrayList<>();
+    this.treeList = new ArrayList<>();
     }
 
   // FIXME define more methods
@@ -103,7 +109,9 @@ public class Hotel implements Serializable {
   }
 
 
-  public void registerEmployee(String employeeId, String name, empType) throws OneOrMoreCoreExceptions {
+  public void registerEmployee(String employeeId, String name, String empType) throws OneOrMoreCoreExceptions {
+    Employee employee;
+
     // checks if the arguments are correct.
     if(employeeId == null || employeeId.isEmpty()) {
       throw new OneOrMoreCoreExceptions("The employee iD is not valid");
@@ -125,26 +133,71 @@ public class Hotel implements Serializable {
       }
     }
 
+    if(empType.equalsIgnoreCase("veterinary")) {
+      employee = new Veterinary(employeeId, name);
+    } else if (empType.equalsIgnoreCase("zookeeper")) {
+      employee = new Zookeeper(employeeId, name);
+    } else {
+      throw new OneOrMoreCoreExceptions("Employee type not valid: " + empType);
+    }
+
+    employeesList.add(employee);
   }
 
 
-  public void addResponsibility(employeeId, responsibility) throws OneOrMoreCoreExceptions {
+  public void addResponsibility(String employeeId, responsibility) throws OneOrMoreCoreExceptions {
 
   }
 
 
-  public void registerVaccine(vaccineId, name, String[] speciesIds) throws someCoreExceptionsOneOrMoreCoreExceptions {
+  public void registerVaccine(String vaccineId, String name, String[] speciesIds) throws someCoreExceptionsOneOrMoreCoreExceptions {
 
   }
 
 
-  public void createTree(TreeId, name, type, age, diff) throws OneOrMoreCoreExceptions {
+  public void createTree(String TreeId, String name, String type, int age, int diff) throws OneOrMoreCoreExceptions {
+    Tree tree;
 
+    Season season = Season.Autumn;
+
+    if(type.equalsIgnoreCase("evergreen")) {
+      tree = new EvergreenTree(season, age, diff);
+    } else if (type.equalsIgnoreCase("decidious")) {
+      tree = new DecidiousTree(season, age, diff);
+    } else {
+      throw new OneOrMoreCoreExceptions("Tree type not valid: " + type);
+    }
+
+    treeList.add(tree);
   }
 
 
-  public Habitat registerHabitat(habitatId, name, area) throws OneOrMoreCoreExceptions { 
+  public Habitat registerHabitat(String habitatId, String name, int area) throws OneOrMoreCoreExceptions {
+    // checks if the arguments are correct.
+    if(habitatId == null || habitatId.isEmpty()) {
+      throw new OneOrMoreCoreExceptions("The employee iD is not valid");
+    }
 
+    if(name == null || name.isEmpty()) {
+      throw new OneOrMoreCoreExceptions("Employee's name is not valid");
+    }
+
+    if(area <= 0) {
+      throw new OneOrMoreCoreExceptions("Employee's type is not valid");
+    }
+
+    // checks if habitat iD already exists
+
+    for(Habitat auxHabitatId: habitatsList) {
+      if(auxHabitatId.getHabitatId().equals(habitatId)) {
+        throw new OneOrMoreCoreExceptions("The habitat iD already exists");
+      }
+    }
+
+    // create habitat
+
+    Habitat newHabitat = new Habitat(habitatId, name, area);
+    habitatsList.add(newHabitat);
   }
 
 
