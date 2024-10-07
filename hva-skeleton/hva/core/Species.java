@@ -8,4 +8,9 @@ public class Species {
         _idSpecies = idSpecies;
         _nameSpecies = nameSpecies;
     }
+
+    public String getSpeciesId() {
+        return _idSpecies;
+    }
+    
 }
