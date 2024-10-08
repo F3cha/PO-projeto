@@ -19,6 +19,7 @@ public class Hotel implements Serializable {
   private List<Employee> employeesList;
   private List<Habitat> habitatsList;
   private List<Tree> treeList;
+  private List<Vaccines> vaccinesList;
 
   // FIXME define contructor(s)
 
@@ -29,6 +30,7 @@ public class Hotel implements Serializable {
     this.employeesList = new ArrayList<>();
     this.habitatsList = new ArrayList<>();
     this.treeList = new ArrayList<>();
+    this.vaccinesList = new ArrayList<>();
     }
 
   // FIXME define more methods
@@ -145,13 +147,54 @@ public class Hotel implements Serializable {
   }
 
 
-  public void addResponsibility(String employeeId, responsibility) throws OneOrMoreCoreExceptions {
+  public void addResponsibility(String employeeId, String[] responsibility) throws OneOrMoreCoreExceptions {
+    // checks if the arguments are correct.
+
+    if(employeeId == null || employeeId.isEmpty()) {
+      throw new OneOrMoreCoreExceptions("The employee iD is not valid");
+    }
+
+    if(responsibility == null || responsibility.length() == 0) {
+      throw new OneOrMoreCoreExceptions("Employee without any responsibility to add");
+    }
+
+    for(Employee emp: employeesList){
+      if (emp.getEmployeeId().equals(employeeId)) {
+        List<String> responsibilityList = Arrays.asList(responsibility);
+        emp.setResponsability(responsibilityList);
+      }
+    }
 
   }
 
 
   public void registerVaccine(String vaccineId, String name, String[] speciesIds) throws someCoreExceptionsOneOrMoreCoreExceptions {
+    // checks if the arguments are correct.
 
+    if(vaccineId == null || vaccineId.isEmpty()) {
+      throw new OneOrMoreCoreExceptions("The vaccine iD is not valid");
+    }
+
+    if(name == null || name.isEmpty()) {
+      throw new OneOrMoreCoreExceptions("Vaccine's name is not valid");
+    }
+
+    if(speciesIds == null || vaccineId.length() == 0) {
+      throw new OneOrMoreCoreExceptions("Vaccine without any species");
+    }
+
+    // checks if vaccine iD already exists
+
+    for(Vaccine idVaccine: vaccinesList) {
+      if(idVaccine.getVaccineId().equals(vaccineId)) {
+        throw new OneOrMoreCoreExceptions("The vaccine iD already exists");
+      }
+    }
+
+
+    List<String> speciesIdsList = Arrays.asList(speciesIds);
+    Vaccine newVaccine = new Vaccine(vaccineId, name, speciesIdsList);
+    vaccinesList.add(newVaccine);
   }
 
 
@@ -198,6 +241,8 @@ public class Hotel implements Serializable {
 
     Habitat newHabitat = new Habitat(habitatId, name, area);
     habitatsList.add(newHabitat);
+
+    return newHabitat;
   }
 
 
