@@ -1,9 +1,11 @@
 package hva.core;
 
 import hva.core.exception.*;
+import hva.core.*;
 import java.io.*;
 import java.util.*;
 import javax.lang.model.util.ElementScanner14;
+
 // FIXME import classes
 
 public class Hotel implements Serializable {
@@ -19,11 +21,11 @@ public class Hotel implements Serializable {
   private List<Employee> employeesList;
   private List<Habitat> habitatsList;
   private List<Tree> treeList;
-  private List<Vaccines> vaccinesList;
+  private List<Vaccine> vaccinesList;
 
   // FIXME define contructor(s)
 
-  public Hotel(String name) { //not sure se é suposto ter nome
+  public Hotel(String name) {
     this.name = name;
     this.speciesList = new ArrayList<>();
     this.animalList = new ArrayList<>();
