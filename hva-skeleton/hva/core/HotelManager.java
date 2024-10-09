@@ -1,27 +1,26 @@
 package hva.core;
 
-import hva.core.exception.*;
 import java.io.*;
 
-// FIXME import classes
+import hva.core.exception.MissingFileAssociationException;
+import hva.core.exception.UnavailableFileException;
+import hva.core.exception.ImportFileException;
+import hva.core.exception.UnrecognizedEntryException;
+
 
 /**
  * Class representing the manager of this application. It manages the current
  * zoo hotel.
  **/
 public class HotelManager {
-  /** The current zoo hotel */ // Should we initialize this field?
+  /** The current zoo hotel */
   private Hotel _hotel = new Hotel();
   private String _filename;
 
+  public final Hotel getHotel() {
+    return _hotel;
+  }
 
-  /**
-   * Saves the serialized application's state into the file associated to the current network.
-   *
-   * @throws FileNotFoundException if for some reason the file cannot be created or opened. 
-   * @throws MissingFileAssociationException if the current network does not have a file.
-   * @throws IOException if there is some error while serializing the state of the network to disk.
-   **/
   public void save() throws FileNotFoundException, MissingFileAssociationException, IOException {
     if (_filename == null || _filename.isEmpty()) {
       throw new MissingFileAssociationException();
@@ -45,7 +44,6 @@ public class HotelManager {
     _filename = filename;
     save();
   }
-  
   /**
    * @param filename name of the file containing the serialized application's state
    *        to load.
@@ -82,7 +80,5 @@ public class HotelManager {
    *
    * @return the current zoo hotel
    **/
-  public final Hotel getHotel() {
-    return _hotel;
-  }
+
 }
