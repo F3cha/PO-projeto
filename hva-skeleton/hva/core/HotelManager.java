@@ -42,7 +42,8 @@ public class HotelManager {
    * @throws IOException if there is some error while serializing the state of the network to disk.
    **/
   public void saveAs(String filename) throws FileNotFoundException, MissingFileAssociationException, IOException {
-    // FIXME implement serialization method
+    _filename = filename;
+    save();
   }
   
   /**
@@ -52,7 +53,12 @@ public class HotelManager {
    *         an error while processing this file.
    **/
   public void load(String filename) throws UnavailableFileException {
-    // FIXME implement serialization method
+    try(ObjectInputStream obIn = new ObjectInputStream(new FileInputStream(filename))) {
+      _hotel = (Hotel) obIn.readObject();
+      _filename = (String) obIn.readObject();
+    } catch (IOException | ClassNotFoundException e) {
+      throw new UnavailableFileException(filename);
+    }
   }
   
   /**
