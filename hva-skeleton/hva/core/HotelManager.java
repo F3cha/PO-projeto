@@ -12,7 +12,9 @@ import java.io.*;
 public class HotelManager {
   /** The current zoo hotel */ // Should we initialize this field?
   private Hotel _hotel = new Hotel();
-  
+  private String _filename;
+
+
   /**
    * Saves the serialized application's state into the file associated to the current network.
    *
@@ -21,7 +23,13 @@ public class HotelManager {
    * @throws IOException if there is some error while serializing the state of the network to disk.
    **/
   public void save() throws FileNotFoundException, MissingFileAssociationException, IOException {
-    // FIXME implement serialization method
+    if (_filename == null || _filename.isEmpty()) {
+      throw new MissingFileAssociationException();
+    }
+    try(ObjectOutputStream obOut = new ObjectOutputStream(new FileOutputStream(_filename))) {
+      obOut.writeObject(_hotel);
+      obOut.writeObject(_filename);
+    }
   }
   
   /**
