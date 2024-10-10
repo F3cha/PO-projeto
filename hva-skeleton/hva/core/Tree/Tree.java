@@ -1,4 +1,4 @@
-package hva.core;
+package hva.core.Tree;
 
 abstract class Tree {
     private Season _season;

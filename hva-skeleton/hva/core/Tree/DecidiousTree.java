@@ -1,4 +1,4 @@
-package hva.core;
+package hva.core.Tree;
 
 public class DecidiousTree extends Tree {
 

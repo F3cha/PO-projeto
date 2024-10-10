@@ -1,4 +1,4 @@
-package hva.core;
+package hva.core.Habitat;
 
 public class Habitat {
     private String _habitatId;

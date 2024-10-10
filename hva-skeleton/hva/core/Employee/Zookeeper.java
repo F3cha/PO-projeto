@@ -1,4 +1,4 @@
-package hva.core;
+package hva.core.Employee;
 
 public class Zookeeper extends Employee {
     public Zookeeper(String idEmployee, String nameEmployee) {
