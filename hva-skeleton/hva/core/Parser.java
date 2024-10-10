@@ -15,21 +15,21 @@ import hva.core.exception.UnrecognizedEntryException;
 /**
  * Esta solução assume que a classe Hotel já tem a seguinte funcionalidade
 
-public class Hotel {
-  public void registerAnimal(animalId, name, habitatId, speciesId) throws OneOrMoreCoreExceptions { ... }
-  public void registerSpecies(speciesId, name) throws OneOrMoreCoreExceptions { ... }
-  public void registerEmployee(employeeId, name, empType) throws OneOrMoreCoreExceptions { ... }
-  public void addResponsibility(employeeId, responsibility) throws OneOrMoreCoreExceptions { ... }
-  public void registerVaccine(vaccineId, name, String[] speciesIds) throws someCoreExceptionsOneOrMoreCoreExceptions { ... }
-  public void createTree(TreeId, name, type, age, diff) throws OneOrMoreCoreExceptions { ... }
-  public Habitat registerHabitat(habitatId, name, area) throws OneOrMoreCoreExceptions { ... }
+ public class Hotel {
+ public void registerAnimal(animalId, name, habitatId, speciesId) throws OneOrMoreCoreExceptions { ... }
+ public void registerSpecies(speciesId, name) throws OneOrMoreCoreExceptions { ... }
+ public void registerEmployee(employeeId, name, empType) throws OneOrMoreCoreExceptions { ... }
+ public void addResponsibility(employeeId, responsibility) throws OneOrMoreCoreExceptions { ... }
+ public void registerVaccine(vaccineId, name, String[] speciesIds) throws someCoreExceptionsOneOrMoreCoreExceptions { ... }
+ public void createTree(TreeId, name, type, age, diff) throws OneOrMoreCoreExceptions { ... }
+ public Habitat registerHabitat(habitatId, name, area) throws OneOrMoreCoreExceptions { ... }
 
-Note-se que esta funcionalidade pode ser utilizada na concretização de alguns dos comandos.
-Caso Hotel não tenha esta funcionalidade, então deverão substituir a invocação destes métodos
-na classe Parser por uma ou mais linhas com uma funcionalidade semelhante.
-Cada um destes métodos pode lançar uma ou mais excepções que irão corresponder aos erros que
-podem acontecer ao nível do domínio surante a concretização da funcionalidade em causa.
-**/
+ Note-se que esta funcionalidade pode ser utilizada na concretização de alguns dos comandos.
+ Caso Hotel não tenha esta funcionalidade, então deverão substituir a invocação destes métodos
+ na classe Parser por uma ou mais linhas com uma funcionalidade semelhante.
+ Cada um destes métodos pode lançar uma ou mais excepções que irão corresponder aos erros que
+ podem acontecer ao nível do domínio surante a concretização da funcionalidade em causa.
+ **/
 
 public class Parser {
   private Hotel _hotel;
@@ -51,14 +51,14 @@ public class Parser {
   private void parseLine(String line) throws UnrecognizedEntryException {
     String[] components = line.split("\\|");
     switch(components[0]) {
-    case "ESPÉCIE" -> parseSpecies(components);
-    case "ANIMAL" -> parseAnimal(components);
-    case "ÁRVORE" -> parseTree(components);
-    case "HABITAT" -> parseHabitat(components);
-    case "TRATADOR" -> parseEmployee(components, "TRT");
-    case "VETERINÁRIO" -> parseEmployee(components, "VET");
-    case "VACINA" -> parseVaccine(components);
-    default -> throw new UnrecognizedEntryException ("tipo de entrada inválido: " + components[0]);
+      case "ESPÉCIE" -> parseSpecies(components);
+      case "ANIMAL" -> parseAnimal(components);
+      case "ÁRVORE" -> parseTree(components);
+      case "HABITAT" -> parseHabitat(components);
+      case "TRATADOR" -> parseEmployee(components, "TRT");
+      case "VETERINÁRIO" -> parseEmployee(components, "VET");
+      case "VACINA" -> parseVaccine(components);
+      default -> throw new UnrecognizedEntryException ("tipo de entrada inválido: " + components[0]);
     }
   }
 
@@ -71,7 +71,7 @@ public class Parser {
       String speciesId = components[3];
 
       _hotel.registerAnimal(id, name, habitatId, speciesId);
-    } catch (excCore1 | excpCore 2 | ...) {
+    } catch (OneOrMoreCoreExceptions e) { // FIXME replace OneOrMoreCoreExceptions with the actual exceptions thrown by Hotel
       throw new UnrecognizedEntryException("Invalid entry: " + e.getMessage);
     }
   }
@@ -87,7 +87,7 @@ public class Parser {
       throw new UnrecognizedEntryException("Invalid entry: " + e.getMessage);
     }
   }
-  
+
   // Parse a line with format TRATADOR|id|nome|idHabitat1,...,idHabitatN or
   // VETERINÁRIO|id|nome|idEspécie1,...,idEspécieN
   private void parseEmployee(String[] components, String empType) throws UnrecognizedEntryException {
@@ -145,7 +145,7 @@ public class Parser {
       if (components.length == 5) {
         String[] listOfTree = components[4].split(",");
         for (String treeKey : listOfTree)
-          // adicionar a árvore com id treeKey ao habitat referenciado por hab
+        // adicionar a árvore com id treeKey ao habitat referenciado por hab
       }
     } catch (excCore1 | excpCore 2 | ...) {
       throw new UnrecognizedEntryException("Invalid entry: " + e.getMessage);
