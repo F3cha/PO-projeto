@@ -23,8 +23,7 @@ public class Hotel implements Serializable {
 
   // FIXME define contructor(s)
 
-  public Hotel(String name) { //not sure se é suposto ter nome
-    this.name = name;
+  public Hotel() { //not sure se é suposto ter nome
     this.speciesList = new ArrayList<>();
     this.animalList = new ArrayList<>();
     this.employeesList = new ArrayList<>();
