@@ -1,4 +1,4 @@
-package hva.core;
+package hva.core.Animals;
 
 public class Animals {
     private String _idAnimal;
