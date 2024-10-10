@@ -43,6 +43,7 @@ public class Hotel implements Serializable {
     public void registerAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) throws OneOrMoreCoreExceptions {
         // checks if the arguments are correct.
 
+        boolean speciesExists =false;
         if (animalId == null || animalId.isEmpty()) {
             throw new OneOrMoreCoreExceptions("Animal's iD can't be null");
         }
@@ -67,8 +68,7 @@ public class Hotel implements Serializable {
             }
         }
 
-        // checks if specie exist.
-        boolean speciesExists ;
+
 
         for (Species specie : speciesList) {
             if (specie.getSpeciesId().equals(speciesId)) {
@@ -77,7 +77,7 @@ public class Hotel implements Serializable {
             }
         }
 
-        if (!speciesExists) {
+        if (speciesExists==false) {
             throw new OneOrMoreCoreExceptions("Given specie doesn't exists.");
         }
 
