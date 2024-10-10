@@ -1,5 +1,8 @@
 package hva.app.animal;
 
+import hva.core.Hotel;
+import hva.app.animal.*;
+
 public class Menu extends pt.tecnico.uilib.menus.Menu {
 
   public Menu(hva.core.Hotel receiver) {
@@ -8,7 +11,7 @@ public class Menu extends pt.tecnico.uilib.menus.Menu {
           new DoRegisterAnimal(receiver),
           new DoTransferToHabitat(receiver),
           new DoShowSatisfactionOfAnimal(receiver)
-          );
+    );
   }
   
 }
