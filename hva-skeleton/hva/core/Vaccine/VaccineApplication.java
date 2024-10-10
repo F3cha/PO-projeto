@@ -1,4 +1,4 @@
-package hva.core;
+package hva.core.Vaccine;
 
 public class VaccineApplication {
 

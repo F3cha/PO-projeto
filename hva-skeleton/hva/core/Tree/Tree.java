@@ -1,6 +1,6 @@
 package hva.core.Tree;
 
-abstract class Tree {
+public abstract class Tree {
     private Season _season;
     private int _age;
     private int _difficulty;

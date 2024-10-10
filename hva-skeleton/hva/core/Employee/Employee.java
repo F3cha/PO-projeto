@@ -2,7 +2,7 @@ package hva.core.Employee;
 
 import java.util.List;
 
-abstract class Employee {
+public abstract class Employee {
     private String _idEmployee;
     private String _nameEmployee;
     private List<String> _responsibility;
