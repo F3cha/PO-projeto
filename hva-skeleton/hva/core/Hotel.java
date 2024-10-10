@@ -20,7 +20,6 @@ public class Hotel implements Serializable {
 
     // FIXME define attributes
 
-    private String name;
     private List<Species> speciesList;
     private List<Animals> animalList;
     private List<Employee> employeesList;
@@ -69,7 +68,7 @@ public class Hotel implements Serializable {
         }
 
         // checks if specie exist.
-        boolean speciesExists = false;
+        boolean speciesExists ;
 
         for (Species specie : speciesList) {
             if (specie.getSpeciesId().equals(speciesId)) {
