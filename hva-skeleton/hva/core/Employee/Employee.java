@@ -26,4 +26,8 @@ public abstract class Employee implements Serializable {
     }
 
     abstract int satisfaction();
+
+    public String getEmployeeName() {
+        return _nameEmployee;
+    }
 }

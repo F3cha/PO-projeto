@@ -238,3 +238,4 @@ public class Hotel implements Serializable {
         parser.parseFile(filename);
     }
 }
+

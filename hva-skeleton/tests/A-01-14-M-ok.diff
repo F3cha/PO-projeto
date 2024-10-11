@@ -1,32 +1,5 @@
 *** tests/A-01-14-M-ok.out	2024-10-11 16:08:09.350580000 +0100
---- tests/A-01-14-M-ok.outhyp	2024-10-11 21:25:38.401793576 +0100
-***************
-*** 28,39 ****
-  3 - Transferir para habitat
-  4 - Calcular satisfação de animal
-  0 - Sair
-! Escolha uma opção: ANIMAL|A1|Farrusco 1|E1|VOID|H1
-! ANIMAL|A2|Farrusco 2|E2|VOID|H1
-! ANIMAL|A3|Farrusco 3|E3|VOID|H2
-! ANIMAL|B1|Farrusco 4|E3|VOID|H2
-! ANIMAL|X1|Farrusco 5|E2|VOID|H3
-! ANIMAL|X2|Farrusco 6|E1|VOID|H3
-  Gestão de Animais
-  1 - Visualizar todos os animais
-  2 - Registar animal
---- 28,39 ----
-  3 - Transferir para habitat
-  4 - Calcular satisfação de animal
-  0 - Sair
-! Escolha uma opção: hva.core.Animals.Animals@2f4d3709
-! hva.core.Animals.Animals@4e50df2e
-! hva.core.Animals.Animals@1d81eb93
-! hva.core.Animals.Animals@7291c18f
-! hva.core.Animals.Animals@34a245ab
-! hva.core.Animals.Animals@7cc355be
-  Gestão de Animais
-  1 - Visualizar todos os animais
-  2 - Registar animal
+--- tests/A-01-14-M-ok.outhyp	2024-10-11 22:19:12.904459488 +0100
 ***************
 *** 60,68 ****
   5 - Plantar árvore
@@ -42,9 +15,9 @@
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: hva.core.Habitat.Habitat@7530d0a
+! Escolha uma opção: hva.core.Habitat.Habitat@312b1dae
+! hva.core.Habitat.Habitat@7530d0a
 ! hva.core.Habitat.Habitat@27bc2616
-! hva.core.Habitat.Habitat@3941a79c
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat

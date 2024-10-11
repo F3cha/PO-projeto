@@ -17,4 +17,18 @@ public class Animals  implements Serializable {
     public String getAnimalId() {
         return _idAnimal;
     }
+
+    public String getAnimalName() {
+        return _nameAnimal;
+    }
+
+    public String getAnimalHabitat() {
+        return _habitatAnimal;
+    }
+
+    public String getAnimalSpecie() {
+        return _specieAnimal;
+    }
+
+
 }

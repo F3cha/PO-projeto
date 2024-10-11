@@ -32,12 +32,6 @@ Gestão de Animais
 4 - Calcular satisfação de animal
 0 - Sair
 Escolha uma opção: 1
-hva.core.Animals.Animals@2f4d3709
-hva.core.Animals.Animals@4e50df2e
-hva.core.Animals.Animals@1d81eb93
-hva.core.Animals.Animals@7291c18f
-hva.core.Animals.Animals@34a245ab
-hva.core.Animals.Animals@7cc355be
 Gestão de Animais
 1 - Visualizar todos os animais
 2 - Registar animal
@@ -67,9 +61,9 @@ Gestão de Habitats
 6 - Mostrar árvores de habitat
 0 - Sair
 Escolha uma opção: 1
+hva.core.Habitat.Habitat@312b1dae
 hva.core.Habitat.Habitat@7530d0a
 hva.core.Habitat.Habitat@27bc2616
-hva.core.Habitat.Habitat@3941a79c
 Gestão de Habitats
 1 - Visualizar todos os habitats
 2 - Registar habitat
