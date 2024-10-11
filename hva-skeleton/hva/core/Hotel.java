@@ -1,13 +1,12 @@
 package hva.core;
 
-import hva.core.exception.*;
-import hva.core.Tree.*;
 import hva.core.Animals.*;
 import hva.core.Employee.*;
 import hva.core.Habitat.*;
 import hva.core.Species.*;
+import hva.core.Tree.*;
 import hva.core.Vaccine.*;
-
+import hva.core.exception.*;
 import java.io.*;
 import java.util.*;
 
@@ -40,31 +39,31 @@ public class Hotel implements Serializable {
 
     // FIXME define more methods
 
-    public void registerAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) throws OneOrMoreCoreExceptions {
+    public void registerAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) throws InvalidArgException {
         // checks if the arguments are correct.
 
         boolean speciesExists =false;
         if (animalId == null || animalId.isEmpty()) {
-            throw new OneOrMoreCoreExceptions("Animal's iD can't be null");
+            throw new InvalidArgException("Animal's iD can't be null");
         }
 
         if (nameAnimals == null || nameAnimals.isEmpty()) {
-            throw new OneOrMoreCoreExceptions("Animal's name can't be null");
+            throw new InvalidArgException("Animal's name can't be null");
         }
 
         if (habitatId == null || habitatId.isEmpty()) {
-            throw new OneOrMoreCoreExceptions("Animal's habitat can't be null");
+            throw new InvalidArgException("Animal's habitat can't be null");
         }
 
         if (speciesId == null || speciesId.isEmpty()) {
-            throw new OneOrMoreCoreExceptions("Animal's species iD can't be null");
+            throw new InvalidArgException("Animal's species iD can't be null");
         }
 
         // checks if the iD of the new animal already exists.
 
         for (Animals animal : animalList) {
             if (animal.getAnimalId().equals(animalId)) {
-                throw new OneOrMoreCoreExceptions("Animal's iD already used");
+                throw new InvalidArgException("Animal's iD already used");
             }
         }
 
@@ -78,7 +77,7 @@ public class Hotel implements Serializable {
         }
 
         if (speciesExists==false) {
-            throw new OneOrMoreCoreExceptions("Given specie doesn't exists.");
+            throw new InvalidArgException("Given specie doesn't exists.");
         }
 
         // create animal
@@ -89,11 +88,11 @@ public class Hotel implements Serializable {
     }
 
 
-    public void registerSpecies(String speciesId, String name) throws OneOrMoreCoreExceptions {
+    public void registerSpecies(String speciesId, String name) throws InvalidArgException {
         // checks if the arguments are correct.
 
         if (speciesId == null || speciesId.isEmpty()) {
-            throw new OneOrMoreCoreExceptions("The species iD is not valid");
+            throw new InvalidArgException("The species iD is not valid");
         }
 
 
@@ -101,7 +100,7 @@ public class Hotel implements Serializable {
 
         for (Species specieslist : speciesList) {  //FIXME isto seta mal
             if (specieslist.getSpeciesId().equals(speciesId)) {
-                throw new OneOrMoreCoreExceptions("The species iD already exists");
+                throw new InvalidArgException("The species iD already exists");
             }
         }
 
@@ -113,27 +112,27 @@ public class Hotel implements Serializable {
     }
 
 
-    public void registerEmployee(String employeeId, String name, String empType) throws OneOrMoreCoreExceptions {
+    public void registerEmployee(String employeeId, String name, String empType) throws InvalidArgException {
         Employee employee;
 
         // checks if the arguments are correct.
         if (employeeId == null || employeeId.isEmpty()) {
-            throw new OneOrMoreCoreExceptions("The employee iD is not valid");
+            throw new InvalidArgException("The employee iD is not valid");
         }
 
         if (name == null || name.isEmpty()) {
-            throw new OneOrMoreCoreExceptions("Employee's name is not valid");
+            throw new InvalidArgException("Employee's name is not valid");
         }
 
         if (empType == null || empType.isEmpty()) {
-            throw new OneOrMoreCoreExceptions("Employee's type is not valid");
+            throw new InvalidArgException("Employee's type is not valid");
         }
 
         // checks if employee iD already exists
 
         for (Employee empId : employeesList) {
             if (empId.getEmployeeId().equals(employeeId)) {
-                throw new OneOrMoreCoreExceptions("The employee iD already exists");
+                throw new InvalidArgException("The employee iD already exists");
             }
         }
 
@@ -142,22 +141,22 @@ public class Hotel implements Serializable {
         } else if (empType.equalsIgnoreCase("zookeeper")) {
             employee = new Zookeeper(employeeId, name);
         } else {
-            throw new OneOrMoreCoreExceptions("Employee type not valid: " + empType);
+            throw new InvalidArgException("Employee type not valid: " + empType);
         }
 
         employeesList.add(employee);
     }
 
 
-    public void addResponsibility(String employeeId, String responsibility) throws OneOrMoreCoreExceptions {
+    public void addResponsibility(String employeeId, String responsibility) throws InvalidArgException {
         // checks if the arguments are correct.
 
         if (employeeId == null || employeeId.isEmpty()) {
-            throw new OneOrMoreCoreExceptions("The employee iD is not valid");
+            throw new InvalidArgException("The employee iD is not valid");
         }
 
         if (responsibility == null || responsibility.isEmpty()) {
-            throw new OneOrMoreCoreExceptions("Employee without any responsibility to add");
+            throw new InvalidArgException("Employee without any responsibility to add");
         }
 
         for (Employee emp : employeesList) {
@@ -170,26 +169,26 @@ public class Hotel implements Serializable {
     }
 
 
-    public void registerVaccine(String vaccineId, String name, String[] speciesIds) throws  OneOrMoreCoreExceptions {
+    public void registerVaccine(String vaccineId, String name, String[] speciesIds) throws  InvalidArgException {
         // checks if the arguments are correct.
 
         if (vaccineId == null || vaccineId.isEmpty()) {
-            throw new OneOrMoreCoreExceptions("The vaccine iD is not valid");
+            throw new InvalidArgException("The vaccine iD is not valid");
         }
 
         if (name == null || name.isEmpty()) {
-            throw new OneOrMoreCoreExceptions("Vaccine's name is not valid");
+            throw new InvalidArgException("Vaccine's name is not valid");
         }
 
         if (speciesIds == null || vaccineId.length() == 0) {
-            throw new OneOrMoreCoreExceptions("Vaccine without any species");
+            throw new InvalidArgException("Vaccine without any species");
         }
 
         // checks if vaccine iD already exists
 
         for (Vaccine idVaccine : vaccinesList) {
             if (idVaccine.getVaccineId().equals(vaccineId)) {
-                throw new OneOrMoreCoreExceptions("The vaccine iD already exists");
+                throw new InvalidArgException("The vaccine iD already exists");
             }
         }
 
@@ -200,7 +199,7 @@ public class Hotel implements Serializable {
     }
 
 
-    public void createTree(String TreeId, String name, String type, int age, int diff) throws OneOrMoreCoreExceptions {
+    public void createTree(String TreeId, String name, String type, int age, int diff) throws InvalidArgException {
         Tree tree;
 
         Season season = Season.Autumn;
@@ -210,32 +209,32 @@ public class Hotel implements Serializable {
         } else if (type.equalsIgnoreCase("decidious")) {
             tree = new DecidiousTree(season, age, diff);
         } else {
-            throw new OneOrMoreCoreExceptions("Tree type not valid: " + type);
+            throw new InvalidArgException("Tree type not valid: " + type);
         }
 
         treeList.add(tree);
     }
 
 
-    public Habitat registerHabitat(String habitatId, String name, int area) throws OneOrMoreCoreExceptions {
+    public Habitat registerHabitat(String habitatId, String name, int area) throws InvalidArgException {
         // checks if the arguments are correct.
         if (habitatId == null || habitatId.isEmpty()) {
-            throw new OneOrMoreCoreExceptions("The employee iD is not valid");
+            throw new InvalidArgException("The employee iD is not valid");
         }
 
         if (name == null || name.isEmpty()) {
-            throw new OneOrMoreCoreExceptions("Employee's name is not valid");
+            throw new InvalidArgException("Employee's name is not valid");
         }
 
         if (area <= 0) {
-            throw new OneOrMoreCoreExceptions("Employee's type is not valid");
+            throw new InvalidArgException("Employee's type is not valid");
         }
 
         // checks if habitat iD already exists
 
         for (Habitat auxHabitatId : habitatsList) {
             if (auxHabitatId.getHabitatId().equals(habitatId)) {
-                throw new OneOrMoreCoreExceptions("The habitat iD already exists");
+                throw new InvalidArgException("The habitat iD already exists");
             }
         }
 
@@ -245,6 +244,10 @@ public class Hotel implements Serializable {
         habitatsList.add(newHabitat);
 
         return newHabitat;
+    }
+
+    public void addTreeToHabitat(Habitat hab, String treeKey){
+
     }
 
 
