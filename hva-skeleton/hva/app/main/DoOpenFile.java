@@ -23,7 +23,7 @@ class DoOpenFile extends Command<HotelManager> {
       try {
       //FIXME implement command is done?
         String filename = stringField("Filename");
-        receiver().loadFile(filename);
+        _receiver.load(filename);
       } catch (UnavailableFileException efe) {
       throw new FileOpenFailedException(efe);
       }
