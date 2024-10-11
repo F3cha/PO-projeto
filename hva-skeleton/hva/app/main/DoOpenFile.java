@@ -5,6 +5,8 @@ import hva.core.HotelManager;
 import hva.core.exception.UnavailableFileException;
 import pt.tecnico.uilib.menus.Command;
 import pt.tecnico.uilib.menus.CommandException;
+import pt.tecnico.uilib.Display;
+
 //FIXME add more imports if needed
 
 /**
@@ -23,6 +25,9 @@ class DoOpenFile extends Command<HotelManager> {
       //FIXME implement command is done?
         String filename = stringField("Filename");
         _receiver.load(filename);
+        Display disp= new Display();
+        disp.add("done");
+        disp.display();
       } catch (UnavailableFileException efe) {
       throw new FileOpenFailedException(efe);
       }

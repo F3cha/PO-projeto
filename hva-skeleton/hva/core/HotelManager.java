@@ -21,6 +21,7 @@ public class HotelManager {
     return _hotel;
   }
 
+
   public void save() throws FileNotFoundException, MissingFileAssociationException, IOException {
     if (_filename == null || _filename.isEmpty()) {
       throw new MissingFileAssociationException();
