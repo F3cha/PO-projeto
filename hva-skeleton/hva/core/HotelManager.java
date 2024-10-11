@@ -21,6 +21,9 @@ public class HotelManager {
     return _hotel;
   }
 
+public HotelManager newHotel() {
+    return new HotelManager();
+  }
 
   public void save() throws FileNotFoundException, MissingFileAssociationException, IOException {
     if (_filename == null || _filename.isEmpty()) {
@@ -71,11 +74,11 @@ public class HotelManager {
   public void importFile(String filename) throws ImportFileException {
     try {
       _hotel.importFile(filename);
-    } catch (IOException | UnrecognizedEntryException /* FIXME maybe other exceptions */ e) {
+    } catch (IOException | UnrecognizedEntryException e) {
       throw new ImportFileException(filename, e);
     }
-  } 
-  
+  }
+
   /**
    * Returns the zoo hotel managed by this instance.
    *
