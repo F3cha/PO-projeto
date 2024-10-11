@@ -38,10 +38,22 @@ public class Hotel implements Serializable {
     }
 
     // FIXME define more methods
+    public boolean hasAnimal(String animalId) {
+        for (Animals animal : animalList) {
+            if (animal.getAnimalId().equals(animalId)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public List<Animals> getAnimals() {
+        return animalList;
+    }
 
     public void registerAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) throws InvalidArgException {
         // checks if the arguments are correct.
-
+        
         boolean speciesExists =false;
         if (animalId == null || animalId.isEmpty()) {
             throw new InvalidArgException("Animal's iD can't be null");
@@ -61,11 +73,9 @@ public class Hotel implements Serializable {
 
         // checks if the iD of the new animal already exists.
 
-        for (Animals animal : animalList) {
-            if (animal.getAnimalId().equals(animalId)) {
-                throw new InvalidArgException("Animal's iD already used");
-            }
-        }
+        if (hasAnimal(animalId)) {
+            throw new InvalidArgException("Animal's ID already used");
+    }
 
 
 
@@ -86,7 +96,6 @@ public class Hotel implements Serializable {
         animalList.add(newAnimal);
 
     }
-
 
     public void registerSpecies(String speciesId, String name) throws InvalidArgException {
         // checks if the arguments are correct.
@@ -111,6 +120,9 @@ public class Hotel implements Serializable {
 
     }
 
+    public List<Employee> getEmployees() {
+        return employeesList;
+    }
 
     public void registerEmployee(String employeeId, String name, String empType) throws InvalidArgException {
         Employee employee;
@@ -168,6 +180,9 @@ public class Hotel implements Serializable {
 
     }
 
+    public List<Vaccine> getVaccines() {
+        return vaccinesList;
+    }
 
     public void registerVaccine(String vaccineId, String name, String[] speciesIds) throws  InvalidArgException {
         // checks if the arguments are correct.
@@ -215,6 +230,9 @@ public class Hotel implements Serializable {
         treeList.add(tree);
     }
 
+    public List<Habitat> getHabitats() {
+        return habitatsList;
+    }
 
     public Habitat registerHabitat(String habitatId, String name, int area) throws InvalidArgException {
         // checks if the arguments are correct.

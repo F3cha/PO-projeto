@@ -24,7 +24,7 @@ class DoNewFile extends Command<HotelManager> {
     @Override
     protected final void execute() throws CommandException {
             _receiver.getHotel();
-            
+
 
         //FIXME implement command
     }
