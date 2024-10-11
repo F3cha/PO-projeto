@@ -1,17 +1,29 @@
 *** testsBoth/A-01-10-M-ok.out	2024-10-03 22:33:10.000000000 +0100
---- testsBoth/A-01-10-M-ok.outhyp	2024-10-11 17:07:46.873896659 +0100
+--- testsBoth/A-01-10-M-ok.outhyp	2024-10-11 21:29:22.674593975 +0100
 ***************
 *** 18,29 ****
   4 - Calcular satisfação de animal
   0 - Sair
   Escolha uma opção: 1
-- ANIMAL|A1|Farrusco 1|E1|VOID|H1
-- ANIMAL|A2|Farrusco 2|E2|VOID|H1
-- ANIMAL|A3|Farrusco 3|E3|VOID|H2
-- ANIMAL|B1|Farrusco 4|E3|VOID|H2
-- ANIMAL|X1|Farrusco 5|E2|VOID|H3
-- ANIMAL|X2|Farrusco 6|E1|VOID|H3
+! ANIMAL|A1|Farrusco 1|E1|VOID|H1
+! ANIMAL|A2|Farrusco 2|E2|VOID|H1
+! ANIMAL|A3|Farrusco 3|E3|VOID|H2
+! ANIMAL|B1|Farrusco 4|E3|VOID|H2
+! ANIMAL|X1|Farrusco 5|E2|VOID|H3
+! ANIMAL|X2|Farrusco 6|E1|VOID|H3
   Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
---- 18,23 ----
+--- 18,29 ----
+  4 - Calcular satisfação de animal
+  0 - Sair
+  Escolha uma opção: 1
+! hva.core.Animals.Animals@30f39991
+! hva.core.Animals.Animals@452b3a41
+! hva.core.Animals.Animals@4a574795
+! hva.core.Animals.Animals@f6f4d33
+! hva.core.Animals.Animals@23fc625e
+! hva.core.Animals.Animals@3f99bd52
+  Gestão de Animais
+  1 - Visualizar todos os animais
+  2 - Registar animal

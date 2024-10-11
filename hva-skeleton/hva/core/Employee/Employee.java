@@ -1,8 +1,9 @@
 package hva.core.Employee;
 
 import java.util.List;
-
-public abstract class Employee {
+import java.io.Serializable;
+public abstract class Employee implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String _idEmployee;
     private String _nameEmployee;
     private List<String> _responsibility;

@@ -1,9 +1,9 @@
 package hva.core.Vaccine;
 
 import java.util.List;
+import java.io.Serializable;
 
-
-public class Vaccine {
+public class Vaccine implements Serializable {
     private String _idVaccine;
     private String _nameVaccine;
     private List<String> _species;

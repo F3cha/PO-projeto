@@ -6,13 +6,16 @@ import hva.core.exception.MissingFileAssociationException;
 import hva.core.exception.UnavailableFileException;
 import hva.core.exception.ImportFileException;
 import hva.core.exception.UnrecognizedEntryException;
+import hva.core.Hotel;
 
 
 /**
  * Class representing the manager of this application. It manages the current
  * zoo hotel.
  **/
-public class HotelManager {
+public class HotelManager implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   /** The current zoo hotel */
   private Hotel _hotel = new Hotel();
   private String _filename;

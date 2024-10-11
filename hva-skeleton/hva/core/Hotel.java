@@ -125,38 +125,7 @@ public class Hotel implements Serializable {
     }
 
     public void registerEmployee(String employeeId, String name, String empType) throws InvalidArgException {
-        Employee employee;
-
-        // checks if the arguments are correct.
-        if (employeeId == null || employeeId.isEmpty()) {
-            throw new InvalidArgException("The employee iD is not valid");
-        }
-
-        if (name == null || name.isEmpty()) {
-            throw new InvalidArgException("Employee's name is not valid");
-        }
-
-        if (empType == null || empType.isEmpty()) {
-            throw new InvalidArgException("Employee's type is not valid");
-        }
-
-        // checks if employee iD already exists
-
-        for (Employee empId : employeesList) {
-            if (empId.getEmployeeId().equals(employeeId)) {
-                throw new InvalidArgException("The employee iD already exists");
-            }
-        }
-
-        if (empType.equalsIgnoreCase("veterinary")) {
-            employee = new Veterinary(employeeId, name);
-        } else if (empType.equalsIgnoreCase("zookeeper")) {
-            employee = new Zookeeper(employeeId, name);
-        } else {
-            throw new InvalidArgException("Employee type not valid: " + empType);
-        }
-
-        employeesList.add(employee);
+        //First checks if the arguments are correct.
     }
 
 
@@ -215,19 +184,7 @@ public class Hotel implements Serializable {
 
 
     public void createTree(String TreeId, String name, String type, int age, int diff) throws InvalidArgException {
-        Tree tree;
 
-        Season season = Season.Autumn;
-
-        if (type.equalsIgnoreCase("evergreen")) {
-            tree = new EvergreenTree(season, age, diff);
-        } else if (type.equalsIgnoreCase("decidious")) {
-            tree = new DecidiousTree(season, age, diff);
-        } else {
-            throw new InvalidArgException("Tree type not valid: " + type);
-        }
-
-        treeList.add(tree);
     }
 
     public List<Habitat> getHabitats() {
@@ -277,6 +234,7 @@ public class Hotel implements Serializable {
      * @throws IOException                if there is an IO erro while processing the text file
      **/
     void importFile(String filename) throws UnrecognizedEntryException, IOException /* FIXME maybe other exceptions */ {
-        //FIXME implement method
+        Parser parser = new Parser(this);
+        parser.parseFile(filename);
     }
 }

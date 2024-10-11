@@ -1,6 +1,7 @@
 package hva.core.Animals;
-
-public class Animals {
+import java.io.Serializable;
+public class Animals  implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String _idAnimal;
     private String _nameAnimal;
     private String _habitatAnimal;

@@ -1,14 +1,23 @@
 *** testsBoth/A-01-24-M-ok.out	2024-10-03 22:33:11.000000000 +0100
---- testsBoth/A-01-24-M-ok.outhyp	2024-10-11 17:07:47.577865749 +0100
+--- testsBoth/A-01-24-M-ok.outhyp	2024-10-11 21:29:23.532571307 +0100
 ***************
 *** 18,26 ****
   4 - Mostrar vacinações
   0 - Sair
   Escolha uma opção: 1
-- VACINA|V3|Tétano|0|E1,E2,E3
-- VACINA|V4|Tétano 2|0|E1,E2
-- VACINA|V5|Tétano 3|0|E1,E2
+! VACINA|V3|Tétano|0|E1,E2,E3
+! VACINA|V4|Tétano 2|0|E1,E2
+! VACINA|V5|Tétano 3|0|E1,E2
   Gestão de Vacinas
   1 - Visualizar todas as vacinas
   2 - Registar vacina
---- 18,23 ----
+--- 18,26 ----
+  4 - Mostrar vacinações
+  0 - Sair
+  Escolha uma opção: 1
+! hva.core.Vaccine.Vaccine@30f39991
+! hva.core.Vaccine.Vaccine@452b3a41
+! hva.core.Vaccine.Vaccine@4a574795
+  Gestão de Vacinas
+  1 - Visualizar todas as vacinas
+  2 - Registar vacina

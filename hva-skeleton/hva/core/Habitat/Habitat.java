@@ -1,6 +1,9 @@
 package hva.core.Habitat;
 
-public class Habitat {
+import java.io.Serializable;
+
+public class Habitat implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String _habitatId;
     private String _habitatName;
     private int _area;
