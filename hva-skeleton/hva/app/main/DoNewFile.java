@@ -25,6 +25,7 @@ class DoNewFile extends Command<HotelManager> {
     protected final void execute() throws CommandException {
         _display.addLine(" Novo hotel criado.");
         _display.display(); // continua sem deixar criar varios hoteis
+        _receiver.newHotel();
 
 
         //FIXME implement command

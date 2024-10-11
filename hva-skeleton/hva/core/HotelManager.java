@@ -21,8 +21,8 @@ public class HotelManager {
     return _hotel;
   }
 
-public HotelManager newHotel() {
-    return new HotelManager();
+public Hotel newHotel() {
+    return new Hotel();
   }
 
   public void save() throws FileNotFoundException, MissingFileAssociationException, IOException {
