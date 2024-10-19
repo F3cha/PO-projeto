@@ -1,5 +1,5 @@
 *** testsBoth/A-01-22-M-ok.out	2024-10-03 22:33:10.000000000 +0100
---- testsBoth/A-01-22-M-ok.outhyp	2024-10-11 22:14:29.237693235 +0100
+--- testsBoth/A-01-22-M-ok.outhyp	2024-10-11 23:44:01.928599149 +0100
 ***************
 *** 18,24 ****
   4 - Mostrar vacinações
@@ -13,7 +13,7 @@
   4 - Mostrar vacinações
   0 - Sair
   Escolha uma opção: 1
-! hva.core.Vaccine.Vaccine@a09ee92
+! VACINA|V3|Tétano|0|
   Gestão de Vacinas
   1 - Visualizar todas as vacinas
   2 - Registar vacina

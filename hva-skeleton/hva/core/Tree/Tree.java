@@ -14,4 +14,15 @@ public abstract class Tree implements Serializable {
 
     }
     abstract public void cleaningEffort();
+
+    public Season getSeason(){
+        return _season;
+    }
+    public int getAge(){
+        return _age;
+    }
+    public int getDifficulty(){
+        return _difficulty;
+    }
+
 }

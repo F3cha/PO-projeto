@@ -7,6 +7,7 @@ import hva.core.Species.*;
 import hva.core.Tree.*;
 import hva.core.Vaccine.*;
 import hva.core.exception.*;
+
 import java.io.*;
 import java.util.*;
 
@@ -46,15 +47,15 @@ public class Hotel implements Serializable {
         }
         return false;
     }
-    
+
     public List<Animals> getAnimals() {
         return animalList;
     }
 
     public void registerAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) throws InvalidArgException {
         // checks if the arguments are correct.
-        
-        boolean speciesExists =false;
+
+        boolean speciesExists = false;
         if (animalId == null || animalId.isEmpty()) {
             throw new InvalidArgException("Animal's iD can't be null");
         }
@@ -75,8 +76,7 @@ public class Hotel implements Serializable {
 
         if (hasAnimal(animalId)) {
             throw new InvalidArgException("Animal's ID already used");
-    }
-
+        }
 
 
         for (Species specie : speciesList) {
@@ -86,7 +86,7 @@ public class Hotel implements Serializable {
             }
         }
 
-        if (speciesExists==false) {
+        if (speciesExists == false) {
             throw new InvalidArgException("Given specie doesn't exists.");
         }
 
@@ -153,7 +153,7 @@ public class Hotel implements Serializable {
         return vaccinesList;
     }
 
-    public void registerVaccine(String vaccineId, String name, String[] speciesIds) throws  InvalidArgException {
+    public void registerVaccine(String vaccineId, String name, String[] speciesIds) throws InvalidArgException {
         // checks if the arguments are correct.
 
         if (vaccineId == null || vaccineId.isEmpty()) {
@@ -221,7 +221,7 @@ public class Hotel implements Serializable {
         return newHabitat;
     }
 
-    public void addTreeToHabitat(Habitat hab, String treeKey){
+    public void addTreeToHabitat(Habitat hab, String treeKey) {
 
     }
 

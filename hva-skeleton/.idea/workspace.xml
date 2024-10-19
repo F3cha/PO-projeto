@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bef536b5-4d10-4260-96ba-e1e2af6bcacb" name="Changes" comment="menu half working">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva-skeleton.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/animal/DoShowAllAnimals.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/animal/DoShowAllAnimals.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/employee/DoShowAllEmployees.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/employee/DoShowAllEmployees.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/employee/DoShowAllEmployees.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/employee/DoShowAllEmployees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/habitat/DoShowAllHabitats.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/habitat/DoShowAllHabitats.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/habitat/DoShowAllHabitats.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/habitat/DoShowAllHabitats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/vaccine/DoShowAllVaccines.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/vaccine/DoShowAllVaccines.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/vaccine/DoShowAllVaccines.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/vaccine/DoShowAllVaccines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/vaccine/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/vaccine/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Animals/Animals.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Animals/Animals.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Animals/Animals.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Animals/Animals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Employee/Veterinary.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Employee/Veterinary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Employee/Veterinary.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Employee/Veterinary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Employee/Zookeeper.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Employee/Zookeeper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Employee/Zookeeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Employee/Zookeeper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Habitat/Habitat.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Habitat/Habitat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Habitat/Habitat.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Habitat/Habitat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Hotel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/HotelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/HotelManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Parser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Species/Species.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Species/Species.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Species/Species.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Species/Species.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Tree/Tree.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Tree/Tree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Tree/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Tree/Tree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Vaccine/Vaccine.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Vaccine/Vaccine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Vaccine/Vaccine.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Vaccine/Vaccine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/hva.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-02-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-02-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-03-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-03-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-04-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-04-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-05-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-05-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-14-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-14-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-15-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-01-15-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-16-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-01-16-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-17-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-01-17-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-18-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-01-18-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-22-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-01-22-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-22-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-01-22-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-23-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-01-23-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-23-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-01-23-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-24-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-01-24-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-01-24-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-01-24-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-02-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-02-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-03-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-03-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-04-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-04-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-05-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-05-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-07-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-07-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-08-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-08-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-09-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-09-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-10-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-10-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-13-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-13-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-14-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-14-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-15-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/testsBoth/A-01-15-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-16-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/testsBoth/A-01-16-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-17-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/testsBoth/A-01-17-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-18-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/testsBoth/A-01-18-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-22-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/testsBoth/A-01-22-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-22-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/testsBoth/A-01-22-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-23-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-23-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-24-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsBoth/A-01-24-M-ok.outhyp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;F3cha&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/F3cha/PO-projeto.git&quot;,
+    &quot;accountId&quot;: &quot;e5faf5d8-8756-4861-965b-bcc464cdea65&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2nFPhuVOFRuMxeOwomRPLbBGz3T" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/fecha/Desktop/PO-projeto/hva-skeleton&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bef536b5-4d10-4260-96ba-e1e2af6bcacb" name="Changes" comment="" />
+      <created>1728565972885</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728565972885</updated>
+      <workItem from="1728565973925" duration="1192000" />
+      <workItem from="1728571287265" duration="16633000" />
+      <workItem from="1728659768643" duration="19260000" />
+    </task>
+    <task id="LOCAL-00001" summary="gooofy ah classes">
+      <option name="closed" value="true" />
+      <created>1728659894180</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728659894180</updated>
+    </task>
+    <task id="LOCAL-00002" summary="nem tenho a certeza que os menus estão a funcionar">
+      <option name="closed" value="true" />
+      <created>1728661741119</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728661741119</updated>
+    </task>
+    <task id="LOCAL-00003" summary="menu half working">
+      <option name="closed" value="true" />
+      <created>1728662004356</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728662004356</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="working" />
+    <MESSAGE value="gooofy ah classes" />
+    <MESSAGE value="nem tenho a certeza que os menus estão a funcionar" />
+    <MESSAGE value="menu half working" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu half working" />
+  </component>
+</project>

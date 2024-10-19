@@ -2,25 +2,41 @@ package hva.app.vaccine;
 
 import hva.core.Hotel;
 import hva.core.Vaccine.Vaccine;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+
 import pt.tecnico.uilib.menus.Command;
 
 //FIXME add more imports if needed
 
-/**
- * Show all vaccines.
- **/
+
 class DoShowAllVaccines extends Command<Hotel> {
 
-  DoShowAllVaccines(Hotel receiver) {
-    super(Label.SHOW_ALL_VACCINES, receiver);
-  }
-  
-  @Override
-  protected final void execute() {
-    List<Vaccine> vaccines = _receiver.getVaccines();
+    DoShowAllVaccines(Hotel receiver) {
+        super(Label.SHOW_ALL_VACCINES, receiver);
+    }
 
-        _display.addAll(vaccines);
+    @Override
+    protected final void execute() {
+        List<Vaccine> vaccines = _receiver.getVaccines();
+        String vaccinesString = "";
+        List<Vaccine> sortedVaccines = new ArrayList<>(vaccines);
+        Collections.sort(sortedVaccines, Comparator.comparing(Vaccine::getVaccineId));
+
+        for (Vaccine vac : sortedVaccines) {
+            String speciesString = String.join(",", vac.getSpecies());
+
+            vaccinesString = String.format("VACINA|%s|%s|0|%s",
+                    vac.getVaccineId(),
+                    vac.getVaccineName(),
+                    speciesString);
+            _display.addLine(vaccinesString);
+
+        }
         _display.display();
-  }
+
+    }
 }

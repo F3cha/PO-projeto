@@ -1,4 +1,5 @@
 package hva.core.Species;
+
 import java.io.Serializable;
 
 public class Species implements Serializable {
@@ -14,5 +15,10 @@ public class Species implements Serializable {
     public String getSpeciesId() {
         return _idSpecies;
     }
-    
+
+    public String getSpeciesName() {
+        return _nameSpecies;
+    }
+
+
 }

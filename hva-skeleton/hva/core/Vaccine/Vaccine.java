@@ -18,4 +18,12 @@ public class Vaccine implements Serializable {
     public String getVaccineId() {
         return _idVaccine;
     }
+
+public String getVaccineName() {
+    return _nameVaccine;
 }
+public List<String> getSpecies() {
+    return _species;
+}
+}
+
