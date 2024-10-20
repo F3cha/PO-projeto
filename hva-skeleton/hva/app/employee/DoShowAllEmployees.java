@@ -37,19 +37,32 @@ class DoShowAllEmployees extends Command<Hotel> {
                 String habitatString = ((Zookeeper) emp).getHabitats().stream()
                         .map(Habitat::toString)
                         .collect(Collectors.joining(","));
-                employeeString = String.format("VET|%s|%s|%s",
+                if (habitatString.length() > 0) {
+                employeeString = String.format("TRT|%s|%s|%s",
                         emp.getEmployeeId(),
                         emp.getEmployeeName(),
                         habitatString);
+                } else {
+                    employeeString = String.format("TRT|%s|%s",
+                        emp.getEmployeeId(),
+                        emp.getEmployeeName());
+
+                }
                 _display.addLine(employeeString);
             } else if (emp instanceof Veterinary) {
                 String speciesString = ((Veterinary) emp).getSpecies().stream()
                         .map(Species::toString)
                         .collect(Collectors.joining(","));
-                employeeString = String.format("TRT|%s|%s|%s",
+                    if (speciesString.length() > 0) {
+                employeeString = String.format("VET|%s|%s|%s",
                         emp.getEmployeeId(),
                         emp.getEmployeeName(),
                         speciesString);
+                    } else {
+                        employeeString = String.format("VET|%s|%s",
+                        emp.getEmployeeId(),
+                        emp.getEmployeeName());
+                    }
                 _display.addLine(employeeString);
             }
         }

@@ -7,7 +7,6 @@ import hva.core.Species.*;
 import hva.core.Tree.*;
 import hva.core.Vaccine.*;
 import hva.core.exception.*;
-
 import java.io.*;
 import java.util.*;
 
@@ -23,6 +22,8 @@ public class Hotel implements Serializable {
     private List<Species> speciesList;
     private List<Animals> animalList;
     private List<Employee> employeesList;
+    private List<Veterinary> veterinaryList;
+    private List<Zookeeper> zookeeperList;
     private List<Habitat> habitatsList;
     private List<Tree> treeList;
     private List<Vaccine> vaccinesList;
@@ -33,9 +34,12 @@ public class Hotel implements Serializable {
         this.speciesList = new ArrayList<>();
         this.animalList = new ArrayList<>();
         this.employeesList = new ArrayList<>();
+        this.veterinaryList = new ArrayList<>();
+        this.zookeeperList = new ArrayList<>();
         this.habitatsList = new ArrayList<>();
         this.treeList = new ArrayList<>();
         this.vaccinesList = new ArrayList<>();
+        
     }
 
     // FIXME define more methods
@@ -48,11 +52,20 @@ public class Hotel implements Serializable {
         return false;
     }
 
+    public boolean hasEmployee(String employeeId) {
+        for (Employee emp : employeesList) {
+            if (emp.getEmployeeId().equals(employeeId)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public List<Animals> getAnimals() {
         return animalList;
     }
 
-    public void registerAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) throws InvalidArgException {
+    public boolean tryRegisterAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) throws InvalidArgException, DuplicateKeyException{
         // checks if the arguments are correct.
 
         boolean speciesExists = false;
@@ -75,7 +88,7 @@ public class Hotel implements Serializable {
         // checks if the iD of the new animal already exists.
 
         if (hasAnimal(animalId)) {
-            throw new InvalidArgException("Animal's ID already used");
+            throw new DuplicateKeyException("Animal's ID already used");
         }
 
 
@@ -87,14 +100,15 @@ public class Hotel implements Serializable {
         }
 
         if (speciesExists == false) {
-            throw new InvalidArgException("Given specie doesn't exists.");
+            return false;
         }
 
+        return true;
+    }
         // create animal
-
+    public void registerAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) {
         Animals newAnimal = new Animals(animalId, nameAnimals, habitatId, speciesId);
         animalList.add(newAnimal);
-
     }
 
     public void registerSpecies(String speciesId, String name) throws InvalidArgException {
@@ -102,15 +116,6 @@ public class Hotel implements Serializable {
 
         if (speciesId == null || speciesId.isEmpty()) {
             throw new InvalidArgException("The species iD is not valid");
-        }
-
-
-        // checks if species already exists
-
-        for (Species specieslist : speciesList) {  //FIXME isto seta mal
-            if (specieslist.getSpeciesId().equals(speciesId)) {
-                throw new InvalidArgException("The species iD already exists");
-            }
         }
 
         // create species
@@ -121,12 +126,42 @@ public class Hotel implements Serializable {
     }
 
     public List<Employee> getEmployees() {
+        //if (empType.equals("VET")) {
+        //    return veterinaryList;
+        //} else if (empType.equals("TRT")) {
+        //    return zookeeperList;
+        //}
         return employeesList;
     }
 
-    public void registerEmployee(String employeeId, String name, String empType) throws InvalidArgException {
-        //First checks if the arguments are correct.
+    public void registerEmployee(String employeeId, String name, String empType) throws InvalidArgException, DuplicateKeyException{
+        if (employeeId == null || employeeId.isEmpty()) {
+            throw new InvalidArgException("Employee's iD can't be null");
+        }
+
+        if (name == null || name.isEmpty()) {
+            throw new InvalidArgException("Employee's name can't be null");
+        }
+
+        if (empType == null || empType.isEmpty()) {
+            throw new InvalidArgException("Employee's habitat can't be null");
+        }
+
+        if (hasEmployee(employeeId)) {
+            throw new DuplicateKeyException("Employee's ID already used");
+        }
+
+        if(empType.equals("VET")) {
+            Veterinary newVeterinary = new Veterinary(employeeId, name);
+            veterinaryList.add(newVeterinary);
+            employeesList.add(newVeterinary);
+        } else if (empType.equals("TRT")) {
+            Zookeeper newZookeeper = new Zookeeper(employeeId, name);
+            zookeeperList.add(newZookeeper);
+            employeesList.add(newZookeeper);
+        }
     }
+
 
 
     public void addResponsibility(String employeeId, String responsibility) throws InvalidArgException {
