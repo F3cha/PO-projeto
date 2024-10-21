@@ -1,0 +1,43 @@
+*** tests/A-09-08-M-ok.out	2024-10-18 19:27:35.000000000 +0100
+--- tests/A-09-08-M-ok.outhyp	2024-10-21 23:35:48.435307844 +0100
+***************
+*** 42,48 ****
+  5 - Plantar árvore
+  6 - Mostrar árvores de habitat
+  0 - Sair
+! Escolha uma opção: Identificador único do habitat: Nome do habitat: Área do habitat: Gestão de Habitats
+  1 - Visualizar todos os habitats
+  2 - Registar habitat
+  3 - Alterar área de habitat
+--- 42,48 ----
+  5 - Plantar árvore
+  6 - Mostrar árvores de habitat
+  0 - Sair
+! Escolha uma opção: Insira o id do habitat: Insira o nome do habitat: Insira a área do habitat: Gestão de Habitats
+  1 - Visualizar todos os habitats
+  2 - Registar habitat
+  3 - Alterar área de habitat
+***************
+*** 68,81 ****
+  3 - Transferir para habitat
+  4 - Calcular satisfação de animal
+  0 - Sair
+! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único da espécie: Identificador único do habitat: Gestão de Animais
+! 1 - Visualizar todos os animais
+! 2 - Registar animal
+! 3 - Transferir para habitat
+! 4 - Calcular satisfação de animal
+! 0 - Sair
+! Escolha uma opção: ANIMAL|a1|patudo|C1|VOID|h1
+! Gestão de Animais
+  1 - Visualizar todos os animais
+  2 - Registar animal
+  3 - Transferir para habitat
+--- 68,74 ----
+  3 - Transferir para habitat
+  4 - Calcular satisfação de animal
+  0 - Sair
+! Escolha uma opção: Animal ID: Animal Name: Species: Habitat ID: Specie name: Gestão de Animais
+  1 - Visualizar todos os animais
+  2 - Registar animal
+  3 - Transferir para habitat

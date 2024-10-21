@@ -1,0 +1,35 @@
+*** tests/A-17-04-M-ok.out	2024-10-18 19:27:35.000000000 +0100
+--- tests/A-17-04-M-ok.outhyp	2024-10-21 23:35:49.839285728 +0100
+***************
+*** 17,30 ****
+  4 - Retirar responsabilidade
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+! Escolha uma opção: Identificador único do funcionário: Identificador único da responsabilidade: Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+  2 - Registar funcionário
+  3 - Atribuir responsabilidade
+  4 - Retirar responsabilidade
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+! Escolha uma opção: TRT|T1|Trt one|H1
+  VET|V1|Vet one
+  Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+--- 17,32 ----
+  4 - Retirar responsabilidade
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+! Escolha uma opção: Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+  2 - Registar funcionário
+  3 - Atribuir responsabilidade
+  4 - Retirar responsabilidade
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: TRT|T1|Trt one
+  VET|V1|Vet one
+  Gestão de Funcionários
+  1 - Visualizar todos os funcionários

@@ -1,0 +1,29 @@
+*** testsPrivIntermedia/A-01-27B-M-ok.out	2024-10-21 18:02:56.691447000 +0100
+--- testsPrivIntermedia/A-01-27B-M-ok.outhyp	2024-10-21 23:46:31.378143634 +0100
+***************
+*** 10,16 ****
+  9 - Gestão de vacinas
+  10 - Consultas
+  0 - Sair
+! Escolha uma opção: Ficheiro a abrir: Guardar antes de fechar? Ficheiro sem nome. Guardar ficheiro como: Menu Principal
+  1 - Criar ficheiro
+  2 - Abrir ficheiro
+  3 - Guardar ficheiro
+--- 10,16 ----
+  9 - Gestão de vacinas
+  10 - Consultas
+  0 - Sair
+! Escolha uma opção: Ficheiro a abrir: Menu Principal
+  1 - Criar ficheiro
+  2 - Abrir ficheiro
+  3 - Guardar ficheiro
+***************
+*** 22,25 ****
+--- 22,27 ----
+  9 - Gestão de vacinas
+  10 - Consultas
+  0 - Sair
++ Escolha uma opção: Número inválido!
++ Escolha uma opção: Número inválido!
+  Escolha uma opção: 
+\ No newline at end of file

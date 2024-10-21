@@ -1,0 +1,42 @@
+*** tests/A-07-02-M-ok.out	2024-10-18 19:27:35.000000000 +0100
+--- tests/A-07-02-M-ok.outhyp	2024-10-21 23:35:47.304325666 +0100
+***************
+*** 18,24 ****
+  5 - Plantar árvore
+  6 - Mostrar árvores de habitat
+  0 - Sair
+! Escolha uma opção: Identificador único do habitat: Identificador único da árvore: Nome da árvore: Idade da árvore: Dificuldade de limpeza da árvore: Tipo de árvore: (CADUCA ou PERENE) Plantar árvore: Operação inválida: O habitat 'h1' não existe.
+  Gestão de Habitats
+  1 - Visualizar todos os habitats
+  2 - Registar habitat
+--- 18,35 ----
+  5 - Plantar árvore
+  6 - Mostrar árvores de habitat
+  0 - Sair
+! Escolha uma opção: Gestão de Habitats
+! 1 - Visualizar todos os habitats
+! 2 - Registar habitat
+! 3 - Alterar área de habitat
+! 4 - Alterar influência de habitat sobre espécie
+! 5 - Plantar árvore
+! 6 - Mostrar árvores de habitat
+! 0 - Sair
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Insira o id do habitat: Insira o nome do habitat: Insira a área do habitat: Registar habitat: Operação inválida: O funcionário 'erro' já existe.
+  Gestão de Habitats
+  1 - Visualizar todos os habitats
+  2 - Registar habitat
+***************
+*** 39,42 ****
+  9 - Gestão de vacinas
+  10 - Consultas
+  0 - Sair
+! Escolha uma opção: 
+\ No newline at end of file
+--- 50,53 ----
+  9 - Gestão de vacinas
+  10 - Consultas
+  0 - Sair
+! Escolha uma opção: Fim de entrada de dados (R-EOF): pt.tecnico.uilib.text.RuntimeEOFException: Fim do fluxo de dados de entrada

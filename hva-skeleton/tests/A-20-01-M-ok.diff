@@ -1,0 +1,36 @@
+*** tests/A-20-01-M-ok.out	2024-10-18 19:27:35.000000000 +0100
+--- tests/A-20-01-M-ok.outhyp	2024-10-21 23:35:51.139265259 +0100
+***************
+*** 16,22 ****
+  3 - Vacinar animal
+  4 - Mostrar vacinações
+  0 - Sair
+! Escolha uma opção: Identificador da vacina: Nome da vacina: Identificadores das espécies que podem receber a vacina: Gestão de Vacinas
+  1 - Visualizar todas as vacinas
+  2 - Registar vacina
+  3 - Vacinar animal
+--- 16,22 ----
+  3 - Vacinar animal
+  4 - Mostrar vacinações
+  0 - Sair
+! Escolha uma opção: Vacina id: Nome da vacina: Identificadores das espécies (separados por vírgula): Gestão de Vacinas
+  1 - Visualizar todas as vacinas
+  2 - Registar vacina
+  3 - Vacinar animal
+***************
+*** 29,35 ****
+  3 - Vacinar animal
+  4 - Mostrar vacinações
+  0 - Sair
+! Escolha uma opção: Identificador da vacina: Nome da vacina: Identificadores das espécies que podem receber a vacina: Gestão de Vacinas
+  1 - Visualizar todas as vacinas
+  2 - Registar vacina
+  3 - Vacinar animal
+--- 29,35 ----
+  3 - Vacinar animal
+  4 - Mostrar vacinações
+  0 - Sair
+! Escolha uma opção: Vacina id: Nome da vacina: Identificadores das espécies (separados por vírgula): Gestão de Vacinas
+  1 - Visualizar todas as vacinas
+  2 - Registar vacina
+  3 - Vacinar animal

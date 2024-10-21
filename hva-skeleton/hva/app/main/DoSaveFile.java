@@ -31,17 +31,11 @@ class DoSaveFile extends Command<HotelManager> {
                 try {
                     _receiver.saveAs(Form.requestString(Prompt.newSaveAs()));
                     saved = true;
-                } catch (FileNotFoundException e1) {
-                    // FIXME add behavior
-                } catch (MissingFileAssociationException e2) {
-                    // FIXME add behavior
-                } catch (IOException e3) {
-                    e3.printStackTrace();
+                } catch (FileNotFoundException | MissingFileAssociationException | IOException e1) {
+                    e1.printStackTrace();
                 }
             }
 
-
-            // FIXME add behavior
         } catch (IOException e) {
             e.printStackTrace();
         }

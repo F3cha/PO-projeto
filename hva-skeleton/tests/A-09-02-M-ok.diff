@@ -1,0 +1,32 @@
+*** tests/A-09-02-M-ok.out	2024-10-18 19:27:35.000000000 +0100
+--- tests/A-09-02-M-ok.outhyp	2024-10-21 23:35:48.263310554 +0100
+***************
+*** 16,23 ****
+  3 - Transferir para habitat
+  4 - Calcular satisfação de animal
+  0 - Sair
+! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único da espécie: Identificador único do habitat: Registar animal: Operação inválida: O habitat 'hh1' não existe.
+! Gestão de Animais
+  1 - Visualizar todos os animais
+  2 - Registar animal
+  3 - Transferir para habitat
+--- 16,22 ----
+  3 - Transferir para habitat
+  4 - Calcular satisfação de animal
+  0 - Sair
+! Escolha uma opção: Animal ID: Animal Name: Species: Habitat ID: Specie name: Gestão de Animais
+  1 - Visualizar todos os animais
+  2 - Registar animal
+  3 - Transferir para habitat
+***************
+*** 35,38 ****
+  9 - Gestão de vacinas
+  10 - Consultas
+  0 - Sair
+! Escolha uma opção: 
+\ No newline at end of file
+--- 34,37 ----
+  9 - Gestão de vacinas
+  10 - Consultas
+  0 - Sair
+! Escolha uma opção: Fim de entrada de dados (R-EOF): pt.tecnico.uilib.text.RuntimeEOFException: Fim do fluxo de dados de entrada

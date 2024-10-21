@@ -1,0 +1,40 @@
+*** tests/A-09-03-M-ok.out	2024-10-18 19:27:35.000000000 +0100
+--- tests/A-09-03-M-ok.outhyp	2024-10-21 23:35:48.348309215 +0100
+***************
+*** 16,34 ****
+  3 - Transferir para habitat
+  4 - Calcular satisfação de animal
+  0 - Sair
+! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único da espécie: Identificador único do habitat: Gestão de Animais
+! 1 - Visualizar todos os animais
+! 2 - Registar animal
+! 3 - Transferir para habitat
+! 4 - Calcular satisfação de animal
+! 0 - Sair
+! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único da espécie: Identificador único do habitat: Registar animal: Operação inválida: O animal 'a2' já existe.
+! Gestão de Animais
+  1 - Visualizar todos os animais
+  2 - Registar animal
+  3 - Transferir para habitat
+  4 - Calcular satisfação de animal
+  0 - Sair
+  Escolha uma opção: ANIMAL|a2|animal 2|C10|VOID|h1
+  Gestão de Animais
+  1 - Visualizar todos os animais
+--- 16,31 ----
+  3 - Transferir para habitat
+  4 - Calcular satisfação de animal
+  0 - Sair
+! Escolha uma opção: Animal ID: Animal Name: Species: Habitat ID: Specie name: Gestão de Animais
+  1 - Visualizar todos os animais
+  2 - Registar animal
+  3 - Transferir para habitat
+  4 - Calcular satisfação de animal
+  0 - Sair
++ Escolha uma opção: Número inválido!
++ Escolha uma opção: Número inválido!
++ Escolha uma opção: Número inválido!
++ Escolha uma opção: Número inválido!
+  Escolha uma opção: ANIMAL|a2|animal 2|C10|VOID|h1
+  Gestão de Animais
+  1 - Visualizar todos os animais

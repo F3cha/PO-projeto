@@ -19,11 +19,12 @@ public class Vaccine implements Serializable {
         return _idVaccine;
     }
 
-public String getVaccineName() {
-    return _nameVaccine;
-}
-public List<String> getSpecies() {
-    return _species;
-}
+    public String getVaccineName() {
+        return _nameVaccine;
+    }
+
+    public List<String> getSpecies() {
+        return _species;
+    }
 }
 
