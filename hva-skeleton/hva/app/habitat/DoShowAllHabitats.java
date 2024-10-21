@@ -33,8 +33,7 @@ class DoShowAllHabitats extends Command<Hotel> {
                     habitat.getHabitatId(),
                     habitat.getHabitatName(),
                     habitat.getArea());
-                    _display.addLine(habitatString
-            );
+                    _display.addLine(habitatString);
         }
         _display.display();
     }
