@@ -4,15 +4,11 @@ import hva.core.Employee.Employee;
 import hva.core.Employee.Veterinary;
 import hva.core.Employee.Zookeeper;
 import hva.core.Hotel;
-import hva.core.Habitat.Habitat;
-import hva.core.Species.*;
 
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Collections;
-import java.util.stream.Collectors;
-
 import pt.tecnico.uilib.menus.Command;
 
 //FIXME add more imports if needed

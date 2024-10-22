@@ -7,6 +7,7 @@ import hva.core.Species.*;
 import hva.core.Tree.*;
 import hva.core.Vaccine.*;
 import hva.core.exception.*;
+
 import java.io.*;
 import java.util.*;
 import java.util.ArrayList;
@@ -40,7 +41,7 @@ public class Hotel implements Serializable {
         this.habitatsList = new ArrayList<>();
         this.treeList = new ArrayList<>();
         this.vaccinesList = new ArrayList<>();
-        
+
     }
 
     // FIXME define more methods
@@ -62,6 +63,15 @@ public class Hotel implements Serializable {
         return false;
     }
 
+    public void transferAnimal(String animalId, String habitatId) throws InvalidArgException {
+        for (Animals animal : animalList) {
+            if (animal.getAnimalId().equals(animalId)) {
+                animal.setAnimalHabitat(habitatId);
+                break;
+            }
+        }
+    }
+
     public boolean hasSpecies(String speciesId) {
         boolean speciesExists = false;
         for (Species specie : speciesList) {
@@ -78,23 +88,32 @@ public class Hotel implements Serializable {
         return false;
     }
 
-    public Species getSpeciesById(String idSpecies, List<Species> allSpecies) {
-        for (Species species : allSpecies) {
-        if (species.getSpeciesId().equals(idSpecies)) {
-            return species; // Retorna o objeto Species correspondente ao ID
+    public void verifyHabitat(String habitatId) throws InvalidArgException {
+        for (Habitat habitat : habitatsList) {
+            if (habitat.getHabitatId().equals(habitatId)) {
+                break;
+            }
+            throw new InvalidArgException(habitatId + "doesnt exist");
         }
     }
-    return null; // Retorna null se a espécie não for encontrada
+
+    public Species getSpeciesById(String idSpecies, List<Species> allSpecies) {
+        for (Species species : allSpecies) {
+            if (species.getSpeciesId().equals(idSpecies)) {
+                return species; // Retorna o objeto Species correspondente ao ID
+            }
+        }
+        return null; // Retorna null se a espécie não for encontrada
     }
 
     public List<Animals> getAnimals() {
         return animalList;
     }
 
-    public boolean tryRegisterAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) throws InvalidArgException, DuplicateKeyException{
+    public boolean tryRegisterAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) throws InvalidArgException, DuplicateKeyException {
         // checks if the arguments are correct.
 
-        
+
         if (animalId == null || animalId.isEmpty()) {
             throw new InvalidArgException("Animal's iD can't be null");
         }
@@ -118,13 +137,14 @@ public class Hotel implements Serializable {
         }
 
 
-        if(hasSpecies(speciesId)){
+        if (hasSpecies(speciesId)) {
             return true;
         }
 
         return false;
     }
-        // create animal
+
+    // create animal
     public void registerAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) {
         Animals newAnimal = new Animals(animalId, nameAnimals, habitatId, speciesId);
         animalList.add(newAnimal);
@@ -153,7 +173,7 @@ public class Hotel implements Serializable {
         return employeesList;
     }
 
-    public void registerEmployee(String employeeId, String name, String empType) throws InvalidArgException, DuplicateKeyException{
+    public void registerEmployee(String employeeId, String name, String empType) throws InvalidArgException, DuplicateKeyException {
         if (employeeId == null || employeeId.isEmpty()) {
             throw new InvalidArgException("Employee's iD can't be null");
         }
@@ -170,7 +190,7 @@ public class Hotel implements Serializable {
             throw new DuplicateKeyException("Employee's ID already used");
         }
 
-        if(empType.equals("VET")) {
+        if (empType.equals("VET")) {
             Veterinary newVeterinary = new Veterinary(employeeId, name);
             veterinaryList.add(newVeterinary);
             employeesList.add(newVeterinary);
@@ -180,7 +200,6 @@ public class Hotel implements Serializable {
             employeesList.add(newZookeeper);
         }
     }
-
 
 
     public void addResponsibility(String employeeId, String responsibility) throws InvalidArgException {
@@ -223,17 +242,16 @@ public class Hotel implements Serializable {
 
         // checks if vaccine iD already exists
 
-    List<String> speciesIdList = new ArrayList<>();
-    for (String speciesId : speciesIds) {
-        Species species = getSpeciesById(speciesId, speciesList); // Assumindo que este método existe e retorna um objeto Species
-        if (species == null) {
-            throw new UnknownKeyException("Specie Id doesn't exist: " + speciesId);
+        List<String> speciesIdList = new ArrayList<>();
+        for (String speciesId : speciesIds) {
+            Species species = getSpeciesById(speciesId, speciesList); // Assumindo que este método existe e retorna um objeto Species
+            if (species == null) {
+                throw new UnknownKeyException("Specie Id doesn't exist: " + speciesId);
+            }
+            speciesIdList.add(species.getSpeciesId());
         }
-        speciesIdList.add(species.getSpeciesId());
-    }
 
 
-        
         Vaccine newVaccine = new Vaccine(vaccineId, name, speciesIdList);
         vaccinesList.add(newVaccine);
     }
@@ -262,7 +280,7 @@ public class Hotel implements Serializable {
         }
 
         // checks if habitat iD already exists
-        
+
         for (Habitat auxHabitatId : habitatsList) {
             if (auxHabitatId.getHabitatId().equals(habitatId)) {
                 throw new DuplicateKeyException("The habitat iD already exists");

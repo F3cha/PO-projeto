@@ -32,5 +32,9 @@ public class Animals implements Serializable {
         return _specieAnimal;
     }
 
+    public void setAnimalHabitat(String habitat) {
+        _habitatAnimal = habitat;
+    }
+
 
 }
