@@ -17,7 +17,5 @@ public class Veterinary extends Employee {
         return 1;
     }
 
-    public List<String> getSpecies() {
-        return _responsibility;
-    }
+
 }

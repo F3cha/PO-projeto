@@ -25,7 +25,14 @@ Escolha uma opção: Gestão de Funcionários
 5 - Calcular satisfação de funcionário
 0 - Sair
 Escolha uma opção: Número inválido!
-Escolha uma opção: TRT|T1|Rohit Figueiredo
+Escolha uma opção: TRT|T1|Rohit Figueiredo|H1
+TRT|T2|Rohit Figueiredo 3|H1,H4
+TRT|T3|Rohit Figueiredo 6|H2,H3,H4
+TRT|T4|Rohit Figueiredo 7|H1,H2,H3,H4
+VET|V1|Rohit Figueiredo 2|E1,E2,E3
+VET|V2|Rohit Figueiredo 4|E3
+VET|V3|Rohit Figueiredo 5
+VET|V4|Rohit Figueiredo 9|E2
 Gestão de Funcionários
 1 - Visualizar todos os funcionários
 2 - Registar funcionário

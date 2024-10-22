@@ -12,10 +12,14 @@ public abstract class Employee implements Serializable {
     public Employee(String idEmployee, String nameEmployee) {
         _idEmployee = idEmployee;
         _nameEmployee = nameEmployee;
+        _responsibility = new ArrayList<>();
     }
 
     public String getEmployeeId() {
         return _idEmployee;
+    }
+    public List<String> getResponsability() {
+        return _responsibility;
     }
 
     public List<String> getResponsibility() {

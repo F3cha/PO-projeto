@@ -18,7 +18,5 @@ public class Zookeeper extends Employee {
         return 1;
     }
 
-    public List<String> getHabitats() {
-        return _responsibility;
-    }
+
 }

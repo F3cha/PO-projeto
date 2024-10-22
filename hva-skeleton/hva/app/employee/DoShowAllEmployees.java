@@ -34,12 +34,10 @@ class DoShowAllEmployees extends Command<Hotel> {
         Collections.sort(sortedEmployees, Comparator.comparing(Employee::getEmployeeId));
         for (Employee emp : sortedEmployees) {
 
+            String speciesString = String.join(",",emp.getResponsability());
 
             if (emp instanceof Veterinary) {
-                String speciesString = ((Veterinary) emp).getSpecies().stream()
-                        .map(Species::toString)
-                        .collect(Collectors.joining(","));
-                if (speciesString.length() > 0) {
+                if (!speciesString.isEmpty()) {
                     employeeString = String.format("VET|%s|%s|%s",
                             emp.getEmployeeId(),
                             emp.getEmployeeName(),
@@ -51,14 +49,12 @@ class DoShowAllEmployees extends Command<Hotel> {
                 }
                 _display.addLine(employeeString);
             } else if (emp instanceof Zookeeper) {
-                String habitatString = ((Zookeeper) emp).getHabitats().stream()
-                        .map(Habitat::toString)
-                        .collect(Collectors.joining(","));
-                if (habitatString.length() > 0) {
+
+                if (!speciesString.isEmpty()) {
                     employeeString = String.format("TRT|%s|%s|%s",
                             emp.getEmployeeId(),
                             emp.getEmployeeName(),
-                            habitatString);
+                            speciesString);
                 } else {
                     employeeString = String.format("TRT|%s|%s",
                             emp.getEmployeeId(),
