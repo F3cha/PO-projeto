@@ -53,7 +53,8 @@ class DoRegisterAnimal extends Command<Hotel> {
         } catch (DuplicateKeyException e) {
             throw new DuplicateAnimalKeyException(_animalId);
         } catch (SpeciesIdNonExistant e) {
-            throw new SpeciesIdNonExistant(_speciesName);
+            throw new CommandException("Species ID does not exist.") {
+            };
         }
     }
 }
