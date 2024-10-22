@@ -29,7 +29,7 @@ class DoRegisterEmployee extends Command<Hotel> {
     try {
       _receiver.registerEmployee(id, name, type);
     } catch (DuplicateKeyException e) {
-      throw new DuplicateEmployeeKeyException("Já existe um funcionário com o identificador " + id);
+      throw new DuplicateEmployeeKeyException(id);
     } catch (InvalidArgException e) {
       //FIXME: handle exception
     }
