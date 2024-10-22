@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="hva-skeleton">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/proj.jar!/" />
+      <root url="jar://$PROJECT_DIR$/po-uilib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

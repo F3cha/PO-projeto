@@ -34,7 +34,7 @@ class DoShowAllEmployees extends Command<Hotel> {
         Collections.sort(sortedEmployees, Comparator.comparing(Employee::getEmployeeId));
         for (Employee emp : sortedEmployees) {
 
-        }
+
         if (emp instanceof Veterinary) {
             String speciesString = ((Veterinary) emp).getSpecies().stream()
                     .map(Species::toString)
@@ -69,4 +69,4 @@ class DoShowAllEmployees extends Command<Hotel> {
         }
         _display.display();
     }
-}
+}}
