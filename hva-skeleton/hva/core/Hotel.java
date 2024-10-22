@@ -61,7 +61,7 @@ public class Hotel implements Serializable {
         return false;
     }
 
-    public boolean hasSpecies(List<Species> speciesList, String speciesId) {
+    public boolean hasSpecies(String speciesId) {
         boolean speciesExists = false;
         for (Species specie : speciesList) {
             if (specie.getSpeciesId().equals(speciesId)) {
@@ -117,7 +117,7 @@ public class Hotel implements Serializable {
         }
 
 
-        if(hasSpecies(speciesList, speciesId)){
+        if(hasSpecies(speciesId)){
             return true;
         }
 
@@ -279,6 +279,15 @@ public class Hotel implements Serializable {
 
     public void addTreeToHabitat(Habitat hab, String treeKey) {
 
+    }
+
+    public String returnIdbyNameSpecies(String speciesName) throws SpeciesIdNonExistant {
+        for (Species specie : speciesList) {
+            if (specie.getSpeciesName().equals(speciesName)) {
+                return specie.getSpeciesId();
+            }
+        }
+        throw new SpeciesIdNonExistant("Species not found");
     }
 
 
