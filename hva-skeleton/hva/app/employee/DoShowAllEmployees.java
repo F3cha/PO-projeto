@@ -35,38 +35,39 @@ class DoShowAllEmployees extends Command<Hotel> {
         for (Employee emp : sortedEmployees) {
 
 
-        if (emp instanceof Veterinary) {
-            String speciesString = ((Veterinary) emp).getSpecies().stream()
-                    .map(Species::toString)
-                    .collect(Collectors.joining(","));
-            if (speciesString.length() > 0) {
-                employeeString = String.format("VET|%s|%s|%s",
-                        emp.getEmployeeId(),
-                        emp.getEmployeeName(),
-                        speciesString);
-            } else {
-                employeeString = String.format("VET|%s|%s",
-                        emp.getEmployeeId(),
-                        emp.getEmployeeName());
-            }
-            _display.addLine(employeeString);
-        } else if (emp instanceof Zookeeper) {
-            String habitatString = ((Zookeeper) emp).getHabitats().stream()
-                    .map(Habitat::toString)
-                    .collect(Collectors.joining(","));
-            if (habitatString.length() > 0) {
-                employeeString = String.format("TRT|%s|%s|%s",
-                        emp.getEmployeeId(),
-                        emp.getEmployeeName(),
-                        habitatString);
-            } else {
-                employeeString = String.format("TRT|%s|%s",
-                        emp.getEmployeeId(),
-                        emp.getEmployeeName());
+            if (emp instanceof Veterinary) {
+                String speciesString = ((Veterinary) emp).getSpecies().stream()
+                        .map(Species::toString)
+                        .collect(Collectors.joining(","));
+                if (speciesString.length() > 0) {
+                    employeeString = String.format("VET|%s|%s|%s",
+                            emp.getEmployeeId(),
+                            emp.getEmployeeName(),
+                            speciesString);
+                } else {
+                    employeeString = String.format("VET|%s|%s",
+                            emp.getEmployeeId(),
+                            emp.getEmployeeName());
+                }
+                _display.addLine(employeeString);
+            } else if (emp instanceof Zookeeper) {
+                String habitatString = ((Zookeeper) emp).getHabitats().stream()
+                        .map(Habitat::toString)
+                        .collect(Collectors.joining(","));
+                if (habitatString.length() > 0) {
+                    employeeString = String.format("TRT|%s|%s|%s",
+                            emp.getEmployeeId(),
+                            emp.getEmployeeName(),
+                            habitatString);
+                } else {
+                    employeeString = String.format("TRT|%s|%s",
+                            emp.getEmployeeId(),
+                            emp.getEmployeeName());
 
+                }
+                _display.addLine(employeeString);
             }
-            _display.addLine(employeeString);
+            _display.display();
         }
-        _display.display();
     }
-}}
+}

@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Zookeeper extends Employee {
-    private List<Habitat> habitats;
+    private List<String> _responsibility;
 
     public Zookeeper(String idEmployee, String nameEmployee) {
         super(idEmployee, nameEmployee);
-        this.habitats = new ArrayList<>();
+        _responsibility = new ArrayList<String>();
     }
 
     public int satisfaction() {
@@ -18,7 +18,7 @@ public class Zookeeper extends Employee {
         return 1;
     }
 
-    public List<Habitat> getHabitats() {
-        return habitats;
+    public List<String> getHabitats() {
+        return _responsibility;
     }
 }

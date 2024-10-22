@@ -1,7 +1,7 @@
 *** tests/A-09-03-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-09-03-M-ok.outhyp	2024-10-22 18:52:46.615680136 +0100
+--- tests/A-09-03-M-ok.outhyp	2024-10-22 22:35:50.807819725 +0100
 ***************
-*** 16,34 ****
+*** 16,36 ****
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
@@ -12,29 +12,33 @@
 ! 4 - Calcular satisfação de animal
 ! 0 - Sair
 ! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único da espécie: Identificador único do habitat: Registar animal: Operação inválida: O animal 'a2' já existe.
+  Gestão de Animais
+  1 - Visualizar todos os animais
+  2 - Registar animal
+  3 - Transferir para habitat
+  4 - Calcular satisfação de animal
+  0 - Sair
+! Escolha uma opção: ANIMAL|a2|animal 2|C10|VOID|h1
 ! Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
   3 - Transferir para habitat
-  4 - Calcular satisfação de animal
-  0 - Sair
-  Escolha uma opção: ANIMAL|a2|animal 2|C10|VOID|h1
-  Gestão de Animais
-  1 - Visualizar todos os animais
---- 16,31 ----
+--- 16,33 ----
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
-! Escolha uma opção: Animal ID: Animal Name: Species: Habitat ID: Specie name: Gestão de Animais
+! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único da espécie: Identificador único do habitat: Nome da espécie: Registar animal: Operação inválida: Species ID does not exist.
+  Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
-+ Escolha uma opção: Número inválido!
-+ Escolha uma opção: Número inválido!
-+ Escolha uma opção: Número inválido!
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: ANIMAL|a2|animal 2|C10|VOID|h1
-  Gestão de Animais
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Gestão de Animais
   1 - Visualizar todos os animais
+  2 - Registar animal
+  3 - Transferir para habitat

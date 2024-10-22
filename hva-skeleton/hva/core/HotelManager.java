@@ -81,7 +81,6 @@ public class HotelManager implements Serializable {
         try {
             _hotel.importFile(filename);
         } catch (IOException | UnrecognizedEntryException e) {
-            e.printStackTrace();
             throw new ImportFileException(e.toString(), e);
         }
     }

@@ -9,6 +9,7 @@ import hva.core.Vaccine.*;
 import hva.core.exception.*;
 import java.io.*;
 import java.util.*;
+import java.util.ArrayList;
 
 // FIXME import classes
 
@@ -195,8 +196,7 @@ public class Hotel implements Serializable {
 
         for (Employee emp : employeesList) {
             if (emp.getEmployeeId().equals(employeeId)) {
-                List<String> responsibilityList = Arrays.asList(responsibility);
-                emp.setResponsability(responsibilityList);
+                emp.addResponsability(responsibility);
             }
         }
 

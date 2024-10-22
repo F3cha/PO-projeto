@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Veterinary extends Employee {
-    private List<Species> species;
+    List<String> _responsibility;
 
     public Veterinary(String idEmployee, String nameEmployee) {
         super(idEmployee, nameEmployee);
-        this.species = new ArrayList<>();
+        _responsibility = new ArrayList<>();
     }
 
     public int satisfaction() {
@@ -17,7 +17,7 @@ public class Veterinary extends Employee {
         return 1;
     }
 
-    public List<Species> getSpecies() {
-        return species;
+    public List<String> getSpecies() {
+        return _responsibility;
     }
 }

@@ -1,5 +1,6 @@
 package hva.core.Employee;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.io.Serializable;
 public abstract class Employee implements Serializable {
@@ -30,4 +31,9 @@ public abstract class Employee implements Serializable {
     public String getEmployeeName() {
         return _nameEmployee;
     }
+
+
+public void addResponsability(String responsibility) {
+    _responsibility.add(responsibility);
+}
 }
