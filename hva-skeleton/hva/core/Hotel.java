@@ -184,8 +184,8 @@ public class Hotel implements Serializable {
             throw new InvalidArgException("Employee's name can't be null");
         }
 
-        if (empType == null || empType.isEmpty()) {
-            throw new InvalidArgException("Employee's habitat can't be null");
+        if (empType == null || empType.isEmpty() ) {
+            throw new InvalidArgException("Employee's type cant be that one");
         }
 
         if (hasEmployee(employeeId)) {
@@ -203,6 +203,14 @@ public class Hotel implements Serializable {
         }
     }
 
+    public boolean verifyEmployeeType(String empType) {
+        if (empType.equals("VET")) {
+            return true;
+        } else if (empType.equals("TRT")) {
+            return true;
+        }
+        return false;
+    }
 
     public void addResponsibility(String employeeId, String responsibility) throws InvalidArgException {
         // checks if the arguments are correct.

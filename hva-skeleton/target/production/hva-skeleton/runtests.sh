@@ -1,5 +1,5 @@
 #!/bin/bash
-
+javac -cp po-uilib.jar:. `find hva -name "*.java"`
 let total=0;
 let correct=0;
 
