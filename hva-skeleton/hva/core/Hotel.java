@@ -383,10 +383,10 @@ public class Hotel implements Serializable {
         // create tree
 
         if (type.equals("CADUCA")) {
-            Tree newTree = new DecidiousTree(_currentSeason, age, diff, TreeId, name);
+            DecidiousTree newTree = new DecidiousTree(_currentSeason, age, diff, TreeId, name);
             treeList.add(newTree);
         } else {
-            Tree newTree = new EvergreenTree(_currentSeason, age, diff, TreeId, name);
+            EvergreenTree newTree = new EvergreenTree(_currentSeason, age, diff, TreeId, name);
             treeList.add(newTree);
         }
         

@@ -1,5 +1,6 @@
 package hva.core;
 
+import hva.core.exception.InvalidArgException;
 import hva.core.exception.UnrecognizedEntryException;
 
 import java.io.BufferedReader;
@@ -121,12 +122,12 @@ public class Parser {
         try {
             String treeId = components[1];
             String name = components[2];
-            String type = components[3];
-            int age = Integer.parseInt(components[4]);
-            int diff = Integer.parseInt(components[5]);
+            String type = components[5];
+            int age = Integer.parseInt(components[3]);
+            int diff = Integer.parseInt(components[4]);
 
             _hotel.createTree(treeId, name, type, age, diff);
-        } catch (Exception e) {
+        } catch (InvalidArgException e) {
             throw new UnrecognizedEntryException("Invalid entry: " + e.getMessage());
         }
     }

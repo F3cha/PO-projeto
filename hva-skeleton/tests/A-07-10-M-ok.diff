@@ -1,5 +1,5 @@
 *** tests/A-07-10-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-07-10-M-ok.outhyp	2024-10-24 00:02:01.488973572 +0100
+--- tests/A-07-10-M-ok.outhyp	2024-10-24 00:27:29.096876785 +0100
 ***************
 *** 18,24 ****
   5 - Plantar árvore
@@ -24,7 +24,7 @@
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: Número inválido!
-! Escolha uma opção: Insira o id do habitat: Insira o nome do habitat: Insira a área do habitat: Gestão de Habitats
+! Escolha uma opção: Identificador único do habitat: Nome do habitat: Área do habitat: Gestão de Habitats
 ! 1 - Visualizar todos os habitats
 ! 2 - Registar habitat
 ! 3 - Alterar área de habitat
@@ -119,12 +119,13 @@
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
---- 91,98 ----
+--- 91,99 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: HABITAT|3|CADUCA|5|0
+! HABITAT|h1|nome2|12|0
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat

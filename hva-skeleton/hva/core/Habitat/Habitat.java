@@ -17,7 +17,7 @@ public class Habitat implements Serializable {
         _habitatId = habitatId;
         _habitatName = habitatName;
         _area = area;
-        _listaArvoresHabitat = new ArrayList<String>();
+        _listaArvoresHabitat = new ArrayList<>();
     }
 
     public String getHabitatId() {

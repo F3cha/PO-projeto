@@ -1,5 +1,5 @@
 *** tests/A-07-05-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-07-05-M-ok.outhyp	2024-10-24 00:02:01.226983468 +0100
+--- tests/A-07-05-M-ok.outhyp	2024-10-24 00:27:28.868885977 +0100
 ***************
 *** 18,24 ****
   5 - Plantar árvore
@@ -33,7 +33,7 @@
 ! 5 - Plantar árvore
 ! 6 - Mostrar árvores de habitat
 ! 0 - Sair
-! Escolha uma opção: Insira o id do habitat: Insira o nome do habitat: Insira a área do habitat: Registar habitat: Operação inválida: O funcionário 'erro' já existe.
+! Escolha uma opção: Identificador único do habitat: Nome do habitat: Área do habitat: Registar habitat: Operação inválida: Employee's type is not valid
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
