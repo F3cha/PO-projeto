@@ -33,4 +33,24 @@ public abstract class Tree implements Serializable {
 
     }
 
+    public String getName(){
+        return _nameTree;
+    }
+
+    public String getCicle(){
+        if(_seasonCriada == Season.Summer) {
+            return "COMFOLHAS";
+        } else if (_seasonCriada == Season.Autumn ) {
+            if (this instanceof DecidiousTree) {
+                return "LARGAFOLHAS";
+            } return "COMFOLHAS";
+        } else if (_seasonCriada == Season.Winter){
+            if (this instanceof DecidiousTree) {
+                return "SEMFOLHAS";
+            } return "LARGAFOLHA";
+        } else 
+            return "GERAFOLHAS";
+    }
+
+
 }
