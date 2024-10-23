@@ -1,5 +1,6 @@
 package hva.core;
 
+import hva.app.exception.UnknownEmployeeKeyException;
 import hva.core.Animals.*;
 import hva.core.Employee.*;
 import hva.core.Habitat.*;
@@ -87,6 +88,24 @@ public class Hotel implements Serializable {
             return false;
         }
 
+        return false;
+    }
+
+    public boolean responsibilityIsSpecies(String responsibility) {
+        for (Species species : speciesList) {
+            if (species.getSpeciesId().equals(responsibility)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean responsibilityIsHabitat(String responsibility) {
+        for (Habitat habitat : habitatsList) {
+            if (habitat.getHabitatId().equals(responsibility)) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -184,7 +203,7 @@ public class Hotel implements Serializable {
             throw new InvalidArgException("Employee's name can't be null");
         }
 
-        if (empType == null || empType.isEmpty() ) {
+        if (empType == null || empType.isEmpty()) {
             throw new InvalidArgException("Employee's type cant be that one");
         }
 
@@ -212,7 +231,7 @@ public class Hotel implements Serializable {
         return false;
     }
 
-    public void addResponsibility(String employeeId, String responsibility) throws InvalidArgException {
+    public void addResponsibility(String employeeId, String responsibility) throws InvalidArgException, UnknownEmployeeKeyException {
         // checks if the arguments are correct.
 
         if (employeeId == null || employeeId.isEmpty()) {
@@ -222,18 +241,50 @@ public class Hotel implements Serializable {
         if (responsibility == null || responsibility.isEmpty()) {
             throw new InvalidArgException("Employee without any responsibility to add");
         }
-
-        for (Employee emp : employeesList) {
-            if (emp.getEmployeeId().equals(employeeId)) {
-                emp.addResponsability(responsibility);
-            }
+        Employee employee = getEmployeeById(employeeId);
+        if (employee == null) {
+            throw new UnknownEmployeeKeyException(employeeId);
         }
+        if (!responsibilityIsHabitat(responsibility) && !responsibilityIsSpecies(responsibility)) {
+            throw new InvalidArgException("Responsibility not valid");
+        }
+        if (employee instanceof Veterinary && responsibilityIsHabitat(responsibility)) {
+            throw new InvalidArgException("Veterinary can't have habitat as responsibility");
+        }
+        if (employee instanceof Zookeeper && responsibilityIsSpecies(responsibility)) {
+            throw new InvalidArgException("Zookeeper can't have species as responsibility");
+        }
+        if (!hasresponsibility(employee, responsibility)) {
+            employee.addResponsibility(responsibility);
+        }
+
 
     }
 
+    public Employee getEmployeeById(String idEmployee) {
+        for (Employee emp : employeesList) {
+            if (emp.getEmployeeId().equals(idEmployee)) {
+                return emp;
+            }
+        }
+        return null;
+    }
+
+    public boolean hasresponsibility(Employee employee, String responsibility) {
+        List<String> responsibilities = employee.getResponsibility();
+        for (String res : responsibilities) {
+            if (res.equals(responsibility)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //Functions related to Vaccines
     public List<Vaccine> getVaccines() {
         return vaccinesList;
     }
+
 
     public void registerVaccine(String vaccineId, String name, String[] speciesIds) throws InvalidArgException, DuplicateKeyException, UnknownKeyException {
         // checks if the arguments are correct.
@@ -282,7 +333,7 @@ public class Hotel implements Serializable {
             throw new InvalidArgException("Tree's type is not valid");
         }
 
-        if (age <= 0 ) {
+        if (age <= 0) {
             throw new InvalidArgException("Tree's age is not valid");
         }
 
@@ -291,7 +342,6 @@ public class Hotel implements Serializable {
         }
 
         // checks if tree iD already exists
-
 
 
         // create tree

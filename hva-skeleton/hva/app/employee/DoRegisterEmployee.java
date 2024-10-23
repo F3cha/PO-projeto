@@ -10,7 +10,6 @@ import pt.tecnico.uilib.forms.Form;
 
 import java.security.InvalidParameterException;
 
-//FIXME add more imports if needed
 
 /**
  * Adds a new employee to this zoo hotel.

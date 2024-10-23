@@ -26,7 +26,7 @@ public abstract class Employee implements Serializable {
         return _responsibility;
     }
 
-    public void setResponsability(List<String> responsibility) {
+    public void setResponsibility(List<String> responsibility) {
         _responsibility.addAll(responsibility);
     }
 
@@ -37,7 +37,7 @@ public abstract class Employee implements Serializable {
     }
 
 
-public void addResponsability(String responsibility) {
+public void addResponsibility(String responsibility) {
     _responsibility.add(responsibility);
 }
 }
