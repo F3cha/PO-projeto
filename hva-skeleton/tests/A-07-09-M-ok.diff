@@ -1,5 +1,5 @@
-*** tests/A-07-09-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-07-09-M-ok.outhyp	2024-10-23 21:45:06.512152421 +0100
+*** tests/A-07-09-M-ok.out	2024-10-23 19:58:54.285995601 +0100
+--- tests/A-07-09-M-ok.outhyp	2024-10-23 22:37:49.235138707 +0100
 ***************
 *** 18,25 ****
   5 - Plantar árvore
@@ -10,63 +10,45 @@
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
---- 18,24 ----
+--- 18,35 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
 ! Escolha uma opção: Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
-***************
-*** 27,34 ****
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-! Escolha uma opção: Identificador único do habitat: Identificador único da árvore: Nome da árvore: Idade da árvore: Dificuldade de limpeza da árvore: Tipo de árvore: (CADUCA ou PERENE) ÁRVORE|P1|p1|3|4|PERENE|GERARFOLHAS
-! Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
---- 26,63 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
+! 1 - Visualizar todos os habitats
+! 2 - Registar habitat
+! 3 - Alterar área de habitat
+! 4 - Alterar influência de habitat sobre espécie
+! 5 - Plantar árvore
+! 6 - Mostrar árvores de habitat
+! 0 - Sair
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: Insira o id do habitat: Insira o nome do habitat: Insira a área do habitat: Gestão de Habitats
-! 1 - Visualizar todos os habitats
-! 2 - Registar habitat
-! 3 - Alterar área de habitat
-! 4 - Alterar influência de habitat sobre espécie
-! 5 - Plantar árvore
-! 6 - Mostrar árvores de habitat
-! 0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Gestão de Habitats
-! 1 - Visualizar todos os habitats
-! 2 - Registar habitat
-! 3 - Alterar área de habitat
-! 4 - Alterar influência de habitat sobre espécie
-! 5 - Plantar árvore
-! 6 - Mostrar árvores de habitat
-! 0 - Sair
-! Escolha uma opção: Gestão de Habitats
-! 1 - Visualizar todos os habitats
-! 2 - Registar habitat
-! 3 - Alterar área de habitat
-! 4 - Alterar influência de habitat sobre espécie
-! 5 - Plantar árvore
-! 6 - Mostrar árvores de habitat
-! 0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
+***************
+*** 27,33 ****
+  5 - Plantar árvore
+  6 - Mostrar árvores de habitat
+  0 - Sair
+! Escolha uma opção: Identificador único do habitat: Identificador único da árvore: Nome da árvore: Idade da árvore: Dificuldade de limpeza da árvore: Tipo de árvore: (CADUCA ou PERENE) ÁRVORE|P1|p1|3|4|PERENE|GERARFOLHAS
+  Gestão de Habitats
+  1 - Visualizar todos os habitats
+  2 - Registar habitat
+--- 37,46 ----
+  5 - Plantar árvore
+  6 - Mostrar árvores de habitat
+  0 - Sair
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Insira o id do habitat: Insira a nova área do habitat: Insira a nova área do habitat: Alterar área de habitat: Operação inválida: O habitat '4' não existe.
+  Gestão de Habitats
+  1 - Visualizar todos os habitats
+  2 - Registar habitat
 ***************
 *** 36,42 ****
   5 - Plantar árvore
@@ -76,7 +58,7 @@
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
---- 65,82 ----
+--- 49,66 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
@@ -104,7 +86,7 @@
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
---- 85,103 ----
+--- 69,87 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
@@ -137,7 +119,7 @@
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
---- 106,112 ----
+--- 90,96 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
@@ -147,7 +129,7 @@
   2 - Registar habitat
 ***************
 *** 67,72 ****
---- 115,130 ----
+--- 99,114 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair

@@ -1,16 +1,15 @@
-*** tests/A-07-10-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-07-10-M-ok.outhyp	2024-10-23 21:45:06.627148269 +0100
+*** tests/A-07-10-M-ok.out	2024-10-23 19:58:54.286995589 +0100
+--- tests/A-07-10-M-ok.outhyp	2024-10-23 22:37:49.353137002 +0100
 ***************
-*** 18,25 ****
+*** 18,24 ****
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
 ! Escolha uma opção: Identificador único do habitat: Identificador único da árvore: Nome da árvore: Idade da árvore: Dificuldade de limpeza da árvore: Tipo de árvore: (CADUCA ou PERENE) ÁRVORE|B1|b1|2|3|CADUCA|GERARFOLHAS
-! Gestão de Habitats
+  Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
-  3 - Alterar área de habitat
---- 18,54 ----
+--- 18,46 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
@@ -36,18 +35,10 @@
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: Número inválido!
-! Escolha uma opção: Gestão de Habitats
-! 1 - Visualizar todos os habitats
-! 2 - Registar habitat
-! 3 - Alterar área de habitat
-! 4 - Alterar influência de habitat sobre espécie
-! 5 - Plantar árvore
-! 6 - Mostrar árvores de habitat
-! 0 - Sair
-! Escolha uma opção: Gestão de Habitats
+! Escolha uma opção: Insira o id do habitat: Insira a nova área do habitat: Insira a nova área do habitat: Alterar área de habitat: Operação inválida: O habitat '4' não existe.
+  Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
-  3 - Alterar área de habitat
 ***************
 *** 27,33 ****
   5 - Plantar árvore
@@ -57,19 +48,10 @@
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
---- 56,82 ----
+--- 49,66 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Gestão de Habitats
-! 1 - Visualizar todos os habitats
-! 2 - Registar habitat
-! 3 - Alterar área de habitat
-! 4 - Alterar influência de habitat sobre espécie
-! 5 - Plantar árvore
-! 6 - Mostrar árvores de habitat
-! 0 - Sair
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: Número inválido!
@@ -94,7 +76,7 @@
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
---- 85,103 ----
+--- 69,87 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
@@ -123,7 +105,7 @@
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
---- 106,112 ----
+--- 90,96 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
@@ -145,7 +127,7 @@
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
---- 115,122 ----
+--- 99,106 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair

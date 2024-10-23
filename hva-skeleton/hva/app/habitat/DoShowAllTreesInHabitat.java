@@ -2,6 +2,8 @@ package hva.app.habitat;
 
 import hva.core.Hotel;
 import hva.app.exception.UnknownHabitatKeyException;
+import hva.core.Habitat.Habitat;
+import java.text.Normalizer;
 import pt.tecnico.uilib.menus.Command;
 import pt.tecnico.uilib.menus.CommandException;
 //FIXME add more imports if needed
@@ -11,6 +13,8 @@ import pt.tecnico.uilib.menus.CommandException;
  **/
 class DoShowAllTreesInHabitat extends Command<Hotel> {
 
+  private String _habitatId;
+
   DoShowAllTreesInHabitat(Hotel receiver) {
     super(Label.SHOW_TREES_IN_HABITAT, receiver);
     //FIXME add command fields
@@ -18,6 +22,8 @@ class DoShowAllTreesInHabitat extends Command<Hotel> {
   
   @Override
   protected void execute() throws CommandException {
-    //FIXME implement command
+    _habitatId = Form.requestString("Insira o id do habitat: ");
+
+    
   }
 }
