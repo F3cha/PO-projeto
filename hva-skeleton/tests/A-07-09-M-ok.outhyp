@@ -40,24 +40,8 @@ Escolha uma opção: Insira o id do habitat: Insira o nome do habitat: Insira a 
 Escolha uma opção: Número inválido!
 Escolha uma opção: Número inválido!
 Escolha uma opção: Número inválido!
-Escolha uma opção: Gestão de Habitats
-1 - Visualizar todos os habitats
-2 - Registar habitat
-3 - Alterar área de habitat
-4 - Alterar influência de habitat sobre espécie
-5 - Plantar árvore
-6 - Mostrar árvores de habitat
-0 - Sair
-Escolha uma opção: Gestão de Habitats
-1 - Visualizar todos os habitats
-2 - Registar habitat
-3 - Alterar área de habitat
-4 - Alterar influência de habitat sobre espécie
-5 - Plantar árvore
-6 - Mostrar árvores de habitat
-0 - Sair
-Escolha uma opção: Número inválido!
-Escolha uma opção: Gestão de Habitats
+Escolha uma opção: Insira o id do habitat: Insira a nova área do habitat: Insira a nova área do habitat: Alterar área de habitat: Operação inválida: O habitat '4' não existe.
+Gestão de Habitats
 1 - Visualizar todos os habitats
 2 - Registar habitat
 3 - Alterar área de habitat

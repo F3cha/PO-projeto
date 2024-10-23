@@ -18,16 +18,7 @@ Escolha uma opção: Gestão de Habitats
 5 - Plantar árvore
 6 - Mostrar árvores de habitat
 0 - Sair
-Escolha uma opção: Gestão de Habitats
-1 - Visualizar todos os habitats
-2 - Registar habitat
-3 - Alterar área de habitat
-4 - Alterar influência de habitat sobre espécie
-5 - Plantar árvore
-6 - Mostrar árvores de habitat
-0 - Sair
-Escolha uma opção: Número inválido!
-Escolha uma opção: Opção inválida!
+Escolha uma opção: Insira o id do habitat: Insira a nova área do habitat: Alterar área de habitat: Operação inválida: O habitat 'AAA' não existe.
 Gestão de Habitats
 1 - Visualizar todos os habitats
 2 - Registar habitat

@@ -32,4 +32,11 @@ public class Habitat implements Serializable {
         return _area;
     }
 
+    public List<String> getTreeList(){
+        return _listaArvoresHabitat;
+    }
+
+    public void changeArea(int newArea) {
+        _area = newArea;
+    }
 }
