@@ -1,40 +1,59 @@
 package hva.app.habitat;
 
-import hva.core.Habitat.Habitat;
 import hva.core.Hotel;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import hva.app.exception.UnknownHabitatKeyException;
+import hva.core.Habitat.Habitat;
+import hva.core.Tree.Tree;
+import java.text.Normalizer;
 import pt.tecnico.uilib.menus.Command;
-
+import pt.tecnico.uilib.menus.CommandException;
 //FIXME add more imports if needed
 
+/**
+ * Show all trees in a given habitat.
+ **/
+class DoShowAllTreesInHabitat extends Command<Hotel> {
+
+  private String _habitatId;
+  private Habitat _auxhabitat;
+  private Tree _auxTree;
+
+  DoShowAllTreesInHabitat(Hotel receiver) {
+    super(Label.SHOW_TREES_IN_HABITAT, receiver);
+    //FIXME add command fields
+  }
+  
+  @Override
+  protected void execute() throws CommandException {
+    _habitatId = Form.requestString("Insira o id do habitat: ");
 
 
-//Show all habitats of this zoo hotel.
-
-class DoShowAllHabitats extends Command<Hotel> {
-
-    DoShowAllHabitats(Hotel receiver) {
-        super(Label.SHOW_ALL_HABITATS, receiver);
+    try {
+        _receiver.verifyHabitat(_habitatId);
+    } catch (InvalidArgException e) {
+      throw new UnknownHabitatKeyException(_habitatId);
     }
 
-    @Override
-    protected void execute() {
-        List<Habitat> habitats = _receiver.getHabitats();
-        String habitatString = "";
-        List<Habitat> sortedHabitat = new ArrayList<>(habitats);
-        Collections.sort(sortedHabitat, Comparator.comparing(Habitat::getHabitatId));
-        for (Habitat habitat: sortedHabitat) {
-
-
-            habitatString = String.format("HABITAT|%s|%s|%d|0",
-                    habitat.getHabitatId(),
-                    habitat.getHabitatName(),
-                    habitat.getArea());
-                    _display.addLine(habitatString);
-        }
-        _display.display();
+    for (Habitat hab: _receiver.getHabitats()) {
+      if (hab.getHabitatId().equals(_habitatId)) {
+        _auxhabitat = hab;
+      }
     }
+
+
+    for (Tree tree : _receiver.getTreeList) {
+      if (_auxhabitat.getHabitatTreeList().contains(tree.getId())) {
+        String treeString = String.format("ÁRVORE|%s|%s|%d|%d|%s|%s",
+        tree.getId(),
+        tree.getName(),
+        tree.getAge(),
+        tree.getDifficulty(),
+        tree.getClass(),
+        tree.getCicle());
+        _display.addLine(treeString);
+      }
+    }
+    _display.display();
+    }
+  
 }
