@@ -1,59 +1,42 @@
 package hva.app.habitat;
 
-import hva.core.Hotel;
-import hva.app.exception.UnknownHabitatKeyException;
 import hva.core.Habitat.Habitat;
-import hva.core.Tree.Tree;
-import java.text.Normalizer;
+import hva.core.Hotel;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 import pt.tecnico.uilib.menus.Command;
-import pt.tecnico.uilib.menus.CommandException;
+
 //FIXME add more imports if needed
 
-/**
- * Show all trees in a given habitat.
- **/
-class DoShowAllTreesInHabitat extends Command<Hotel> {
 
-  private String _habitatId;
-  private Habitat _auxhabitat;
-  private Tree _auxTree;
+//Show all habitats of this zoo hotel.
 
-  DoShowAllTreesInHabitat(Hotel receiver) {
-    super(Label.SHOW_TREES_IN_HABITAT, receiver);
-    //FIXME add command fields
-  }
-  
-  @Override
-  protected void execute() throws CommandException {
-    _habitatId = Form.requestString("Insira o id do habitat: ");
+class DoShowAllHabitats extends Command<Hotel> {
 
-
-    try {
-        _receiver.verifyHabitat(_habitatId);
-    } catch (InvalidArgException e) {
-      throw new UnknownHabitatKeyException(_habitatId);
+    DoShowAllHabitats(Hotel receiver) {
+        super(Label.SHOW_ALL_HABITATS, receiver);
     }
 
-    for (Habitat hab: _receiver.getHabitats()) {
-      if (hab.getHabitatId().equals(_habitatId)) {
-        _auxhabitat = hab;
-      }
-    }
+    @Override
+    protected void execute() {
+        List<Habitat> habitats = _receiver.getHabitats();
+        String habitatString = "";
+        List<Habitat> sortedHabitat = new ArrayList<>(habitats);
+        Collections.sort(sortedHabitat, Comparator.comparing(Habitat::getHabitatId));
+        for (Habitat habitat : sortedHabitat) {
 
 
-    for (Tree tree : _receiver.getTreeList) {
-      if (_auxhabitat.getHabitatTreeList().contains(tree.getId())) {
-        String treeString = String.format("ÁRVORE|%s|%s|%d|%d|%s|%s",
-        tree.getId(),
-        tree.getName(),
-        tree.getAge(),
-        tree.getDifficulty(),
-        tree.getClass(),
-        tree.getCicle());
-        _display.addLine(treeString);
-      }
+            habitatString = String.format("HABITAT|%s|%s|%d|%d",
+                    habitat.getHabitatId(),
+                    habitat.getHabitatName(),
+                    habitat.getArea(), habitat.getNumberOfTrees())
+            ;
+            _display.addLine(habitatString);
+        }
+        _display.display();
     }
-    _display.display();
-    }
-  
 }

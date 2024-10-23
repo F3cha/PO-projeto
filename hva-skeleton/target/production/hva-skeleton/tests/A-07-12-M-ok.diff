@@ -1,5 +1,5 @@
 *** tests/A-07-12-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-07-12-M-ok.outhyp	2024-10-23 21:30:23.410318240 +0100
+--- tests/A-07-12-M-ok.outhyp	2024-10-23 23:44:20.463025172 +0100
 ***************
 *** 18,24 ****
   5 - Plantar árvore
@@ -9,7 +9,7 @@
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
---- 18,35 ----
+--- 18,44 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
@@ -25,24 +25,24 @@
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: HABITAT|h1|nome2|12|0
+! Gestão de Habitats
+! 1 - Visualizar todos os habitats
+! 2 - Registar habitat
+! 3 - Alterar área de habitat
+! 4 - Alterar influência de habitat sobre espécie
+! 5 - Plantar árvore
+! 6 - Mostrar árvores de habitat
+! 0 - Sair
+! Escolha uma opção: HABITAT|h1|nome2|12|0
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
 ***************
 *** 27,32 ****
---- 38,53 ----
+--- 47,53 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-+ Escolha uma opção: HABITAT|h1|nome2|12|0
-+ Gestão de Habitats
-+ 1 - Visualizar todos os habitats
-+ 2 - Registar habitat
-+ 3 - Alterar área de habitat
-+ 4 - Alterar influência de habitat sobre espécie
-+ 5 - Plantar árvore
-+ 6 - Mostrar árvores de habitat
-+ 0 - Sair
 + Escolha uma opção: Número inválido!
   Escolha uma opção: Menu Principal
   1 - Criar ficheiro
@@ -79,20 +79,10 @@
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Gestão de Habitats
+! Escolha uma opção: Insira o id do habitat: Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
-***************
-*** 69,74 ****
---- 88,94 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro
 ***************
 *** 81,88 ****
   9 - Gestão de vacinas
@@ -103,7 +93,7 @@
   1 - Criar ficheiro
   2 - Abrir ficheiro
   3 - Guardar ficheiro
---- 101,107 ----
+--- 100,106 ----
   9 - Gestão de vacinas
   10 - Consultas
   0 - Sair
@@ -121,24 +111,14 @@
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
---- 121,127 ----
+--- 120,126 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Gestão de Habitats
+! Escolha uma opção: Insira o id do habitat: Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
-***************
-*** 111,116 ****
---- 129,135 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro
 ***************
 *** 123,130 ****
   9 - Gestão de vacinas
@@ -149,7 +129,7 @@
   1 - Criar ficheiro
   2 - Abrir ficheiro
   3 - Guardar ficheiro
---- 142,148 ----
+--- 140,146 ----
   9 - Gestão de vacinas
   10 - Consultas
   0 - Sair
@@ -167,21 +147,11 @@
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
---- 162,168 ----
+--- 160,166 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Gestão de Habitats
+! Escolha uma opção: Insira o id do habitat: Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
-***************
-*** 153,158 ****
---- 170,176 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro

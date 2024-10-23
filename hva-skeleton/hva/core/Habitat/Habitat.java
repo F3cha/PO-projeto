@@ -40,5 +40,9 @@ public class Habitat implements Serializable {
         _area = newArea;
     }
 
+    public int getNumberOfTrees() {
+        return _listaArvoresHabitat.size();
+    }
+
     
 }
