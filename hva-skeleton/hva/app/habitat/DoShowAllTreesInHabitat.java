@@ -27,7 +27,7 @@ class DoShowAllTreesInHabitat extends Command<Hotel> {
 
   @Override
   protected void execute() throws CommandException {
-    _habitatId = Form.requestString("Insira o id do habitat: ");
+    _habitatId = Form.requestString(Prompt.habitatKey());
 
 
     try {

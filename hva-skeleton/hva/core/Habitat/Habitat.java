@@ -36,7 +36,7 @@ public class Habitat implements Serializable {
         return _listaArvoresHabitat;
     }
 
-    public void changeArea(int newArea) {
+    public void setArea(int newArea) {
         _area = newArea;
     }
 

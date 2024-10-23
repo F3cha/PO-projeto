@@ -22,7 +22,7 @@ class DoShowAllHabitats extends Command<Hotel> {
     }
 
     @Override
-    protected void execute() {
+    protected void execute() { //FIXME: implement show Trees do habitat
         List<Habitat> habitats = _receiver.getHabitats();
         String habitatString = "";
         List<Habitat> sortedHabitat = new ArrayList<>(habitats);

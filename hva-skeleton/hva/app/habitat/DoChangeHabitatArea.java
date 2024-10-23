@@ -21,13 +21,12 @@ class DoChangeHabitatArea extends Command<Hotel> {
 
   DoChangeHabitatArea(Hotel receiver) {
     super(Label.CHANGE_HABITAT_AREA, receiver);
-    //FIXME add command fields
   }
   
   @Override
   protected void execute() throws CommandException {
-    _habitatId = Form.requestString("Insira o id do habitat: ");
-    _newArea = Form.requestInteger("Insira a nova área do habitat: ");
+    _habitatId = Form.requestString(Prompt.habitatKey());
+    _newArea = Form.requestInteger(Prompt.habitatArea());
 
     try {
         _receiver.verifyHabitat(_habitatId);
@@ -35,10 +34,6 @@ class DoChangeHabitatArea extends Command<Hotel> {
       throw new UnknownHabitatKeyException(_habitatId);
     }
 
-    for (Habitat hab: _receiver.getHabitats()) {
-      if (hab.getHabitatId().equals(_habitatId)) {
-          hab.changeArea(_newArea);
-      } break;
-    }
+    _receiver.getHabitatById(_habitatId).setArea(_newArea);
   }
 }

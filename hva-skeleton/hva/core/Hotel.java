@@ -173,6 +173,15 @@ public class Hotel implements Serializable {
         animalList.add(newAnimal);
     }
 
+    public Habitat getHabitatById(String habitatId) {
+        for (Habitat habitat : habitatsList) {
+            if (habitat.getHabitatId().equals(habitatId)) {
+                return habitat;
+            }
+        }
+        return null;
+    }
+
     public void registerSpecies(String speciesId, String name) throws InvalidArgException {
         // checks if the arguments are correct.
 
