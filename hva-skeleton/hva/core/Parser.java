@@ -1,11 +1,13 @@
 package hva.core;
 
+import hva.core.exception.DuplicateKeyException;
 import hva.core.exception.InvalidArgException;
 import hva.core.exception.UnrecognizedEntryException;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import hva.core.exception.*;
 
 // FIXME add other imports if needed
 
@@ -147,7 +149,7 @@ public class Parser {
                     // adicionar a árvore com id treeKey ao habitat referenciado por hab
                     continue;
             }
-        } catch (Exception e) {
+        } catch (InvalidArgException | DuplicateKeyException e) {
             throw new UnrecognizedEntryException("Invalid entry: " + e.getMessage());
         }
     }
