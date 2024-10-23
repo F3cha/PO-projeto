@@ -29,6 +29,7 @@ public class Hotel implements Serializable {
     private List<Habitat> habitatsList;
     private List<Tree> treeList;
     private List<Vaccine> vaccinesList;
+    private Season _currentSeason;
 
     // FIXME define contructor(s)
 
@@ -64,6 +65,7 @@ public class Hotel implements Serializable {
     }
 
     public void transferAnimal(String animalId, String habitatId) throws InvalidArgException {
+        //FIXME implemntar adicionar ao habitat
         for (Animals animal : animalList) {
             if (animal.getAnimalId().equals(animalId)) {
                 animal.setAnimalHabitat(habitatId);
@@ -258,7 +260,36 @@ public class Hotel implements Serializable {
 
 
     public void createTree(String TreeId, String name, String type, int age, int diff) throws InvalidArgException {
+        // checks if the arguments are correct.
 
+        if (TreeId == null || TreeId.isEmpty()) {
+            throw new InvalidArgException("The tree iD is not valid");
+        }
+
+        if (name == null || name.isEmpty()) {
+            throw new InvalidArgException("Tree's name is not valid");
+        }
+
+        if (type == null || type.isEmpty()) {
+            throw new InvalidArgException("Tree's type is not valid");
+        }
+
+        if (age <= 0 ) {
+            throw new InvalidArgException("Tree's age is not valid");
+        }
+
+        if (diff <= 0) {
+            throw new InvalidArgException("Tree's difficulty is not valid");
+        }
+
+        // checks if tree iD already exists
+
+
+
+        // create tree
+
+        //Tree newTree = new Tree(TreeId, name, type, age, diff);
+        //treeList.add(newTree);
     }
 
     public List<Habitat> getHabitats() {

@@ -1,7 +1,7 @@
 *** tests/A-10-01-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-10-01-M-ok.outhyp	2024-10-22 23:31:33.002330938 +0100
+--- tests/A-10-01-M-ok.outhyp	2024-10-23 14:49:08.476904468 +0100
 ***************
-*** 16,28 ****
+*** 16,23 ****
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
@@ -10,23 +10,11 @@
   1 - Visualizar todos os animais
   2 - Registar animal
   3 - Transferir para habitat
-  4 - Calcular satisfação de animal
-  0 - Sair
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro
---- 16,29 ----
+--- 16,22 ----
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
-! Escolha uma opção: Gestão de Animais
+! Escolha uma opção: Identificador único do animal: Identificador único do habitat: Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
   3 - Transferir para habitat
-  4 - Calcular satisfação de animal
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro

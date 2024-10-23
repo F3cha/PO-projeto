@@ -10,13 +10,14 @@ public class Habitat implements Serializable {
     private String _habitatId;
     private String _habitatName;
     private int _area;
+    private List<String> _listaArvoresHabitat;
 
 
     public Habitat(String habitatId, String habitatName, int area) {
         _habitatId = habitatId;
         _habitatName = habitatName;
         _area = area;
-        List<Tree> _listaArvoresHabitat = new ArrayList<>();
+        _listaArvoresHabitat = new ArrayList<String>();
     }
 
     public String getHabitatId() {
