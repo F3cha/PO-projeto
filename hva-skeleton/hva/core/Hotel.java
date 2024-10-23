@@ -1,5 +1,7 @@
 package hva.core;
 
+import hva.app.exception.NoResponsibilityException;
+import hva.app.exception.NonExistantResponsibilityExceptiion;
 import hva.app.exception.UnknownEmployeeKeyException;
 import hva.core.Animals.*;
 import hva.core.Employee.*;
@@ -222,16 +224,8 @@ public class Hotel implements Serializable {
         }
     }
 
-    public boolean verifyEmployeeType(String empType) {
-        if (empType.equals("VET")) {
-            return true;
-        } else if (empType.equals("TRT")) {
-            return true;
-        }
-        return false;
-    }
 
-    public void addResponsibility(String employeeId, String responsibility) throws InvalidArgException, UnknownEmployeeKeyException {
+    public void addResponsibility(String employeeId, String responsibility) throws InvalidArgException, UnknownEmployeeKeyException, NonExistantResponsibilityExceptiion {
         // checks if the arguments are correct.
 
         if (employeeId == null || employeeId.isEmpty()) {
@@ -246,7 +240,7 @@ public class Hotel implements Serializable {
             throw new UnknownEmployeeKeyException(employeeId);
         }
         if (!responsibilityIsHabitat(responsibility) && !responsibilityIsSpecies(responsibility)) {
-            throw new InvalidArgException("Responsibility not valid");
+            throw new NonExistantResponsibilityExceptiion("Responsibility doesn't exist");
         }
         if (employee instanceof Veterinary && responsibilityIsHabitat(responsibility)) {
             throw new InvalidArgException("Veterinary can't have habitat as responsibility");
@@ -258,6 +252,39 @@ public class Hotel implements Serializable {
             employee.addResponsibility(responsibility);
         }
 
+
+
+    }
+
+    public void removeResponsibility(String employeeId, String responsibility) throws InvalidArgException, UnknownEmployeeKeyException, NoResponsibilityException {
+        // checks if the arguments are correct.
+
+        if (employeeId == null || employeeId.isEmpty()) {
+            throw new InvalidArgException("The employee iD is not valid");
+        }
+
+        if (responsibility == null || responsibility.isEmpty()) {
+            throw new InvalidArgException("Employee without any responsibility to add");
+        }
+        Employee employee = getEmployeeById(employeeId);
+        if (employee == null) {
+            throw new UnknownEmployeeKeyException(employeeId);
+        }
+        if (!responsibilityIsHabitat(responsibility) && !responsibilityIsSpecies(responsibility)) {
+            throw new NoResponsibilityException(employeeId, responsibility);
+        }
+        if (employee instanceof Veterinary && responsibilityIsHabitat(responsibility)) {
+            throw new InvalidArgException("Veterinary can't have habitat as responsibility");
+        }
+        if (employee instanceof Zookeeper && responsibilityIsSpecies(responsibility)) {
+            throw new InvalidArgException("Zookeeper can't have species as responsibility");
+        }
+        if (hasresponsibility(employee, responsibility)) {
+            employee.removeResponsibility(responsibility);
+        }
+        else {
+            throw new NonExistantResponsibilityExceptiion("Responsibility doesn't exist");
+        }
 
     }
 

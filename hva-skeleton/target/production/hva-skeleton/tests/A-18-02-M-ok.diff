@@ -1,7 +1,7 @@
 *** tests/A-18-02-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-18-02-M-ok.outhyp	2024-10-23 20:39:59.805915732 +0100
+--- tests/A-18-02-M-ok.outhyp	2024-10-23 21:30:27.353245957 +0100
 ***************
-*** 17,45 ****
+*** 47,60 ****
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
@@ -12,79 +12,11 @@
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
-! Escolha uma opção: Identificador único do funcionário: Identificador único da responsabilidade: Gestão de Funcionários
-  1 - Visualizar todos os funcionários
-  2 - Registar funcionário
-  3 - Atribuir responsabilidade
-  4 - Retirar responsabilidade
-  5 - Calcular satisfação de funcionário
-  0 - Sair
-! Escolha uma opção: Identificador único do funcionário: Identificador único da responsabilidade: Gestão de Funcionários
-  1 - Visualizar todos os funcionários
-  2 - Registar funcionário
-  3 - Atribuir responsabilidade
-  4 - Retirar responsabilidade
-  5 - Calcular satisfação de funcionário
-  0 - Sair
-! Escolha uma opção: TRT|T1|Trt one|H1
-! VET|V1|Vet one|C1,C2
-  Gestão de Funcionários
-  1 - Visualizar todos os funcionários
-  2 - Registar funcionário
---- 17,51 ----
-  4 - Retirar responsabilidade
-  5 - Calcular satisfação de funcionário
-  0 - Sair
-! Escolha uma opção: Gestão de Funcionários
-  1 - Visualizar todos os funcionários
-  2 - Registar funcionário
-  3 - Atribuir responsabilidade
-  4 - Retirar responsabilidade
-  5 - Calcular satisfação de funcionário
-  0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Gestão de Funcionários
-  1 - Visualizar todos os funcionários
-  2 - Registar funcionário
-  3 - Atribuir responsabilidade
-  4 - Retirar responsabilidade
-  5 - Calcular satisfação de funcionário
-  0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Gestão de Funcionários
-  1 - Visualizar todos os funcionários
-  2 - Registar funcionário
-  3 - Atribuir responsabilidade
-  4 - Retirar responsabilidade
-  5 - Calcular satisfação de funcionário
-  0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
 ! Escolha uma opção: TRT|T1|Trt one
-! VET|V1|Vet one
+  VET|V1|Vet one|C1,C2
   Gestão de Funcionários
   1 - Visualizar todos os funcionários
-  2 - Registar funcionário
-***************
-*** 47,61 ****
-  4 - Retirar responsabilidade
-  5 - Calcular satisfação de funcionário
-  0 - Sair
-! Escolha uma opção: Identificador único do funcionário: Identificador único da responsabilidade: Gestão de Funcionários
-  1 - Visualizar todos os funcionários
-  2 - Registar funcionário
-  3 - Atribuir responsabilidade
-  4 - Retirar responsabilidade
-  5 - Calcular satisfação de funcionário
-  0 - Sair
-  Escolha uma opção: TRT|T1|Trt one
-! VET|V1|Vet one|C1,C2
-  Gestão de Funcionários
-  1 - Visualizar todos os funcionários
-  2 - Registar funcionário
---- 53,69 ----
+--- 47,62 ----
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
@@ -95,13 +27,12 @@
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
-+ Escolha uma opção: Número inválido!
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: TRT|T1|Trt one
-! VET|V1|Vet one
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: TRT|T1|Trt one|H1
+  VET|V1|Vet one|C1,C2
   Gestão de Funcionários
   1 - Visualizar todos os funcionários
-  2 - Registar funcionário
 ***************
 *** 63,77 ****
   4 - Retirar responsabilidade
@@ -114,12 +45,12 @@
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
-  Escolha uma opção: TRT|T1|Trt one
+! Escolha uma opção: TRT|T1|Trt one
 ! VET|V1|Vet one|C2
   Gestão de Funcionários
   1 - Visualizar todos os funcionários
   2 - Registar funcionário
---- 71,87 ----
+--- 65,81 ----
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
@@ -130,10 +61,10 @@
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
-+ Escolha uma opção: Número inválido!
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: TRT|T1|Trt one
-! VET|V1|Vet one
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: TRT|T1|Trt one|H1
+! VET|V1|Vet one|C1,C2
   Gestão de Funcionários
   1 - Visualizar todos os funcionários
   2 - Registar funcionário

@@ -40,4 +40,8 @@ public abstract class Employee implements Serializable {
 public void addResponsibility(String responsibility) {
     _responsibility.add(responsibility);
 }
+public void removeResponsibility(String responsibility) {
+    _responsibility.remove(responsibility);
+}
+
 }
