@@ -48,19 +48,12 @@ public class Hotel implements Serializable {
 
     }
 
-    // FIXME define more methods
+    /* Animal related functions
+     *
+     * */
     public boolean hasAnimal(String animalId) {
         for (Animals animal : animalList) {
             if (animal.getAnimalId().equals(animalId)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public boolean hasEmployee(String employeeId) {
-        for (Employee emp : employeesList) {
-            if (emp.getEmployeeId().equals(employeeId)) {
                 return true;
             }
         }
@@ -91,33 +84,6 @@ public class Hotel implements Serializable {
         }
 
         return false;
-    }
-
-    public boolean responsibilityIsSpecies(String responsibility) {
-        for (Species species : speciesList) {
-            if (species.getSpeciesId().equals(responsibility)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public boolean responsibilityIsHabitat(String responsibility) {
-        for (Habitat habitat : habitatsList) {
-            if (habitat.getHabitatId().equals(responsibility)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public void verifyHabitat(String habitatId) throws InvalidArgException {
-        for (Habitat habitat : habitatsList) {
-            if (habitat.getHabitatId().equals(habitatId)) {
-                break;
-            }
-            throw new InvalidArgException(habitatId + "doesnt exist");
-        }
     }
 
     public Species getSpeciesById(String idSpecies, List<Species> allSpecies) {
@@ -187,6 +153,54 @@ public class Hotel implements Serializable {
 
     }
 
+    public String returnIdbyNameSpecies(String speciesName) throws SpeciesIdNonExistant {
+        for (Species specie : speciesList) {
+            if (specie.getSpeciesName().equals(speciesName)) {
+                return specie.getSpeciesId();
+            }
+        }
+        throw new SpeciesIdNonExistant("Species not found");
+    }
+    
+
+    public boolean hasEmployee(String employeeId) {
+        for (Employee emp : employeesList) {
+            if (emp.getEmployeeId().equals(employeeId)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    public boolean responsibilityIsSpecies(String responsibility) {
+        for (Species species : speciesList) {
+            if (species.getSpeciesId().equals(responsibility)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean responsibilityIsHabitat(String responsibility) {
+        for (Habitat habitat : habitatsList) {
+            if (habitat.getHabitatId().equals(responsibility)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void verifyHabitat(String habitatId) throws InvalidArgException {
+        for (Habitat habitat : habitatsList) {
+            if (habitat.getHabitatId().equals(habitatId)) {
+                break;
+            }
+            throw new InvalidArgException(habitatId + "doesnt exist");
+        }
+    }
+
+
     public List<Employee> getEmployees() {
         //if (empType.equals("VET")) {
         //    return veterinaryList;
@@ -253,7 +267,6 @@ public class Hotel implements Serializable {
         }
 
 
-
     }
 
     public void removeResponsibility(String employeeId, String responsibility) throws InvalidArgException, UnknownEmployeeKeyException, NoResponsibilityException {
@@ -281,8 +294,7 @@ public class Hotel implements Serializable {
         }
         if (hasresponsibility(employee, responsibility)) {
             employee.removeResponsibility(responsibility);
-        }
-        else {
+        } else {
             throw new NonExistantResponsibilityExceptiion("Responsibility doesn't exist");
         }
 
@@ -413,15 +425,6 @@ public class Hotel implements Serializable {
 
     public void addTreeToHabitat(Habitat hab, String treeKey) {
 
-    }
-
-    public String returnIdbyNameSpecies(String speciesName) throws SpeciesIdNonExistant {
-        for (Species specie : speciesList) {
-            if (specie.getSpeciesName().equals(speciesName)) {
-                return specie.getSpeciesId();
-            }
-        }
-        throw new SpeciesIdNonExistant("Species not found");
     }
 
 
