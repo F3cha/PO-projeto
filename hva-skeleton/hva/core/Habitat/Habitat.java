@@ -2,6 +2,7 @@ package hva.core.Habitat;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import hva.core.Tree.*;
 
@@ -11,6 +12,7 @@ public class Habitat implements Serializable {
     private String _habitatName;
     private int _area;
     private List<String> _listaArvoresHabitat;
+    private HashMap<String,String> _MapInfluenceSpecies;
 
 
     public Habitat(String habitatId, String habitatName, int area) {
@@ -18,6 +20,7 @@ public class Habitat implements Serializable {
         _habitatName = habitatName;
         _area = area;
         _listaArvoresHabitat = new ArrayList<>();
+        _MapInfluenceSpecies = new HashMap<>();
     }
 
     public String getHabitatId() {
@@ -47,6 +50,15 @@ public class Habitat implements Serializable {
     public void addTreeToHabitat(String treeId) {
         _listaArvoresHabitat.add(treeId);
     }
+
+    public void changeInfluenceSpecies(String speciesId, String influence) {
+        if (_MapInfluenceSpecies.containsKey(speciesId)) {
+            _MapInfluenceSpecies.replace(speciesId, influence);
+        }
+        else {
+        _MapInfluenceSpecies.put(speciesId, influence);
+    }}
+
 
     
 }
