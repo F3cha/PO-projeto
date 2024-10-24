@@ -1,5 +1,5 @@
 *** tests/A-05-01-M-ok.out	2024-10-23 19:58:54.284995613 +0100
---- tests/A-05-01-M-ok.outhyp	2024-10-24 17:56:05.277285219 +0100
+--- tests/A-05-01-M-ok.outhyp	2024-10-24 18:49:46.569561814 +0100
 ***************
 *** 18,25 ****
   5 - Plantar árvore
@@ -14,7 +14,7 @@
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Identificador único do habitat: Identificador único da espécieInfluência (positiva, negativa, neutra: POS, NEG, NEU): Gestão de Habitats
+! Escolha uma opção: Identificador único do habitat: Identificador único da espécie: Influência (positiva, negativa, neutra: POS, NEG, NEU): Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
@@ -32,7 +32,7 @@
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Identificador único do habitat: Identificador único da espécieInfluência (positiva, negativa, neutra: POS, NEG, NEU): Gestão de Habitats
+! Escolha uma opção: Identificador único do habitat: Identificador único da espécie: Influência (positiva, negativa, neutra: POS, NEG, NEU): Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
