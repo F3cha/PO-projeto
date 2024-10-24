@@ -18,7 +18,7 @@ class DoVaccinateAnimal extends Command<Hotel> {
     super(Label.VACCINATE_ANIMAL, receiver);
     addStringField("vaccineId", Prompt.vaccineKey());
     addStringField("vetId", Prompt.veterinarianKey());
-    addStringField("animalId", Prompt.animalId());
+    addStringField("animalId", hva.app.animal.Prompt.animalKey());
   }
 
   @Override

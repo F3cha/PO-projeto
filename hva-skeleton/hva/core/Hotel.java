@@ -1,5 +1,6 @@
 package hva.core;
 
+import hva.app.exception.CoreUnknownSpeciesIdException;
 import hva.core.Animals.*;
 import hva.core.Employee.*;
 import hva.core.Habitat.*;
@@ -522,6 +523,15 @@ public class Hotel implements Serializable {
             }
         }
         throw new UnknownKeyException("Species not found");
+    }
+
+    public void changeInfluenceSpecies(String habitatId, String speciesId, String influence) throws CoreUnknownSpeciesIdException, CoreUnknownHabitatKey {
+        Habitat habitat = getHabitatById(habitatId);
+        if (habitat == null) { throw new CoreUnknownHabitatKey("Habitat not found");
+        }
+        if (!hasSpecies(speciesId)) {
+            throw new CoreUnknownSpeciesIdException("Species not found");}
+        habitat.changeInfluenceSpecies(speciesId, influence);
     }
 
 

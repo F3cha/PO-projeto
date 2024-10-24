@@ -16,8 +16,4 @@ public interface Prompt {
   static String listOfSpeciesKeys() {
     return "Identificadores das espécies que podem receber a vacina: ";
   }
-
-  static String animalId() {
-    return "Identificador do animal: ";
-  }
 }
