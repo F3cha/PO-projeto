@@ -1,5 +1,5 @@
-*** tests/A-09-02-M-ok.out	2024-10-23 19:58:54.286995589 +0100
---- tests/A-09-02-M-ok.outhyp	2024-10-24 18:49:48.526544857 +0100
+*** tests/A-09-02-M-ok.out	2024-10-18 19:27:35.000000000 +0100
+--- tests/A-09-02-M-ok.outhyp	2024-10-24 20:00:54.819468938 +0100
 ***************
 *** 16,23 ****
   3 - Transferir para habitat
@@ -24,7 +24,7 @@
   10 - Consultas
   0 - Sair
 ! Escolha uma opção: 
-\ Sem newline no fim do ficheiro
+\ No newline at end of file
 --- 34,37 ----
   9 - Gestão de vacinas
   10 - Consultas

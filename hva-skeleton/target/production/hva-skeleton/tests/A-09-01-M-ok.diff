@@ -1,7 +1,7 @@
 *** tests/A-09-01-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-09-01-M-ok.outhyp	2024-10-24 02:23:29.030182699 +0100
+--- tests/A-09-01-M-ok.outhyp	2024-10-24 19:53:56.077457474 +0100
 ***************
-*** 16,28 ****
+*** 16,29 ****
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
@@ -12,14 +12,15 @@
 ! 4 - Calcular satisfação de animal
 ! 0 - Sair
 ! Escolha uma opção: ANIMAL|a1|animal1|C10|VOID|h1
-  Gestão de Animais
+! Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
+  3 - Transferir para habitat
 --- 16,22 ----
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
-! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único da espécie: Identificador único do habitat: Nome da espécie: Registar animal: Operação inválida: Species ID does not exist.
-  Gestão de Animais
+! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único da espécie: Identificador único do habitat: Nome da espécie: Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
+  3 - Transferir para habitat

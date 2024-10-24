@@ -1,5 +1,5 @@
 *** tests/A-05-01-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-05-01-M-ok.outhyp	2024-10-24 02:23:27.687234631 +0100
+--- tests/A-05-01-M-ok.outhyp	2024-10-24 19:53:53.978556310 +0100
 ***************
 *** 18,25 ****
   5 - Plantar árvore
@@ -14,7 +14,7 @@
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Gestão de Habitats
+! Escolha uma opção: Identificador único do habitat: Identificador único da espécie: Influência (positiva, negativa, neutra: POS, NEG, NEU): Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
@@ -28,26 +28,11 @@
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
---- 26,35 ----
+--- 26,32 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Gestão de Habitats
+! Escolha uma opção: Identificador único do habitat: Identificador único da espécie: Influência (positiva, negativa, neutra: POS, NEG, NEU): Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
-***************
-*** 36,41 ****
---- 37,45 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-+ Escolha uma opção: Número inválido!
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro

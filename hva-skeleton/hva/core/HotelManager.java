@@ -2,6 +2,7 @@ package hva.core;
 
 import java.io.*;
 
+import hva.core.Tree.Season;
 import hva.core.exception.MissingFileAssociationException;
 import hva.core.exception.UnavailableFileException;
 import hva.core.exception.ImportFileException;
@@ -90,5 +91,18 @@ public class HotelManager implements Serializable {
      *
      * @return the current zoo hotel
      **/
-
+public Season advanceHotelSeason() {
+        return _hotel.advanceSeason();
+    }
+    public int seasonToNumber(Season season) {
+        if (season == Season.Winter) {
+            return 3;
+        } else if (season == Season.Spring) {
+            return 0;
+        } else if (season == Season.Summer) {
+            return 1;
+        } else {
+            return 2;
+        }
+    }
 }

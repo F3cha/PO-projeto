@@ -33,23 +33,25 @@ public class Hotel implements Serializable {
     private List<Habitat> habitatsList;
     private List<Tree> treeList;
     private List<Vaccine> vaccinesList;
+
     private Season _currentSeason;
 
     // FIXME define contructor(s)
 
     public Hotel() {
-        this.speciesList = new ArrayList<>();
-        this.animalList = new ArrayList<>();
-        this.employeesList = new ArrayList<>();
-        this.veterinaryList = new ArrayList<>();
-        this.zookeeperList = new ArrayList<>();
-        this.habitatsList = new ArrayList<>();
-        this.treeList = new ArrayList<>();
-        this.vaccinesList = new ArrayList<>();
+        speciesList = new ArrayList<>();
+        animalList = new ArrayList<>();
+        employeesList = new ArrayList<>();
+        veterinaryList = new ArrayList<>();
+        zookeeperList = new ArrayList<>();
+        habitatsList = new ArrayList<>();
+        treeList = new ArrayList<>();
+        vaccinesList = new ArrayList<>();
+        _currentSeason = Season.Spring;
 
     }
 
-    // FIXME define more methods
+    /* Methods Related to Animals*/
     public boolean hasAnimal(String animalId) {
         for (Animals animal : animalList) {
             if (animal.getAnimalId().equals(animalId)) {
@@ -120,9 +122,10 @@ public class Hotel implements Serializable {
                 break;
             }
         }
-        if (!found) { 
+        if (!found) {
             throw new UnknownKeyException(habitatId + " doesn't exist");
-    }}
+        }
+    }
 
     public Species getSpeciesById(String idSpecies, List<Species> allSpecies) {
         for (Species species : allSpecies) {
@@ -266,7 +269,6 @@ public class Hotel implements Serializable {
         }
 
 
-
     }
 
     public void removeResponsibility(String employeeId, String responsibility) throws InvalidArgException, UnknownEmployeeKeyException, NoResponsibilityException {
@@ -294,8 +296,7 @@ public class Hotel implements Serializable {
         }
         if (hasresponsibility(employee, responsibility)) {
             employee.removeResponsibility(responsibility);
-        }
-        else {
+        } else {
             throw new NonExistantResponsibilityExceptiion("Responsibility doesn't exist");
         }
 
@@ -393,9 +394,9 @@ public class Hotel implements Serializable {
             EvergreenTree newTree = new EvergreenTree(_currentSeason, age, diff, TreeId, name);
             treeList.add(newTree);
         }
-        
+
     }
-    
+
     public Tree getTreeById(String treeId) {
         for (Tree tree : treeList) {
             if (tree.getId().equals(treeId)) {
@@ -410,7 +411,7 @@ public class Hotel implements Serializable {
         return tree.getCicle();
     }
 
-    public String verifyTree(String treeId) throws DuplicateKeyException{
+    public String verifyTree(String treeId) throws DuplicateKeyException {
         for (Tree tree : treeList) {
             if (tree.getId().equals(treeId)) {
                 throw new DuplicateKeyException(treeId);
@@ -457,10 +458,10 @@ public class Hotel implements Serializable {
         return newHabitat;
     }
 
-    public void addTreeToHabitat(String hab, String treeKey)  {
+    public void addTreeToHabitat(String hab, String treeKey) {
         Habitat habitat = getHabitatById(hab);
         habitat.addTreeToHabitat(treeKey);
-        
+
     }
 
     public String returnIdbyNameSpecies(String speciesName) throws SpeciesIdNonExistant {
@@ -483,6 +484,24 @@ public class Hotel implements Serializable {
     void importFile(String filename) throws UnrecognizedEntryException, IOException /* FIXME maybe other exceptions */ {
         Parser parser = new Parser(this);
         parser.parseFile(filename);
+    }
+
+    public Season advanceSeason() {
+        for (Tree tree : treeList) {
+            tree.treeAdvanceSeason();
+        }
+        if (_currentSeason == Season.Spring) {
+            _currentSeason = Season.Summer;
+        } else if (_currentSeason == Season.Summer) {
+            _currentSeason = Season.Autumn;
+        } else if (_currentSeason == Season.Autumn) {
+            _currentSeason = Season.Winter;
+        } else {
+            _currentSeason = Season.Spring;
+        }
+        return _currentSeason;
+
+
     }
 }
 

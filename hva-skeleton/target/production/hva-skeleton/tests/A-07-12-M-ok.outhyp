@@ -18,18 +18,7 @@ Escolha uma opção: Gestão de Habitats
 5 - Plantar árvore
 6 - Mostrar árvores de habitat
 0 - Sair
-Escolha uma opção: Gestão de Habitats
-1 - Visualizar todos os habitats
-2 - Registar habitat
-3 - Alterar área de habitat
-4 - Alterar influência de habitat sobre espécie
-5 - Plantar árvore
-6 - Mostrar árvores de habitat
-0 - Sair
-Escolha uma opção: Número inválido!
-Escolha uma opção: Número inválido!
-Escolha uma opção: Número inválido!
-Escolha uma opção: HABITAT|h1|nome2|12|0
+Escolha uma opção: Identificador único do habitat: Identificador único da árvore: Nome da árvore: Idade da árvore: Dificuldade de limpeza da árvore: Tipo de árvore: (CADUCA ou PERENE) ÁRVORE|t1|t1|1|1|CADUCA|GERARFOLHAS
 Gestão de Habitats
 1 - Visualizar todos os habitats
 2 - Registar habitat
@@ -38,7 +27,40 @@ Gestão de Habitats
 5 - Plantar árvore
 6 - Mostrar árvores de habitat
 0 - Sair
-Escolha uma opção: HABITAT|h1|nome2|12|0
+Escolha uma opção: Menu Principal
+1 - Criar ficheiro
+2 - Abrir ficheiro
+3 - Guardar ficheiro
+4 - Avançar estação do ano
+5 - Ver satisfação global
+6 - Gestão de animais
+7 - Gestão de funcionários
+8 - Gestão de habitats
+9 - Gestão de vacinas
+10 - Consultas
+0 - Sair
+Escolha uma opção: 1
+Menu Principal
+1 - Criar ficheiro
+2 - Abrir ficheiro
+3 - Guardar ficheiro
+4 - Avançar estação do ano
+5 - Ver satisfação global
+6 - Gestão de animais
+7 - Gestão de funcionários
+8 - Gestão de habitats
+9 - Gestão de vacinas
+10 - Consultas
+0 - Sair
+Escolha uma opção: Gestão de Habitats
+1 - Visualizar todos os habitats
+2 - Registar habitat
+3 - Alterar área de habitat
+4 - Alterar influência de habitat sobre espécie
+5 - Plantar árvore
+6 - Mostrar árvores de habitat
+0 - Sair
+Escolha uma opção: Identificador único do habitat: ÁRVORE|t1|t1|1|1|CADUCA|COMFOLHAS
 Gestão de Habitats
 1 - Visualizar todos os habitats
 2 - Registar habitat
@@ -47,7 +69,6 @@ Gestão de Habitats
 5 - Plantar árvore
 6 - Mostrar árvores de habitat
 0 - Sair
-Escolha uma opção: Número inválido!
 Escolha uma opção: Menu Principal
 1 - Criar ficheiro
 2 - Abrir ficheiro
@@ -60,47 +81,8 @@ Escolha uma opção: Menu Principal
 9 - Gestão de vacinas
 10 - Consultas
 0 - Sair
-Escolha uma opção: Menu Principal
-1 - Criar ficheiro
-2 - Abrir ficheiro
-3 - Guardar ficheiro
-4 - Avançar estação do ano
-5 - Ver satisfação global
-6 - Gestão de animais
-7 - Gestão de funcionários
-8 - Gestão de habitats
-9 - Gestão de vacinas
-10 - Consultas
-0 - Sair
-Escolha uma opção: Gestão de Habitats
-1 - Visualizar todos os habitats
-2 - Registar habitat
-3 - Alterar área de habitat
-4 - Alterar influência de habitat sobre espécie
-5 - Plantar árvore
-6 - Mostrar árvores de habitat
-0 - Sair
-Escolha uma opção: Identificador único do habitat: Gestão de Habitats
-1 - Visualizar todos os habitats
-2 - Registar habitat
-3 - Alterar área de habitat
-4 - Alterar influência de habitat sobre espécie
-5 - Plantar árvore
-6 - Mostrar árvores de habitat
-0 - Sair
-Escolha uma opção: Menu Principal
-1 - Criar ficheiro
-2 - Abrir ficheiro
-3 - Guardar ficheiro
-4 - Avançar estação do ano
-5 - Ver satisfação global
-6 - Gestão de animais
-7 - Gestão de funcionários
-8 - Gestão de habitats
-9 - Gestão de vacinas
-10 - Consultas
-0 - Sair
-Escolha uma opção: Menu Principal
+Escolha uma opção: 2
+Menu Principal
 1 - Criar ficheiro
 2 - Abrir ficheiro
 3 - Guardar ficheiro
@@ -120,7 +102,8 @@ Escolha uma opção: Gestão de Habitats
 5 - Plantar árvore
 6 - Mostrar árvores de habitat
 0 - Sair
-Escolha uma opção: Identificador único do habitat: Gestão de Habitats
+Escolha uma opção: Identificador único do habitat: ÁRVORE|t1|t1|1|1|CADUCA|LARGAFOLHAS
+Gestão de Habitats
 1 - Visualizar todos os habitats
 2 - Registar habitat
 3 - Alterar área de habitat
@@ -140,7 +123,8 @@ Escolha uma opção: Menu Principal
 9 - Gestão de vacinas
 10 - Consultas
 0 - Sair
-Escolha uma opção: Menu Principal
+Escolha uma opção: 3
+Menu Principal
 1 - Criar ficheiro
 2 - Abrir ficheiro
 3 - Guardar ficheiro
@@ -160,7 +144,8 @@ Escolha uma opção: Gestão de Habitats
 5 - Plantar árvore
 6 - Mostrar árvores de habitat
 0 - Sair
-Escolha uma opção: Identificador único do habitat: Gestão de Habitats
+Escolha uma opção: Identificador único do habitat: ÁRVORE|t1|t1|1|1|CADUCA|SEMFOLHAS
+Gestão de Habitats
 1 - Visualizar todos os habitats
 2 - Registar habitat
 3 - Alterar área de habitat

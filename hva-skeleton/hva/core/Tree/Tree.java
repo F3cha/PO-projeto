@@ -1,59 +1,93 @@
 package hva.core.Tree;
+
 import java.io.Serializable;
 
 public abstract class Tree implements Serializable {
     private static final long serialVersionUID = 1L;
-    private Season _seasonCriada;
+    private Season _seasonAtual;
+    private Season _seasonBorn;
     private int _age;
     private int _difficulty;
     private String _idTree;
     private String _nameTree;
-    private String Type;
+    private String Type; // CADUCA OU PERENE, feita para as classes filhas
 
-    public Tree (Season season, int age, int difficulty,String idTree, String nameTree){
-        _seasonCriada = season;
+    public Tree(Season season, int age, int difficulty, String idTree, String nameTree) {
+        _seasonAtual = season;
+        _seasonBorn = season;
         _age = age;
         _difficulty = difficulty;
         _idTree = idTree;
         _nameTree = nameTree;
 
     }
+
     abstract public void cleaningEffort();
 
-    public Season getSeason(){
-        return _seasonCriada;
+    public Season getSeason() {
+        return _seasonAtual;
     }
-    public int getAge(){
+
+    public int getAge() {
         return _age;
     }
-    public int getDifficulty(){
+
+    public int getDifficulty() {
         return _difficulty;
     }
-    public String getId (){
+
+    public String getId() {
         return _idTree;
 
     }
 
-    public String getName(){
+    public String getName() {
         return _nameTree;
     }
 
-    public String getCicle(){
-        if(_seasonCriada == Season.Summer) {
+    public String getCicle() {
+        if (_seasonAtual == Season.Summer) {
             return "COMFOLHAS";
-        } else if (_seasonCriada == Season.Autumn ) {
+        } else if (_seasonAtual == Season.Autumn) {
             if (this instanceof DecidiousTree) {
-                return "LARGAFOLHAS";
-            } return "COMFOLHAS";
-        } else if (_seasonCriada == Season.Winter){
+                return "LARGARFOLHAS";
+            }
+            return "COMFOLHAS";
+        } else if (_seasonAtual == Season.Winter) {
             if (this instanceof DecidiousTree) {
                 return "SEMFOLHAS";
-            } return "LARGAFOLHA";
-        } else 
+            }
+            return "LARGARFOLHA";
+        } else
             return "GERARFOLHAS";
     }
-public String getType(){
-    return Type;
-}
+
+    public String getType() {
+        return Type;
+    }
+
+
+
+
+
+    public Season getSeasonBorn() {
+        return _seasonBorn;
+    }
+
+    public void treeAdvanceSeason() {
+        if (_seasonAtual == Season.Winter) {
+            _seasonAtual = Season.Spring;
+        } else if (_seasonAtual == Season.Spring) {
+            _seasonAtual = Season.Summer;
+        } else if (_seasonAtual == Season.Summer) {
+            _seasonAtual = Season.Autumn;
+        } else {
+            _seasonAtual = Season.Winter;
+        } if (_seasonAtual == _seasonBorn) {
+            _age++;
+        }
+
+
+    }
 
 }
