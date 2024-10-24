@@ -1,9 +1,5 @@
 package hva.core;
 
-import hva.app.exception.NoResponsibilityException;
-import hva.app.exception.NonExistantResponsibilityExceptiion;
-import hva.app.exception.UnknownEmployeeKeyException;
-
 import hva.core.Animals.*;
 import hva.core.Employee.*;
 import hva.core.Habitat.*;
@@ -11,10 +7,8 @@ import hva.core.Species.*;
 import hva.core.Tree.*;
 import hva.core.Vaccine.*;
 import hva.core.exception.*;
-
 import java.io.*;
 import java.util.*;
-import java.util.ArrayList;
 
 // FIXME import classes
 
@@ -280,7 +274,7 @@ public class Hotel implements Serializable {
     }
 
 
-    public void addResponsibility(String employeeId, String responsibility) throws InvalidArgException, UnknownEmployeeKeyException, NonExistantResponsibilityExceptiion {
+    public void addResponsibility(String employeeId, String responsibility) throws InvalidArgException, UnknownKeyException {
         // checks if the arguments are correct.
         if (employeeId == null || employeeId.isEmpty()) {
             throw new InvalidArgException("The employee iD is not valid");
@@ -293,10 +287,10 @@ public class Hotel implements Serializable {
         Employee employee = getEmployeeById(employeeId);
 
         if (employee == null) {
-            throw new UnknownEmployeeKeyException(employeeId);
+            throw new UnknownKeyException(employeeId);
         }
         if (!responsibilityIsHabitat(responsibility) && !responsibilityIsSpecies(responsibility)) {
-            throw new NonExistantResponsibilityExceptiion("Responsibility doesn't exist");
+            throw new UnknownKeyException("Responsibility doesn't exist");
         }
         if (employee instanceof Veterinary && responsibilityIsHabitat(responsibility)) {
             throw new InvalidArgException("Veterinary can't have habitat as responsibility");
@@ -311,7 +305,7 @@ public class Hotel implements Serializable {
 
     }
 
-    public void removeResponsibility(String employeeId, String responsibility) throws InvalidArgException, UnknownEmployeeKeyException, NoResponsibilityException {
+    public void removeResponsibility(String employeeId, String responsibility) throws InvalidArgException, UnknownKeyException  {
         // checks if the arguments are correct.
 
         if (employeeId == null || employeeId.isEmpty()) {
@@ -323,10 +317,10 @@ public class Hotel implements Serializable {
         }
         Employee employee = getEmployeeById(employeeId);
         if (employee == null) {
-            throw new UnknownEmployeeKeyException(employeeId);
+            throw new UnknownKeyException(employeeId);
         }
         if (!responsibilityIsHabitat(responsibility) && !responsibilityIsSpecies(responsibility)) {
-            throw new NoResponsibilityException(employeeId, responsibility);
+            throw new UnknownKeyException(responsibility);
         }
         if (employee instanceof Veterinary && responsibilityIsHabitat(responsibility)) {
             throw new InvalidArgException("Veterinary can't have habitat as responsibility");
@@ -337,7 +331,7 @@ public class Hotel implements Serializable {
         if (hasresponsibility(employee, responsibility)) {
             employee.removeResponsibility(responsibility);
         } else {
-            throw new NonExistantResponsibilityExceptiion("Responsibility doesn't exist");
+            throw new UnknownKeyException("Responsibility doesn't exist");
         }
 
     }
@@ -521,13 +515,13 @@ public class Hotel implements Serializable {
 
     }
 
-    public String returnIdbyNameSpecies(String speciesName) throws SpeciesIdNonExistant {
+    public String returnIdbyNameSpecies(String speciesName) throws UnknownKeyException {
         for (Species specie : speciesList) {
             if (specie.getSpeciesName().equals(speciesName)) {
                 return specie.getSpeciesId();
             }
         }
-        throw new SpeciesIdNonExistant("Species not found");
+        throw new UnknownKeyException("Species not found");
     }
 
 

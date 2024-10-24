@@ -3,7 +3,7 @@ package hva.app.employee;
 import hva.app.exception.NonExistantResponsibilityExceptiion;
 import hva.core.Hotel;
 import hva.app.exception.NoResponsibilityException;
-import hva.app.exception.UnknownEmployeeKeyException;
+import hva.core.exception.UnknownKeyException;
 import hva.core.exception.InvalidArgException;
 import pt.tecnico.uilib.menus.Command;
 import pt.tecnico.uilib.menus.CommandException;
@@ -27,7 +27,7 @@ class DoRemoveResponsibility extends Command<Hotel> {
         String responsibility = stringField("responsability");
         try {
             _receiver.removeResponsibility(employeeId, responsibility);
-        } catch (UnknownEmployeeKeyException e) {
+        } catch (UnknownKeyException e) {
             throw new CommandException("Employee ID does not exist.") {
             };
         } catch (InvalidArgException e) {

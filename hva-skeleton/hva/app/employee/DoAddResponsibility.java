@@ -2,7 +2,7 @@ package hva.app.employee;
 
 import hva.app.exception.NonExistantResponsibilityExceptiion;
 import hva.core.Hotel;
-import hva.app.exception.UnknownEmployeeKeyException;
+import hva.core.exception.UnknownKeyException;
 import hva.app.exception.NoResponsibilityException;
 import hva.core.exception.InvalidArgException;
 import pt.tecnico.uilib.menus.Command;
@@ -27,7 +27,7 @@ class DoAddResponsibility extends Command<Hotel> {
     String responsability = stringField("responsability");
     try {
       _receiver.addResponsibility(employeeId, responsability);
-    } catch (UnknownEmployeeKeyException e) {
+    } catch (UnknownKeyException e) {
       throw new CommandException("Employee ID does not exist.") {
       };
     } catch (InvalidArgException e) {
