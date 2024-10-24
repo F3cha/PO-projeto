@@ -2,6 +2,7 @@ package hva.app.habitat;
 
 import hva.core.Hotel;
 import hva.app.exception.UnknownHabitatKeyException;
+import hva.core.exception.UnknownKeyException;
 import hva.core.Habitat.Habitat;
 import hva.core.Tree.Tree;
 import java.text.Normalizer;
@@ -22,17 +23,16 @@ class DoShowAllTreesInHabitat extends Command<Hotel> {
 
   DoShowAllTreesInHabitat(Hotel receiver) {
     super(Label.SHOW_TREES_IN_HABITAT, receiver);
-    //FIXME add command fields
+    addStringField("habitatId", Prompt.habitatKey());
   }
 
   @Override
   protected void execute() throws CommandException {
-    _habitatId = Form.requestString(Prompt.habitatKey());
-
+    String _habitatId = stringField("habitatId");
 
     try {
       _receiver.verifyHabitat(_habitatId);
-    } catch (InvalidArgException e) {
+    } catch (UnknownKeyException e) {
       throw new UnknownHabitatKeyException(_habitatId);
     }
 

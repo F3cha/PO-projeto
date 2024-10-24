@@ -3,6 +3,8 @@ package hva.app.habitat;
 import hva.core.Hotel;
 import hva.app.exception.UnknownHabitatKeyException;
 import hva.app.exception.DuplicateTreeKeyException;
+import hva.core.exception.DuplicateKeyException;
+import hva.core.exception.UnknownKeyException;
 import hva.core.exception.InvalidArgException;
 import hva.app.exception.AppInvalidArgException;
 import pt.tecnico.uilib.menus.Command;
@@ -20,9 +22,9 @@ class DoAddTreeToHabitat extends Command<Hotel> {
       addStringField("habitatId", Prompt.habitatKey());
       addStringField("treeId", Prompt.treeKey());
       addStringField("treeName", Prompt.treeName());
-      addStringField("treeType", Prompt.treeType());
       addStringField("treeAge", Prompt.treeAge());
       addStringField("treeDfficulty", Prompt.treeDifficulty());
+      addStringField("treeType", Prompt.treeType());
   }
   
   @Override
@@ -43,22 +45,42 @@ class DoAddTreeToHabitat extends Command<Hotel> {
       String _habitatId = stringField("habitatId");
       String _treeId = stringField("treeId");
       String _treeName = stringField("treeName");
-      String _treeType = stringField("treeType");
       int _treeAge = Integer.parseInt(stringField("treeAge"));
       int _treeDifficulty = Integer.parseInt(stringField("treeDfficulty"));
+      String _treeType = stringField("treeType");
 
-      if(_receiver.getHabitatById(_habitatId) != null && _receiver.getTreeById(_treeId) == null) {
-
-        try {
-            _receiver.createTree(_treeId, _treeName, _treeType, _treeAge, _treeDifficulty);
-        } catch (InvalidArgException e) {
-          throw new AppInvalidArgException("Argumento Inválido.");
+      while(true) {
+        _treeType = stringField("treeType");
+        if (_treeType.equals("CADUCA") || _treeType.equals("PERENE")) {
+          break;
         }
       }
 
+
+      try {
+          _receiver.verifyHabitat(_habitatId);
+          _receiver.verifyTree(_treeId);
+          _receiver.createTree(_treeId, _treeName, _treeType, _treeAge, _treeDifficulty);
+          _receiver.addTreeToHabitat(_habitatId, _treeId);
+          String _treeCicle =_receiver.getTreeCicle(_treeId);
+
+          String treeString = String.format("ÁRVORE|%s|%s|%d|%d|%s|%s",
+                _treeId,
+                _treeName,
+                _treeAge,
+                _treeDifficulty,
+                _treeType,
+                _treeCicle);
+        _display.addLine(treeString);
+
+      } catch (UnknownKeyException e) {
+        throw new UnknownHabitatKeyException(_habitatId);
+      } catch (DuplicateKeyException e) {
+        throw new DuplicateTreeKeyException(_treeId);
+      } catch (InvalidArgException e) {
+          throw new AppInvalidArgException("Argumentos Inválidos.");
+      }
+
+
   }
-
-
-
 }
-

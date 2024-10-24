@@ -3,7 +3,7 @@ package hva.app.habitat;
 import hva.core.Hotel;
 import hva.core.Habitat.Habitat;
 import hva.core.exception.InvalidArgException;
-
+import hva.core.exception.UnknownKeyException;
 import hva.app.exception.UnknownHabitatKeyException;
 import java.text.Normalizer;
 import pt.tecnico.uilib.forms.Form;
@@ -30,7 +30,7 @@ class DoChangeHabitatArea extends Command<Hotel> {
 
     try {
         _receiver.verifyHabitat(_habitatId);
-    } catch (InvalidArgException e) {
+    } catch (UnknownKeyException e) {
       throw new UnknownHabitatKeyException(_habitatId);
     }
 

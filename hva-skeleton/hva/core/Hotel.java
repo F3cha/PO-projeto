@@ -3,6 +3,7 @@ package hva.core;
 import hva.app.exception.NoResponsibilityException;
 import hva.app.exception.NonExistantResponsibilityExceptiion;
 import hva.app.exception.UnknownEmployeeKeyException;
+
 import hva.core.Animals.*;
 import hva.core.Employee.*;
 import hva.core.Habitat.*;
@@ -111,14 +112,17 @@ public class Hotel implements Serializable {
         return false;
     }
 
-    public void verifyHabitat(String habitatId) throws InvalidArgException {
+    public void verifyHabitat(String habitatId) throws UnknownKeyException {
+        boolean found = false;
         for (Habitat habitat : habitatsList) {
             if (habitat.getHabitatId().equals(habitatId)) {
+                found = true;
                 break;
             }
-            throw new InvalidArgException(habitatId + "doesnt exist");
         }
-    }
+        if (!found) { 
+            throw new UnknownKeyException(habitatId + " doesn't exist");
+    }}
 
     public Species getSpeciesById(String idSpecies, List<Species> allSpecies) {
         for (Species species : allSpecies) {
@@ -400,6 +404,21 @@ public class Hotel implements Serializable {
         }
         return null;
     }
+
+    public String getTreeCicle(String treeId) {
+        Tree tree = getTreeById(treeId);
+        return tree.getCicle();
+    }
+
+    public String verifyTree(String treeId) throws DuplicateKeyException{
+        for (Tree tree : treeList) {
+            if (tree.getId().equals(treeId)) {
+                throw new DuplicateKeyException(treeId);
+            }
+        }
+        return null;
+    }
+
     public List<Tree> getTrees() {
         return treeList;
     }
@@ -438,8 +457,10 @@ public class Hotel implements Serializable {
         return newHabitat;
     }
 
-    public void addTreeToHabitat(Habitat hab, String treeKey) {
-
+    public void addTreeToHabitat(String hab, String treeKey)  {
+        Habitat habitat = getHabitatById(hab);
+        habitat.addTreeToHabitat(treeKey);
+        
     }
 
     public String returnIdbyNameSpecies(String speciesName) throws SpeciesIdNonExistant {
