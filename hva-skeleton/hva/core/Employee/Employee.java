@@ -1,8 +1,8 @@
 package hva.core.Employee;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 public abstract class Employee implements Serializable {
     private static final long serialVersionUID = 1L;
     private String _idEmployee;
@@ -18,9 +18,7 @@ public abstract class Employee implements Serializable {
     public String getEmployeeId() {
         return _idEmployee;
     }
-    public List<String> getResponsability() {
-        return _responsibility;
-    }
+    
 
     public List<String> getResponsibility() {
         return _responsibility;

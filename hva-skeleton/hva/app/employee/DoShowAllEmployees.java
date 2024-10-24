@@ -30,7 +30,7 @@ class DoShowAllEmployees extends Command<Hotel> {
         Collections.sort(sortedEmployees, Comparator.comparing(Employee::getEmployeeId));
         for (Employee emp : sortedEmployees) {
 
-            String speciesString = String.join(",",emp.getResponsability());
+            String speciesString = String.join(",",emp.getResponsibility());
 
             if (emp instanceof Veterinary) {
                 if (!speciesString.isEmpty()) {

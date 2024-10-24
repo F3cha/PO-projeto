@@ -52,6 +52,15 @@ public class Hotel implements Serializable {
     }
 
     /* Methods Related to Animals*/
+    public String getSpeciesUsingAnimalId(String animalid) {
+        for (Animals animal: animalList) {
+            if (animal.getAnimalId().equals(animalid)) {
+                return animal.getAnimalSpecie();
+            }
+        }
+        return null;
+    }
+
     public boolean hasAnimal(String animalId) {
         for (Animals animal : animalList) {
             if (animal.getAnimalId().equals(animalId)) {
@@ -238,6 +247,10 @@ public class Hotel implements Serializable {
         }
     }
 
+    public void isAuthorizedForVaccine(String vetId, String vacId) {
+
+    }
+
     public void registerEmployee(String employeeId, String name, String empType) throws InvalidArgException, DuplicateKeyException {
         if (employeeId == null || employeeId.isEmpty()) {
             throw new InvalidArgException("Employee's iD can't be null");
@@ -269,7 +282,6 @@ public class Hotel implements Serializable {
 
     public void addResponsibility(String employeeId, String responsibility) throws InvalidArgException, UnknownEmployeeKeyException, NonExistantResponsibilityExceptiion {
         // checks if the arguments are correct.
-
         if (employeeId == null || employeeId.isEmpty()) {
             throw new InvalidArgException("The employee iD is not valid");
         }
@@ -277,7 +289,9 @@ public class Hotel implements Serializable {
         if (responsibility == null || responsibility.isEmpty()) {
             throw new InvalidArgException("Employee without any responsibility to add");
         }
+
         Employee employee = getEmployeeById(employeeId);
+
         if (employee == null) {
             throw new UnknownEmployeeKeyException(employeeId);
         }
@@ -345,6 +359,11 @@ public class Hotel implements Serializable {
             }
         }
         return false;
+    }
+
+    public List<String> getResponsibilityEmp(String employeeId) {
+        Employee employee = getEmployeeById(employeeId);
+        return employee.getResponsibility();
     }
 
     //Functions related to Vaccines

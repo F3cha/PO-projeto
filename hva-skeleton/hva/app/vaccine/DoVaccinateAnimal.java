@@ -27,10 +27,15 @@ class DoVaccinateAnimal extends Command<Hotel> {
     String _vetId = stringField("vetId");
     String _animalId = stringField("animalId");
 
+
     try {
         _receiver.verifyVet(_vetId);
         _receiver.verifyVaccine(_vaccineId);
         _receiver.verifyAnimal(_animalId);
+
+        _receiver.getSpeciesUsingAnimalId(_animalId);
+        _receiver.getResponsibilityEmp(_vetId);
+
     } catch (UnknownKeyException e) {
       throw new UnknownVeterinarianKeyException(_vetId);
     }
