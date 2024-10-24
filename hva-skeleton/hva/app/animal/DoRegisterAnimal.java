@@ -37,12 +37,15 @@ class DoRegisterAnimal extends Command<Hotel> {
 
             try {
                 _receiver.tryRegisterAnimal(_animalId, _animalName, _habitatId, _specieId);
+                _receiver.verifyHabitat(_habitatId);
                 _receiver.registerAnimal(_animalId, _animalName, _habitatId, _specieId);
 
             } catch (InvalidArgException e) {
                 throw new AppInvalidArgException("Argumento Inválido.");
             } catch (DuplicateKeyException e) {
                 throw new DuplicateAnimalKeyException(_animalId);
+            } catch (UnknownKeyException e) {
+                throw new UnknownHabitatKeyException(_habitatId);
             }
         }
 
@@ -64,10 +67,13 @@ class DoRegisterAnimal extends Command<Hotel> {
             String _speciesName = Form.requestString(Prompt.speciesName());
             try {
                 _receiver.registerSpecies(_specieId, _speciesName);
+                _receiver.verifyHabitat(_habitatId);
                 _receiver.registerAnimal(_animalId, _animalName, _habitatId, _specieId);
             } catch (InvalidArgException e) {
                 throw new AppInvalidArgException("Argumento Inválido.");
-            } 
+            } catch (UnknownKeyException e) {
+                throw new UnknownHabitatKeyException(_habitatId);
+            }
        }
     }
 }
