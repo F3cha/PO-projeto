@@ -24,7 +24,6 @@ class DoAddTreeToHabitat extends Command<Hotel> {
       addStringField("treeName", Prompt.treeName());
       addStringField("treeAge", Prompt.treeAge());
       addStringField("treeDfficulty", Prompt.treeDifficulty());
-      addStringField("treeType", Prompt.treeType());
   }
   
   @Override
@@ -47,13 +46,14 @@ class DoAddTreeToHabitat extends Command<Hotel> {
       String _treeName = stringField("treeName");
       int _treeAge = Integer.parseInt(stringField("treeAge"));
       int _treeDifficulty = Integer.parseInt(stringField("treeDfficulty"));
-      String _treeType = stringField("treeType");
+      String _treeType;
 
       while(true) {
-        _treeType = stringField("treeType");
+        _treeType = Form.requestString(Prompt.treeType());
         if (_treeType.equals("CADUCA") || _treeType.equals("PERENE")) {
           break;
         }
+        
       }
 
 

@@ -1,5 +1,5 @@
 *** tests/A-11-11-M-ok.out	2024-10-23 19:58:54.288995566 +0100
---- tests/A-11-11-M-ok.outhyp	2024-10-24 17:07:44.030493404 +0100
+--- tests/A-11-11-M-ok.outhyp	2024-10-24 17:56:07.980257264 +0100
 ***************
 *** 18,24 ****
   5 - Plantar árvore
@@ -13,22 +13,10 @@
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Gestão de Habitats
+! Escolha uma opção: Identificador único do habitat: Identificador único da espécieInfluência (positiva, negativa, neutra: POS, NEG, NEU): Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
-***************
-*** 26,31 ****
---- 26,34 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-+ Escolha uma opção: Número inválido!
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro
 ***************
 *** 44,56 ****
   3 - Transferir para habitat
@@ -44,7 +32,7 @@
   Escolha uma opção: Menu Principal
   1 - Criar ficheiro
   2 - Abrir ficheiro
---- 47,59 ----
+--- 44,56 ----
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
