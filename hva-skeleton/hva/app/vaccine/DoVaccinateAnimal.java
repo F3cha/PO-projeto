@@ -1,6 +1,7 @@
 package hva.app.vaccine;
 
 import hva.core.Hotel;
+import hva.core.exception.UnknownKeyException;
 import hva.app.exception.UnknownAnimalKeyException;
 import hva.app.exception.UnknownVaccineKeyException;
 import hva.app.exception.UnknownVeterinarianKeyException;
@@ -15,11 +16,23 @@ import pt.tecnico.uilib.menus.CommandException;
 class DoVaccinateAnimal extends Command<Hotel> {
   DoVaccinateAnimal(Hotel receiver) {
     super(Label.VACCINATE_ANIMAL, receiver);
-    //FIXME add command fields
+    addStringField("vaccineId", Prompt.vaccineKey());
+    addStringField("vetId", Prompt.veterinarianKey());
+    addStringField("animalId", Prompt.animalId());
   }
 
   @Override
   protected final void execute() throws CommandException {
-    //FIXME implement command
+    String _vaccineId = stringField("vaccineId");
+    String _vetId = stringField("vetId");
+    String _animalId = stringField("animalId");
+
+    try {
+        _receiver.verifyVet(_vetId);
+        _receiver.verifyVaccine(_vaccineId);
+        _receiver.verifyAnimal(_animalId);
+    } catch (UnknownKeyException e) {
+      throw new UnknownVeterinarianKeyException(_vetId);
+    }
   }
 }

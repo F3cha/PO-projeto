@@ -25,21 +25,23 @@ class DoRegisterVaccine extends Command<Hotel> {
 
   DoRegisterVaccine(Hotel receiver) {
     super(Label.REGISTER_VACCINE, receiver);
-    //FIXME add command fields
+    addStringField("vaccineId", Prompt.vaccineKey());
+    addStringField("vaccineName", Prompt.vaccineName());
+    addStringField("species", Prompt.listOfSpeciesKeys());
   }
 
   @Override
   protected final void execute() throws CommandException {
-    _vaccineId = Form.requestString("Vacina id: ");
-    _vaccineName = Form.requestString("Nome da vacina: ");
-    String speciesInput = Form.requestString("Identificadores das espécies (separados por vírgula): ");
+    String _vaccineId = stringField("vaccineId");
+    String _vaccineName = stringField("vaccineName");
+    String _speciesInput = stringField("species");
 
-    String[] idsArray = speciesInput.split(",");
+    String[] idsArray = _speciesInput.split(",");
 
-    //remover espaços em branco
-    for (int i = 0; i < idsArray.length; i++) {
-      idsArray[i] = idsArray[i].trim(); // Remove espaços em branco
-    }
+     for (int i = 0; i < idsArray.length; i++) {
+            idsArray[i] = idsArray[i].trim();
+        }
+
 
     try {
         _receiver.registerVaccine(_vaccineId, _vaccineName, idsArray);

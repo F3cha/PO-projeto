@@ -1,5 +1,5 @@
 *** tests/A-21-07-M-ok.out	2024-10-23 19:58:54.293995507 +0100
---- tests/A-21-07-M-ok.outhyp	2024-10-24 18:49:52.715508561 +0100
+--- tests/A-21-07-M-ok.outhyp	2024-10-24 21:45:51.525685221 +0100
 ***************
 *** 16,36 ****
   3 - Vacinar animal
@@ -23,28 +23,24 @@
   1 - Visualizar todas as vacinas
   2 - Registar vacina
   3 - Vacinar animal
---- 16,40 ----
+--- 16,36 ----
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
-! Escolha uma opção: Gestão de Vacinas
+! Escolha uma opção: Identificador da vacina: Identficador do veterinário a ministrar a vacina: Identificador do animal: Vacinar animal: Operação inválida: O veterinário 'Vet1' não existe.
+! Gestão de Vacinas
   1 - Visualizar todas as vacinas
   2 - Registar vacina
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Gestão de Vacinas
+! Escolha uma opção: Identificador da vacina: Identficador do veterinário a ministrar a vacina: Identificador do animal: Vacinar animal: Operação inválida: O veterinário 'Vet2' não existe.
+! Gestão de Vacinas
   1 - Visualizar todas as vacinas
   2 - Registar vacina
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
 ! Escolha uma opção: Gestão de Vacinas
   1 - Visualizar todas as vacinas
   2 - Registar vacina

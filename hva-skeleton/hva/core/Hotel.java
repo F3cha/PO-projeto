@@ -61,6 +61,19 @@ public class Hotel implements Serializable {
         return false;
     }
 
+    public void verifyAnimal(String animalId) throws UnknownKeyException {
+        boolean found = false;
+        for (Animals animal : animalList) {
+            if (animal.getAnimalId().equals(animal)) {
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            throw new UnknownKeyException(animalId);
+        }
+    }
+
     public boolean hasEmployee(String employeeId) {
         for (Employee emp : employeesList) {
             if (emp.getEmployeeId().equals(employeeId)) {
@@ -212,6 +225,19 @@ public class Hotel implements Serializable {
         return employeesList;
     }
 
+    public void verifyVet(String vetId) throws UnknownKeyException{
+        boolean found = false;
+        for (Veterinary aux: veterinaryList) {
+            if(aux.getEmployeeId().equals(vetId)) {
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            throw new UnknownKeyException(vetId);
+        }
+    }
+
     public void registerEmployee(String employeeId, String name, String empType) throws InvalidArgException, DuplicateKeyException {
         if (employeeId == null || employeeId.isEmpty()) {
             throw new InvalidArgException("Employee's iD can't be null");
@@ -326,6 +352,18 @@ public class Hotel implements Serializable {
         return vaccinesList;
     }
 
+    public void verifyVaccine(String vaccineId) throws UnknownKeyException{
+        boolean found = false;
+        for (Vaccine aux: vaccinesList) {
+            if(aux.getVaccineId().equals(vaccineId)) {
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            throw new UnknownKeyException(vaccineId);
+        }
+    }
 
     public void registerVaccine(String vaccineId, String name, String[] speciesIds) throws InvalidArgException, DuplicateKeyException, UnknownKeyException {
         // checks if the arguments are correct.
