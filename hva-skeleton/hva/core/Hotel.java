@@ -391,6 +391,7 @@ public class Hotel implements Serializable {
         }
         
     }
+    
     public Tree getTreeById(String treeId) {
         for (Tree tree : treeList) {
             if (tree.getId().equals(treeId)) {

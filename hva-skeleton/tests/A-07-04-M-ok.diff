@@ -1,5 +1,5 @@
 *** tests/A-07-04-M-ok.out	2024-10-23 19:58:54.285995601 +0100
---- tests/A-07-04-M-ok.outhyp	2024-10-24 11:11:17.156524662 +0100
+--- tests/A-07-04-M-ok.outhyp	2024-10-24 11:54:20.860540791 +0100
 ***************
 *** 26,32 ****
   5 - Plantar árvore
@@ -9,51 +9,29 @@
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
---- 26,43 ----
+--- 26,32 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Gestão de Habitats
-! 1 - Visualizar todos os habitats
-! 2 - Registar habitat
-! 3 - Alterar área de habitat
-! 4 - Alterar influência de habitat sobre espécie
-! 5 - Plantar árvore
-! 6 - Mostrar árvores de habitat
-! 0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: HABITAT|h1|nome2|3|0
+! Escolha uma opção: Identificador único do habitat: Identificador único da árvore: Nome da árvore: Tipo de árvore: (CADUCA ou PERENE) Idade da árvore: Dificuldade de limpeza da árvore: Número inválido!
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
 ***************
-*** 35,41 ****
+*** 35,42 ****
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
 ! Escolha uma opção: Identificador único do habitat: ÁRVORE|a1|nome34|1|2|CADUCA|GERARFOLHAS
-  Gestão de Habitats
+! Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
---- 46,52 ----
+  3 - Alterar área de habitat
+--- 35,41 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Identificador único do habitat: Nome do habitat: Área do habitat: Área do habitat: Registar habitat: Operação inválida: Employee's type is not valid
-  Gestão de Habitats
+! Escolha uma opção: Identificador único do habitat: Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
-***************
-*** 56,59 ****
-  9 - Gestão de vacinas
-  10 - Consultas
-  0 - Sair
-! Escolha uma opção: 
-\ Sem newline no fim do ficheiro
---- 67,70 ----
-  9 - Gestão de vacinas
-  10 - Consultas
-  0 - Sair
-! Escolha uma opção: Fim de entrada de dados (R-EOF): pt.tecnico.uilib.text.RuntimeEOFException: Fim do fluxo de dados de entrada
+  3 - Alterar área de habitat

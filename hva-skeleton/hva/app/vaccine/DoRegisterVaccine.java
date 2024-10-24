@@ -41,10 +41,6 @@ class DoRegisterVaccine extends Command<Hotel> {
       idsArray[i] = idsArray[i].trim(); // Remove espaços em branco
     }
 
-
-    
-    
-
     try {
         _receiver.registerVaccine(_vaccineId, _vaccineName, idsArray);
     } catch (InvalidArgException e) {

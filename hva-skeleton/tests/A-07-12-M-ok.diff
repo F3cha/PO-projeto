@@ -1,5 +1,5 @@
 *** tests/A-07-12-M-ok.out	2024-10-23 19:58:54.286995589 +0100
---- tests/A-07-12-M-ok.outhyp	2024-10-24 11:11:17.765518190 +0100
+--- tests/A-07-12-M-ok.outhyp	2024-10-24 11:54:21.455532783 +0100
 ***************
 *** 18,24 ****
   5 - Plantar árvore
@@ -9,44 +9,14 @@
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
---- 18,44 ----
+--- 18,24 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Gestão de Habitats
-! 1 - Visualizar todos os habitats
-! 2 - Registar habitat
-! 3 - Alterar área de habitat
-! 4 - Alterar influência de habitat sobre espécie
-! 5 - Plantar árvore
-! 6 - Mostrar árvores de habitat
-! 0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: HABITAT|h1|nome2|12|0
-! Gestão de Habitats
-! 1 - Visualizar todos os habitats
-! 2 - Registar habitat
-! 3 - Alterar área de habitat
-! 4 - Alterar influência de habitat sobre espécie
-! 5 - Plantar árvore
-! 6 - Mostrar árvores de habitat
-! 0 - Sair
-! Escolha uma opção: HABITAT|h1|nome2|12|0
+! Escolha uma opção: Identificador único do habitat: Identificador único da árvore: Nome da árvore: Tipo de árvore: (CADUCA ou PERENE) Idade da árvore: Dificuldade de limpeza da árvore: Número inválido!
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
-***************
-*** 27,32 ****
---- 47,53 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro
 ***************
 *** 39,46 ****
   9 - Gestão de vacinas
@@ -57,7 +27,7 @@
   1 - Criar ficheiro
   2 - Abrir ficheiro
   3 - Guardar ficheiro
---- 60,66 ----
+--- 39,45 ----
   9 - Gestão de vacinas
   10 - Consultas
   0 - Sair
@@ -75,7 +45,7 @@
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
---- 80,86 ----
+--- 59,65 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
@@ -93,7 +63,7 @@
   1 - Criar ficheiro
   2 - Abrir ficheiro
   3 - Guardar ficheiro
---- 100,106 ----
+--- 79,85 ----
   9 - Gestão de vacinas
   10 - Consultas
   0 - Sair
@@ -111,7 +81,7 @@
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
---- 120,126 ----
+--- 99,105 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
@@ -129,7 +99,7 @@
   1 - Criar ficheiro
   2 - Abrir ficheiro
   3 - Guardar ficheiro
---- 140,146 ----
+--- 119,125 ----
   9 - Gestão de vacinas
   10 - Consultas
   0 - Sair
@@ -147,7 +117,7 @@
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
---- 160,166 ----
+--- 139,145 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair

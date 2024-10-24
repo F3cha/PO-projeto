@@ -38,7 +38,7 @@ class DoRegisterAnimal extends Command<Hotel> {
             try {
                 _receiver.tryRegisterAnimal(_animalId, _animalName, _habitatId, _specieId);
             } catch (InvalidArgException e) {
-                throw new AppInvalidArgException("Invalid argument.");
+                throw new AppInvalidArgException("Argumento Inválido.");
             } catch (DuplicateKeyException e) {
                 throw new DuplicateAnimalKeyException(_animalId);
             }
