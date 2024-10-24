@@ -1,5 +1,5 @@
-*** tests/A-07-04-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-07-04-M-ok.outhyp	2024-10-24 02:23:28.354208839 +0100
+*** tests/A-07-04-M-ok.out	2024-10-23 19:58:54.285995601 +0100
+--- tests/A-07-04-M-ok.outhyp	2024-10-24 11:11:17.156524662 +0100
 ***************
 *** 26,32 ****
   5 - Plantar árvore
@@ -51,7 +51,7 @@
   10 - Consultas
   0 - Sair
 ! Escolha uma opção: 
-\ No newline at end of file
+\ Sem newline no fim do ficheiro
 --- 67,70 ----
   9 - Gestão de vacinas
   10 - Consultas

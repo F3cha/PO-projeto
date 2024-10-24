@@ -38,24 +38,34 @@ class DoRegisterAnimal extends Command<Hotel> {
             try {
                 _receiver.tryRegisterAnimal(_animalId, _animalName, _habitatId, _specieId);
             } catch (InvalidArgException e) {
-                throw new DuplicateAnimalKeyException("Invalid argument.");
+                throw new AppInvalidArgException("Invalid argument.");
             } catch (DuplicateKeyException e) {
                 throw new DuplicateAnimalKeyException(_animalId);
             }
         }
 
         String _speciesName = Form.requestString(Prompt.speciesName());
+        /*
         try {
             _specieId = _receiver.returnIdbyNameSpecies(_speciesName);
             _receiver.tryRegisterAnimal(_animalId, _animalName, _habitatId, _specieId);
         } catch (InvalidArgException e) {
-            //FIXME: handle exception
+            throw new AppInvalidArgException("Invalid argument.");
         } catch (DuplicateKeyException e) {
             throw new DuplicateAnimalKeyException(_animalId);
         } catch (SpeciesIdNonExistant e) {
             throw new CommandException("Species ID does not exist.") {
             };
         }
+        */
+       if(_receiver.hasSpecies(_specieId) == false) {
+            try {
+                _receiver.registerSpecies(_specieId, _speciesName);
+                _receiver.registerAnimal(_animalId, _animalName, _habitatId, _specieId);
+            } catch (InvalidArgException e) {
+                throw new AppInvalidArgException("Argumento Inválido.");
+            } 
+       }
     }
 }
 

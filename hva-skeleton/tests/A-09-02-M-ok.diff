@@ -1,30 +1,31 @@
-*** tests/A-09-02-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-09-02-M-ok.outhyp	2024-10-24 02:23:29.118179296 +0100
+*** tests/A-09-02-M-ok.out	2024-10-23 19:58:54.286995589 +0100
+--- tests/A-09-02-M-ok.outhyp	2024-10-24 11:11:18.268512835 +0100
 ***************
-*** 16,22 ****
+*** 16,23 ****
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
 ! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único da espécie: Identificador único do habitat: Registar animal: Operação inválida: O habitat 'hh1' não existe.
-  Gestão de Animais
+! Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
+  3 - Transferir para habitat
 --- 16,22 ----
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
-! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único da espécie: Identificador único do habitat: Nome da espécie: Registar animal: Operação inválida: Species ID does not exist.
-  Gestão de Animais
+! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único da espécie: Identificador único do habitat: Nome da espécie: Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
+  3 - Transferir para habitat
 ***************
 *** 35,38 ****
   9 - Gestão de vacinas
   10 - Consultas
   0 - Sair
 ! Escolha uma opção: 
-\ No newline at end of file
---- 35,38 ----
+\ Sem newline no fim do ficheiro
+--- 34,37 ----
   9 - Gestão de vacinas
   10 - Consultas
   0 - Sair
