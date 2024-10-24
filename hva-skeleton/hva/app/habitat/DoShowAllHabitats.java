@@ -2,6 +2,7 @@ package hva.app.habitat;
 
 import hva.core.Habitat.Habitat;
 import hva.core.Hotel;
+import hva.core.Tree.Tree;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,6 +37,19 @@ class DoShowAllHabitats extends Command<Hotel> {
                     habitat.getArea(), habitat.getNumberOfTrees())
             ;
             _display.addLine(habitatString);
+            for (String treeId : habitat.getHabitatTreeList()) {
+                Tree treeAtual = _receiver.getTreeById(treeId);
+                String treeString = String.format("ÁRVORE|%s|%s|%d|%d|%s|%s",
+                        treeAtual.getId(),
+                        treeAtual.getName(),
+                        treeAtual.getAge(),
+                        treeAtual.getDifficulty(),
+                        treeAtual.getType(),
+                        treeAtual.getCicle());
+                _display.addLine(treeString);
+
+
+            }
         }
         _display.display();
     }

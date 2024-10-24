@@ -8,6 +8,7 @@ public abstract class Tree implements Serializable {
     private int _difficulty;
     private String _idTree;
     private String _nameTree;
+    private String Type;
 
     public Tree (Season season, int age, int difficulty,String idTree, String nameTree){
         _seasonCriada = season;
@@ -49,8 +50,10 @@ public abstract class Tree implements Serializable {
                 return "SEMFOLHAS";
             } return "LARGAFOLHA";
         } else 
-            return "GERAFOLHAS";
+            return "GERARFOLHAS";
     }
-
+public String getType(){
+    return Type;
+}
 
 }

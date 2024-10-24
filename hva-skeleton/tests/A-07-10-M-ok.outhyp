@@ -93,7 +93,8 @@ Gestão de Habitats
 0 - Sair
 Escolha uma opção: Número inválido!
 Escolha uma opção: HABITAT|3|CADUCA|5|0
-HABITAT|h1|nome2|12|0
+HABITAT|h1|nome2|12|1
+ÁRVORE|A1|Pinheiro 1|5|20|PERENE|GERARFOLHAS
 Gestão de Habitats
 1 - Visualizar todos os habitats
 2 - Registar habitat

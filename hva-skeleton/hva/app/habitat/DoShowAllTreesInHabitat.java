@@ -50,7 +50,7 @@ class DoShowAllTreesInHabitat extends Command<Hotel> {
                 tree.getName(),
                 tree.getAge(),
                 tree.getDifficulty(),
-                tree.getClass(),
+                tree.getType(),
                 tree.getCicle());
         _display.addLine(treeString);
       }

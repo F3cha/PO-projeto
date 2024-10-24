@@ -1,5 +1,5 @@
 *** tests/A-07-10-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-07-10-M-ok.outhyp	2024-10-24 00:34:46.396483764 +0100
+--- tests/A-07-10-M-ok.outhyp	2024-10-24 02:14:23.694276594 +0100
 ***************
 *** 18,24 ****
   5 - Plantar árvore
@@ -111,21 +111,22 @@
   6 - Mostrar árvores de habitat
   0 - Sair
 ! Escolha uma opção: HABITAT|h1|nome2|12|5
-! ÁRVORE|A1|Pinheiro 1|5|20|PERENE|GERARFOLHAS
-! ÁRVORE|B1|b1|2|3|CADUCA|GERARFOLHAS
-! ÁRVORE|P1|p1|3|4|PERENE|GERARFOLHAS
-! ÁRVORE|R1|r1|6|7|PERENE|GERARFOLHAS
-! ÁRVORE|X1|x1|10|12|CADUCA|GERARFOLHAS
+  ÁRVORE|A1|Pinheiro 1|5|20|PERENE|GERARFOLHAS
+- ÁRVORE|B1|b1|2|3|CADUCA|GERARFOLHAS
+- ÁRVORE|P1|p1|3|4|PERENE|GERARFOLHAS
+- ÁRVORE|R1|r1|6|7|PERENE|GERARFOLHAS
+- ÁRVORE|X1|x1|10|12|CADUCA|GERARFOLHAS
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
---- 91,99 ----
+--- 91,100 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: HABITAT|3|CADUCA|5|0
-! HABITAT|h1|nome2|12|0
+! HABITAT|h1|nome2|12|1
+  ÁRVORE|A1|Pinheiro 1|5|20|PERENE|GERARFOLHAS
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat

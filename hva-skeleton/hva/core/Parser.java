@@ -146,8 +146,7 @@ public class Parser {
             if (components.length == 5) {
                 String[] listOfTree = components[4].split(",");
                 for (String treeKey : listOfTree)
-                    // adicionar a árvore com id treeKey ao habitat referenciado por hab
-                    continue;
+                    _hotel.getHabitatById(id).addTreeToHabitat(treeKey);
             }
         } catch (InvalidArgException | DuplicateKeyException e) {
             throw new UnrecognizedEntryException("Invalid entry: " + e.getMessage());

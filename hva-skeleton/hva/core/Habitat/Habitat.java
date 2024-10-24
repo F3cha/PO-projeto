@@ -44,5 +44,9 @@ public class Habitat implements Serializable {
         return _listaArvoresHabitat.size();
     }
 
+    public void addTreeToHabitat(String treeId) {
+        _listaArvoresHabitat.add(treeId);
+    }
+
     
 }
