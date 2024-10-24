@@ -20,7 +20,7 @@ class DoAddTreeToHabitat extends Command<Hotel> {
   
   @Override
   protected void execute() throws CommandException {
-  /*  //FIXME implement command
+  /*  //FIXME implement command ps so falta fazer o builder da arvore e adicionar
     String _idHabitat = Form.requestString(Prompt.habitatKey());
     String _idTree = Form.requestString(Prompt.treeKey());
     String _nameTree = Form.requestString(Prompt.treeName());
