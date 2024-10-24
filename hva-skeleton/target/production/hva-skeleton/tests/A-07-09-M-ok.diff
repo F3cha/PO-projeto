@@ -1,5 +1,5 @@
 *** tests/A-07-09-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-07-09-M-ok.outhyp	2024-10-24 00:02:01.348978860 +0100
+--- tests/A-07-09-M-ok.outhyp	2024-10-24 02:23:28.556201028 +0100
 ***************
 *** 18,24 ****
   5 - Plantar árvore
@@ -24,7 +24,7 @@
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: Número inválido!
 ! Escolha uma opção: Número inválido!
-! Escolha uma opção: Insira o id do habitat: Insira o nome do habitat: Insira a área do habitat: Gestão de Habitats
+! Escolha uma opção: Identificador único do habitat: Nome do habitat: Área do habitat: Gestão de Habitats
 ! 1 - Visualizar todos os habitats
 ! 2 - Registar habitat
 ! 3 - Alterar área de habitat
@@ -110,11 +110,11 @@
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Identificador único do habitat: ÁRVORE|A1|Pinheiro 1|5|20|PERENE|GERARFOLHAS
-! ÁRVORE|B1|b1|2|3|CADUCA|GERARFOLHAS
-! ÁRVORE|P1|p1|3|4|PERENE|GERARFOLHAS
-! ÁRVORE|R1|r1|6|7|PERENE|GERARFOLHAS
-! ÁRVORE|X1|x1|10|12|CADUCA|GERARFOLHAS
+  Escolha uma opção: Identificador único do habitat: ÁRVORE|A1|Pinheiro 1|5|20|PERENE|GERARFOLHAS
+- ÁRVORE|B1|b1|2|3|CADUCA|GERARFOLHAS
+- ÁRVORE|P1|p1|3|4|PERENE|GERARFOLHAS
+- ÁRVORE|R1|r1|6|7|PERENE|GERARFOLHAS
+- ÁRVORE|X1|x1|10|12|CADUCA|GERARFOLHAS
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
@@ -122,8 +122,8 @@
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Identificador único do habitat: Mostrar árvores de habitat: Operação inválida: O habitat 'h1' não existe.
++ Escolha uma opção: Número inválido!
+  Escolha uma opção: Identificador único do habitat: ÁRVORE|A1|Pinheiro 1|5|20|PERENE|GERARFOLHAS
   Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat

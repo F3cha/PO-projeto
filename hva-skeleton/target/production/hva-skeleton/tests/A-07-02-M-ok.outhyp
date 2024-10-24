@@ -29,7 +29,7 @@ Escolha uma opção: Gestão de Habitats
 Escolha uma opção: Número inválido!
 Escolha uma opção: Número inválido!
 Escolha uma opção: Número inválido!
-Escolha uma opção: Insira o id do habitat: Insira o nome do habitat: Insira a área do habitat: Registar habitat: Operação inválida: O funcionário 'erro' já existe.
+Escolha uma opção: Identificador único do habitat: Nome do habitat: Área do habitat: Registar habitat: Operação inválida: Employee's type is not valid
 Gestão de Habitats
 1 - Visualizar todos os habitats
 2 - Registar habitat

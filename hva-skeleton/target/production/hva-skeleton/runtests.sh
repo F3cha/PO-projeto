@@ -28,6 +28,7 @@ let res=100*$correct/$total
 echo ""
 echo "Total Tests = " $total
 echo "Passed = " $res"%"
+echo "Correct tests = $correct"
 printf "$failures"
 echo "Done."
 

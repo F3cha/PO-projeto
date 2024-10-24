@@ -5,6 +5,7 @@ import hva.app.exception.UnknownHabitatKeyException;
 import hva.app.exception.DuplicateTreeKeyException;
 import pt.tecnico.uilib.menus.Command;
 import pt.tecnico.uilib.menus.CommandException;
+import pt.tecnico.uilib.forms.Form;
 //FIXME add more imports if needed
 
 /**
@@ -19,6 +20,22 @@ class DoAddTreeToHabitat extends Command<Hotel> {
   
   @Override
   protected void execute() throws CommandException {
-    //FIXME implement command
+  /*  //FIXME implement command
+    String _idHabitat = Form.requestString(Prompt.habitatKey());
+    String _idTree = Form.requestString(Prompt.treeKey());
+    String _nameTree = Form.requestString(Prompt.treeName());
+    int _age = Form.requestInteger(Prompt.treeAge());
+    int _difficulty = Form.requestInteger(Prompt.treeDifficulty());
+    while(true){
+    String _type = Form.requestString(Prompt.treeType());
+    if(_type.equals("CAD") || _type.equals("PER")){
+      break;
+    }
+    }*/
+
   }
+
+
+
 }
+

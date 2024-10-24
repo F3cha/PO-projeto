@@ -1,22 +1,5 @@
 *** tests/A-07-03-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-07-03-M-ok.outhyp	2024-10-24 00:02:00.982992683 +0100
-***************
-*** 18,24 ****
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-! Escolha uma opção: Identificador único do habitat: Nome do habitat: Área do habitat: Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
---- 18,24 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-! Escolha uma opção: Insira o id do habitat: Insira o nome do habitat: Insira a área do habitat: Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
+--- tests/A-07-03-M-ok.outhyp	2024-10-24 02:23:28.240213247 +0100
 ***************
 *** 26,32 ****
   5 - Plantar árvore
