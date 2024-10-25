@@ -1,24 +1,5 @@
 *** tests/A-21-10-M-ok.out	2024-10-23 19:58:54.294995495 +0100
---- tests/A-21-10-M-ok.outhyp	2024-10-25 18:23:14.530539288 +0100
-***************
-*** 56,63 ****
-  4 - Calcular satisfação de animal
-  0 - Sair
-  Escolha uma opção: ANIMAL|AA1|Patudo|E1|VOID|H1
-! ANIMAL|AA2|Patudo 2|E1|NORMAL|H1
-! ANIMAL|AA3|Malhado|E2|NORMAL|H1
-  Gestão de Animais
-  1 - Visualizar todos os animais
-  2 - Registar animal
---- 56,63 ----
-  4 - Calcular satisfação de animal
-  0 - Sair
-  Escolha uma opção: ANIMAL|AA1|Patudo|E1|VOID|H1
-! ANIMAL|AA2|Patudo 2|E1|VOID|H1
-! ANIMAL|AA3|Malhado|E2|VOID|H1
-  Gestão de Animais
-  1 - Visualizar todos os animais
-  2 - Registar animal
+--- tests/A-21-10-M-ok.outhyp	2024-10-25 18:31:05.956602546 +0100
 ***************
 *** 82,90 ****
   3 - Vacinar animal

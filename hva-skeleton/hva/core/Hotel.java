@@ -764,12 +764,12 @@ public class Hotel implements Serializable {
             for(String aux: vaccine.getSpecies()) {
                 count += countDifferentCharacters(animal.getAnimalSpecie(), aux);
             }
-
-            addHealthState(animalId, count, vaccine);
+            String aux = addHealthState(animalId, count, vaccine);
+            animal.setAnimalState(aux);
             throw new CoreVaccineNotForVetException("Veterinary not able to vaccinate");
         } else {
             vaccine.addDamageLog(animalId, "NORMAL");
-            
+            animal.setAnimalState("NORMAL");
         }
         _vaccinationRes.add(VaccineId);
         _vaccinationRes.add(VeterinaryId);
@@ -781,7 +781,7 @@ public class Hotel implements Serializable {
         return _vaccinationRes;
     }
 
-    public void addHealthState(String animalId, int num, Vaccine vaccine) {
+    public String addHealthState(String animalId, int num, Vaccine vaccine) {
             String damage = "";
             if (num == 0) {
                 damage = "CONFUSÃO";
@@ -791,6 +791,7 @@ public class Hotel implements Serializable {
                 damage = "ERRO";
             }
             vaccine.addDamageLog(animalId, damage);
+            return damage;
     }
 
     public static int countDifferentCharacters(String str1, String str2) {

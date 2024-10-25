@@ -8,12 +8,14 @@ public class Animals implements Serializable {
     private String _nameAnimal;
     private String _habitatAnimal;
     private String _specieAnimal;
+    private String _healthState;
 
     public Animals(String idAnimal, String nameAnimal, String habitatAnimal, String specieAnimal) {
         _idAnimal = idAnimal;
         _nameAnimal = nameAnimal;
         _habitatAnimal = habitatAnimal;
         _specieAnimal = specieAnimal;
+        _healthState = "VOID";
     }
 
     public String getAnimalId() {
@@ -34,6 +36,14 @@ public class Animals implements Serializable {
 
     public void setAnimalHabitat(String habitat) {
         _habitatAnimal = habitat;
+    }
+
+    public void setAnimalState(String state) {
+        _healthState = state;
+    }
+
+    public String getAnimalState() {
+        return _healthState;
     }
 
 

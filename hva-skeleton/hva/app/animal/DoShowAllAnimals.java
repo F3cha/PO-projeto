@@ -29,10 +29,11 @@ class DoShowAllAnimals extends Command<Hotel> {
         List<Animals> sortedAnimals = new ArrayList<>(animals);
         Collections.sort(sortedAnimals, Comparator.comparing(Animals::getAnimalId));
         for (Animals animal : sortedAnimals) {
-            animalString = String.format("ANIMAL|%s|%s|%s|VOID|%s",
+            animalString = String.format("ANIMAL|%s|%s|%s|%s|%s",
                     animal.getAnimalId(),
                     animal.getAnimalName(),
                     animal.getAnimalSpecie(),
+                    animal.getAnimalState(),
                     animal.getAnimalHabitat());
             _display.addLine(animalString);
         }
