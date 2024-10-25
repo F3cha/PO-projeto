@@ -1,6 +1,5 @@
 package hva.core.Employee;
 
-import hva.core.Species.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,10 +14,5 @@ public class Veterinary extends Employee {
     public int satisfaction() {
         return 1;
     }
-
-
-
-
-
 
 }

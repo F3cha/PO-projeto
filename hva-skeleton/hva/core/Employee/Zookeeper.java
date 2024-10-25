@@ -21,7 +21,4 @@ public class Zookeeper extends Employee {
     public int getNumberOfResponsibilities() {
         return _responsibility.size();
     }
-
-
-
 }

@@ -35,13 +35,6 @@ public class Vaccine implements Serializable {
         return _species;
     }
 
-    /*
-    public void addVaccineLog(String animalId, String date) {
-        _Vaccinelog.put(animalId, date);
-        _totalVaccines++;
-    }
-    */
-
     public void addVaccineAplication() {
         _totalVaccines++;
     }

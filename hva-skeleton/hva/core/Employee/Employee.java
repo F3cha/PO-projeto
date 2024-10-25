@@ -29,29 +29,29 @@ public abstract class Employee implements Serializable {
         _responsibility.addAll(responsibility);
     }
 
-    abstract int satisfaction();
-
     public String getEmployeeName() {
         return _nameEmployee;
     }
 
 
-public void addResponsibility(String responsibility) {
-    _responsibility.add(responsibility);
-}
-public void removeResponsibility(String responsibility) {
-    _responsibility.remove(responsibility);
-}
-
-public boolean hasResponsibility(String responsibility) {
-    if (_responsibility.contains(responsibility.toLowerCase())) {
-        return true;
+    public void addResponsibility(String responsibility) {
+        _responsibility.add(responsibility);
     }
-    else if (_responsibility.contains(responsibility.toUpperCase())) {
-        return true;
+    
+    public void removeResponsibility(String responsibility) {
+        _responsibility.remove(responsibility);
     }
-    else {
-        return false;
-    }}
 
-}
+    public boolean hasResponsibility(String responsibility) {
+        if (_responsibility.contains(responsibility.toLowerCase())) {
+            return true;
+        }
+        else if (_responsibility.contains(responsibility.toUpperCase())) {
+            return true;
+        }
+        else {
+            return false;
+        }
+        }
+
+    }
