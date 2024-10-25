@@ -69,11 +69,12 @@ public class Parser {
             String name = components[2];
             String habitatId = components[4];
             String speciesId = components[3];
-
+            _hotel.tryRegisterAnimal(id, name, habitatId, speciesId);
             _hotel.registerAnimal(id, name, habitatId, speciesId);
-        } catch (Exception e) {
+        } catch (InvalidArgException | DuplicateKeyException e) {
             throw new UnrecognizedEntryException("Invalid entry: " + e.getMessage());
         }
+
     }
 
     // Parse a line with format ESPÉCIE|id|nome
@@ -83,7 +84,7 @@ public class Parser {
             String name = components[2];
 
             _hotel.registerSpecies(id, name);
-        } catch (Exception e) {
+        } catch (InvalidArgException e) {
             throw new UnrecognizedEntryException("Invalid entry: " + e.getMessage());
         }
     }
@@ -101,7 +102,7 @@ public class Parser {
                 for (String responsibility : components[3].split(","))
                     _hotel.addResponsibility(components[1], responsibility);
             }
-        } catch (Exception e) {
+        } catch (InvalidArgException | UnknownKeyException |DuplicateKeyException e) {
             throw new UnrecognizedEntryException("Invalid entry: " + e.getMessage());
         }
     }
@@ -114,7 +115,7 @@ public class Parser {
             String[] speciesIds = components.length == 4 ? components[3].split(",") : new String[0];
 
             _hotel.registerVaccine(id, name, speciesIds);
-        } catch (Exception e) {
+        } catch (InvalidArgException | DuplicateKeyException| UnknownKeyException e) {
             throw new UnrecognizedEntryException("Invalid entry: " + e.getMessage());
         }
     }
