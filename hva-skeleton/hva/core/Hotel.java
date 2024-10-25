@@ -9,7 +9,6 @@ import hva.core.Species.*;
 import hva.core.Tree.*;
 import hva.core.Vaccine.*;
 import hva.core.exception.*;
-
 import java.io.*;
 import java.util.*;
 
@@ -56,6 +55,7 @@ public class Hotel implements Serializable {
      * @param animalid The ID of the animal.
      * @return The species ID of the animal if found, otherwise null.
      */
+
     public String getSpeciesUsingAnimalId(String animalid) {
         for (Animals animal : animalList) {
             if (animal.getAnimalId().equalsIgnoreCase(animalid)) {
@@ -87,6 +87,16 @@ public class Hotel implements Serializable {
         }
     }
 
+    /**
+     * Transfers an animal to a new habitat, updating its habitat ID.
+     * 
+     * @param animalid The ID of the animal.
+     * @param habitatId The ID of the habitat
+     * @throws CoreUnknownAnimalKeyException if the animal ID is not found in the system.
+     * @throws CoreUnknownHabitatKey if the habitat ID is not found in the system.
+     * 
+    */
+
     public void transferAnimal(String animalId, String habitatId) throws CoreUnknownAnimalKeyException, CoreUnknownHabitatKey {
         if (!verifyAnimalExistence(animalId)) {
             throw new CoreUnknownAnimalKeyException(animalId);
@@ -100,6 +110,13 @@ public class Hotel implements Serializable {
         habitat.addAnimalToHabitat(animal);
     }
 
+    /**
+     * Verify if an habitat exists.
+     * 
+     * @param habitatId The ID of the habitat.
+     * @return `true` if a habitat with the specified ID exists; `false` otherwise. 
+    */
+
     public boolean verifyHabitatExistence(String habitatId) {
         for (Habitat habitat : habitatsList) {
             if (habitat.getHabitatId().equalsIgnoreCase(habitatId)) {
@@ -108,6 +125,13 @@ public class Hotel implements Serializable {
         }
         return false;
     }
+
+    /**
+     * Retrieves an animal from the system by its ID.
+     * 
+     * @param animalId The ID of the animal.
+     * @return The `Animals` object with the specified ID if found; `null` otherwise. 
+    */
 
     public Animals getAnimalById(String animalId) {
         for (Animals animal : animalList) {
@@ -118,6 +142,13 @@ public class Hotel implements Serializable {
         return null;
     }
 
+    /**
+     * Verify if a specie exists.
+     * 
+     * @param speciesId The ID of the specie.
+     * @return `true` if a specie with the specified ID exists; `false` otherwise. 
+    */
+
     public boolean hasSpecies(String speciesId) {
         for (Species specie : speciesList) {
             if (specie.getSpeciesId().equalsIgnoreCase(speciesId)) {
@@ -127,6 +158,15 @@ public class Hotel implements Serializable {
         return false;
     }
 
+    /**
+     * Retrieves a species from the system by its ID.
+     * 
+     * @param animalId The ID of the animal.
+     * @param allSpecies A List of Species
+     * @return The "Species" object with the specified ID if found; `null` otherwise. 
+     * 
+    */
+
     public Species getSpeciesById(String idSpecies, List<Species> allSpecies) {
         for (Species species : allSpecies) {
             if (species.getSpeciesId().equalsIgnoreCase(idSpecies)) {
@@ -135,6 +175,15 @@ public class Hotel implements Serializable {
         }
         return null; // Retorna null se a espécie não for encontrada
     }
+
+    /**
+     * Retrieves a species from the system by its ID.
+     * 
+     * @param speciesName The name of the species.
+     * @return The ID of the species if found.
+     * @return 
+     * 
+    */
 
     public String returnIdbyNameSpecies(String speciesName) throws UnknownKeyException {
         for (Species specie : speciesList) {
