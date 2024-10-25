@@ -10,6 +10,7 @@ import pt.tecnico.uilib.menus.Command;
 import pt.tecnico.uilib.forms.Form;
 
 
+
 import pt.tecnico.uilib.menus.CommandException;
 //FIXME add more imports if needed
 
@@ -21,7 +22,7 @@ class DoChangeHabitatInfluence extends Command<Hotel> {
     DoChangeHabitatInfluence(Hotel receiver) {
         super(Label.CHANGE_HABITAT_INFLUENCE, receiver);
         addStringField("habitatId", Prompt.habitatKey());
-        addStringField("specieID", Prompt.specieId());
+        addStringField("specieID", hva.app.animal.Prompt.speciesKey());
 
     }
 

@@ -235,7 +235,7 @@ public class Hotel implements Serializable {
         } else{
             return getVeterinarySatisfaction(employeeId);
         }
-        
+
     }
 
     public int getVeterinarySatisfaction(String veterinaryId) {

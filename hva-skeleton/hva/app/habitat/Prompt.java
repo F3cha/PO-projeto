@@ -41,8 +41,4 @@ public interface Prompt {
   static String treeState() {
     return "A nova situação biológica passa a ser: ";
   }
-
-  static String specieId() {
-    return "Identificador único da espécie: ";
-  }
 }
