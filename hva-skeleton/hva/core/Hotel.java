@@ -753,6 +753,7 @@ public class Hotel implements Serializable {
         
         Vaccine vaccine = getVaccineById(VaccineId);
         Animals animal = getAnimalById(animalId);
+        String animalSpecie = animal.getAnimalSpecie();
         
         if (!existsVaccine(VaccineId)) {
             throw new InvalidArgException("Vaccine not found");
@@ -772,7 +773,7 @@ public class Hotel implements Serializable {
         }
         _vaccinationRes.add(VaccineId);
         _vaccinationRes.add(VeterinaryId);
-        _vaccinationRes.add(animalId);
+        _vaccinationRes.add(animalSpecie);
 
     }
 

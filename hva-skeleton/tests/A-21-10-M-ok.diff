@@ -1,24 +1,5 @@
 *** tests/A-21-10-M-ok.out	2024-10-23 19:58:54.294995495 +0100
---- tests/A-21-10-M-ok.outhyp	2024-10-25 18:17:21.180977526 +0100
-***************
-*** 29,36 ****
-  3 - Vacinar animal
-  4 - Mostrar vacinações
-  0 - Sair
-! Escolha uma opção: REGISTO-VACINA|Vac1|Vet3|E1
-! REGISTO-VACINA|Vac3|Vet3|E2
-  Gestão de Vacinas
-  1 - Visualizar todas as vacinas
-  2 - Registar vacina
---- 29,36 ----
-  3 - Vacinar animal
-  4 - Mostrar vacinações
-  0 - Sair
-! Escolha uma opção: REGISTO-VACINA|Vac1|Vet3|AA2
-! REGISTO-VACINA|Vac3|Vet3|AA3
-  Gestão de Vacinas
-  1 - Visualizar todas as vacinas
-  2 - Registar vacina
+--- tests/A-21-10-M-ok.outhyp	2024-10-25 18:23:14.530539288 +0100
 ***************
 *** 56,63 ****
   4 - Calcular satisfação de animal
