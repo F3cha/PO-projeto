@@ -1,6 +1,7 @@
 package hva.core;
 
 import hva.app.exception.CoreUnknownSpeciesIdException;
+import hva.app.exception.WrongEmployeeTypeException;
 import hva.core.Animals.*;
 import hva.core.Employee.*;
 import hva.core.Habitat.*;
@@ -212,18 +213,16 @@ public class Hotel implements Serializable {
                 ((float) habitat.getHabitatArea() / getTotalAnimalsInHabitat(habitatId)) + getInfluenceAnimalInHabiat(animalId, habitatId));
     }
 
-    public int getZookeeperSatisfaction(String zookeeperId)   {
+    public int getZookeeperSatisfaction(String zookeeperId) {
 
         Zookeeper zookeeper = (Zookeeper) getEmployeeById(zookeeperId);
         float totalSatisfaction = 0;
-        for (String habitatId: zookeeper.getResponsibility()){
-            totalSatisfaction += (workInHabitat(habitatId)/getWorkersInHabitat(habitatId));
+        for (String habitatId : zookeeper.getResponsibility()) {
+            totalSatisfaction += (workInHabitat(habitatId) / getWorkersInHabitat(habitatId));
         }
 
 
-
-
-        return Math.round(300 - totalSatisfaction );
+        return Math.round(300 - totalSatisfaction);
     }
 
     public int getSatisfactionOfEmployee(String employeeId) throws UnknownKeyException {
@@ -238,31 +237,30 @@ public class Hotel implements Serializable {
         }
     }
 
-    public int getWorkersInHabitat(String habitatId){
+    public int getWorkersInHabitat(String habitatId) {
         int totalworkers = 0;
-     for (Employee emp : employeesList){
-         if (emp instanceof Zookeeper){
-             if (hasresponsibility(emp, habitatId)){
+        for (Employee emp : employeesList) {
+            if (emp instanceof Zookeeper) {
+                if (hasresponsibility(emp, habitatId)) {
                     totalworkers++;
 
-             }
-         }
-     }
+                }
+            }
+        }
         return totalworkers;
     }
 
-    public int workInHabitat(String habitatID){
+    public int workInHabitat(String habitatID) {
         Habitat habitat = getHabitatById(habitatID);
         int area = habitat.getHabitatArea();
         int population = habitat.getListAnimalsInHabitat().size();
         int CleaningEffort = 0;
-        for (String treeID: habitat.getHabitatTreeList()){
+        for (String treeID : habitat.getHabitatTreeList()) {
             Tree tree = getTreeById(treeID);
             CleaningEffort += tree.getCleaningEffort();
-            }
-        return (area + population*3 + CleaningEffort);
+        }
+        return (area + population * 3 + CleaningEffort);
     }
-
 
 
     public int getTotalAnimalsInHabitat(String habitatId) {
@@ -365,9 +363,6 @@ public class Hotel implements Serializable {
         }
     }
 
-    public void isAuthorizedForVaccine(String vetId, String vacId) {
-
-    }
 
     public void registerEmployee(String employeeId, String name, String empType) throws InvalidArgException, DuplicateKeyException {
         if (employeeId == null || employeeId.isEmpty()) {
@@ -491,17 +486,13 @@ public class Hotel implements Serializable {
         return vaccinesList;
     }
 
-    public void verifyVaccine(String vaccineId) throws UnknownKeyException {
-        boolean found = false;
-        for (Vaccine aux : vaccinesList) {
-            if (aux.getVaccineId().equalsIgnoreCase(vaccineId)) {
-                found = true;
-                break;
+    public boolean verifyVaccine(String vaccineId) {
+        for (Vaccine tempvaccine : vaccinesList) {
+            if (tempvaccine.getVaccineId().equalsIgnoreCase(vaccineId)) {
+                return true;
             }
         }
-        if (!found) {
-            throw new UnknownKeyException(vaccineId);
-        }
+        return false;
     }
 
     public void registerVaccine(String vaccineId, String name, String[] speciesIds) throws InvalidArgException, DuplicateKeyException, UnknownKeyException {
@@ -525,7 +516,7 @@ public class Hotel implements Serializable {
         for (String speciesId : speciesIds) {
             Species species = getSpeciesById(speciesId, speciesList); // Assumindo que este método existe e retorna um objeto Species
             if (species == null) {
-                throw new UnknownKeyException("Specie Id doesn't exist: " + speciesId);
+                throw new UnknownKeyException(speciesId);
             }
             speciesIdList.add(species.getSpeciesId());
         }
@@ -641,6 +632,35 @@ public class Hotel implements Serializable {
 
     }
 
+    public void VaccinateAnimal(String animalId, String VeterinaryId, String VaccineId) throws InvalidArgException, WrongEmployeeTypeException {
+        Employee employee = getEmployeeById(VeterinaryId);
+        if (!(employee instanceof Veterinary)) {
+            throw new WrongEmployeeTypeException("Employee is not a Veterinary");
+        }
+        Vaccine vaccine = getVaccineById(VaccineId);
+        if (vaccine == null) {
+            throw new InvalidArgException("Vaccine not found");
+        }
+        Veterinary vet = (Veterinary) employee;
+        for (String speciesid: vet.getResponsibility()){
+            if (!vaccine.vaccineContainsSpecies(speciesid)){
+                throw new InvalidArgException("Invalid vaccine for Veterinary");
+            }
+        }
+
+
+
+        //FIXME do vaccine command
+    }
+
+    public Vaccine getVaccineById(String vaccineId) {
+        for (Vaccine vaccine : vaccinesList) {
+            if (vaccine.getVaccineId().equalsIgnoreCase(vaccineId)) {
+                return vaccine;
+            }
+        }
+        return null;
+    }
 
     public void changeInfluenceSpecies(String habitatId, String speciesId, String influence) throws CoreUnknownSpeciesIdException, CoreUnknownHabitatKey {
         Habitat habitat = getHabitatById(habitatId);

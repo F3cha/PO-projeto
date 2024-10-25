@@ -1,33 +1,19 @@
 *** tests/A-19-02-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-19-02-M-ok.outhyp	2024-10-25 02:08:52.369495624 +0100
+--- tests/A-19-02-M-ok.outhyp	2024-10-25 03:26:02.188802341 +0100
 ***************
-*** 17,30 ****
+*** 17,23 ****
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
 ! Escolha uma opção: Identificador único do funcionário: 20
-! Gestão de Funcionários
+  Gestão de Funcionários
   1 - Visualizar todos os funcionários
   2 - Registar funcionário
-  3 - Atribuir responsabilidade
+--- 17,23 ----
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
-  Escolha uma opção: TRT|T1|Rohit Figueiredo|H1
-  TRT|T2|Rohit Figueiredo 3|H1,H4
-  TRT|T3|Rohit Figueiredo 6|H2,H3,H4
---- 17,30 ----
-  4 - Retirar responsabilidade
-  5 - Calcular satisfação de funcionário
-  0 - Sair
-! Escolha uma opção: Gestão de Funcionários
+! Escolha uma opção: Identificador único do funcionário: 0
+  Gestão de Funcionários
   1 - Visualizar todos os funcionários
   2 - Registar funcionário
-  3 - Atribuir responsabilidade
-  4 - Retirar responsabilidade
-  5 - Calcular satisfação de funcionário
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: TRT|T1|Rohit Figueiredo|H1
-  TRT|T2|Rohit Figueiredo 3|H1,H4
-  TRT|T3|Rohit Figueiredo 6|H2,H3,H4

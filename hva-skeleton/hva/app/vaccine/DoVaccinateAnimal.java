@@ -1,11 +1,9 @@
 package hva.app.vaccine;
 
+import hva.app.exception.*;
 import hva.core.Hotel;
+import hva.core.exception.InvalidArgException;
 import hva.core.exception.UnknownKeyException;
-import hva.app.exception.UnknownAnimalKeyException;
-import hva.app.exception.UnknownVaccineKeyException;
-import hva.app.exception.UnknownVeterinarianKeyException;
-import hva.app.exception.VeterinarianNotAuthorizedException;
 import pt.tecnico.uilib.menus.Command;
 import pt.tecnico.uilib.menus.CommandException;
 //FIXME add more imports if needed
@@ -26,18 +24,16 @@ class DoVaccinateAnimal extends Command<Hotel> {
     String _vaccineId = stringField("vaccineId");
     String _vetId = stringField("vetId");
     String _animalId = stringField("animalId");
-
-
     try {
-        _receiver.verifyVet(_vetId);
-        _receiver.verifyVaccine(_vaccineId);
-        _receiver.verifyAnimal(_animalId);
-
-        _receiver.getSpeciesUsingAnimalId(_animalId);
-        _receiver.getResponsibilityEmp(_vetId);
-
-    } catch (UnknownKeyException e) {
+      _receiver.VaccinateAnimal(_animalId, _vetId, _vaccineId); //Se mexeres aqui e nao fizeres igual levas um carolo
+    } catch (InvalidArgException e) {
+      throw new VeterinarianNotAuthorizedException(_vetId, _animalId);
+    } catch (WrongEmployeeTypeException e) {
       throw new UnknownVeterinarianKeyException(_vetId);
     }
+
+
+
+
   }
 }

@@ -23,7 +23,7 @@ class DoShowSatisfactionOfEmployee extends Command<Hotel> {
     String employeeId = stringField("employeeId");
     try {
       int satisfaction = _receiver.getSatisfactionOfEmployee(employeeId);
-      _display.addLine("Employee " + employeeId + " has a satisfaction of " + satisfaction);
+      _display.addLine(satisfaction);
       _display.display();
     } catch (UnknownKeyException e) {
       throw new CommandException("Employee ID does not exist.") {

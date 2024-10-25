@@ -46,11 +46,12 @@ class DoRegisterVaccine extends Command<Hotel> {
     try {
         _receiver.registerVaccine(_vaccineId, _vaccineName, idsArray);
     } catch (InvalidArgException e) {
-      throw new DuplicateEmployeeKeyException("Invalid argument");
+        throw new CommandException("Invalid argument") {
+        };
     } catch (DuplicateKeyException e) {
       throw new DuplicateVaccineKeyException("Duplicate vaccine key");
     } catch (UnknownKeyException e) {
-      throw new UnknownSpeciesKeyException("Unknown Specie");
+      throw new UnknownSpeciesKeyException(e.getMessage());
     }
 
   }
