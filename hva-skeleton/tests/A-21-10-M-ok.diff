@@ -1,24 +1,24 @@
-*** tests/A-21-10-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-21-10-M-ok.outhyp	2024-10-25 18:10:26.253818996 +0100
+*** tests/A-21-10-M-ok.out	2024-10-23 19:58:54.294995495 +0100
+--- tests/A-21-10-M-ok.outhyp	2024-10-25 18:17:21.180977526 +0100
 ***************
-*** 29,37 ****
+*** 29,36 ****
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
 ! Escolha uma opção: REGISTO-VACINA|Vac1|Vet3|E1
 ! REGISTO-VACINA|Vac3|Vet3|E2
-! Gestão de Vacinas
+  Gestão de Vacinas
   1 - Visualizar todas as vacinas
   2 - Registar vacina
-  3 - Vacinar animal
---- 29,35 ----
+--- 29,36 ----
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
-! Escolha uma opção: Gestão de Vacinas
+! Escolha uma opção: REGISTO-VACINA|Vac1|Vet3|AA2
+! REGISTO-VACINA|Vac3|Vet3|AA3
+  Gestão de Vacinas
   1 - Visualizar todas as vacinas
   2 - Registar vacina
-  3 - Vacinar animal
 ***************
 *** 56,63 ****
   4 - Calcular satisfação de animal
@@ -29,7 +29,7 @@
   Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
---- 54,61 ----
+--- 56,63 ----
   4 - Calcular satisfação de animal
   0 - Sair
   Escolha uma opção: ANIMAL|AA1|Patudo|E1|VOID|H1
@@ -49,7 +49,7 @@
   Gestão de Vacinas
   1 - Visualizar todas as vacinas
   2 - Registar vacina
---- 80,88 ----
+--- 82,90 ----
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair

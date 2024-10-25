@@ -25,7 +25,10 @@ class DoShowVaccinations extends Command<Hotel> {
         _vaccineId,
         _vetId,
         _animalId);
+
+        _display.addLine(vaccines);
       }
+    _display.display();
     } 
   }
 
