@@ -5,32 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bef536b5-4d10-4260-96ba-e1e2af6bcacb" name="Changes" comment="DoRegisterAnimal done?">
-      <change afterPath="$PROJECT_DIR$/hva/core/exception/CoreVaccineNotForVetException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hva/app/employee/DoAddResponsibility$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/employee/DoAddResponsibility$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hva/app/employee/DoAddResponsibility$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/employee/DoAddResponsibility$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hva/app/employee/DoAddResponsibility.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/employee/DoAddResponsibility.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hva/core/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hva/core/Vaccine/Vaccine.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Vaccine/Vaccine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-08-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-08-02-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-10-03-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-10-03-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-10-04-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-10-04-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-11-08-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-11-08-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-17-02-M-ok.diff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-17-02-M-ok.outhyp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-21-03-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-03-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-21-05-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-05-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-21-06-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-06-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-21-07-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-07-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-21-08-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-08-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-21-10-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-10-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-21-13-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-13-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-21-14-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-14-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-22-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-22-02-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-23-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-23-01-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-24-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-24-01-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-24-03-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-24-03-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-25-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-25-01-M-ok.diff" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +129,7 @@
       <workItem from="1729690172140" duration="2547000" />
       <workItem from="1729709407259" duration="7814000" />
       <workItem from="1729721111724" duration="488000" />
-      <workItem from="1729858427609" duration="8043000" />
+      <workItem from="1729858427609" duration="8425000" />
     </task>
     <task id="LOCAL-00001" summary="gooofy ah classes">
       <option name="closed" value="true" />

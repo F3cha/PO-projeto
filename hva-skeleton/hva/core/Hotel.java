@@ -764,7 +764,11 @@ public class Hotel implements Serializable {
     return 0;
     }
 
-    public int differentSpeciesName(String specieId1, String specieId2){
+    public int differentSpeciesName(String specieIdvaccine, String specieId2){
+        HashMap<String, Integer> vaccine = new HashMap<>();
+        char[] vaccineName = specieIdvaccine.toCharArray();
+        char[] speciesName = specieId2.toCharArray();
+
         return 0;
     }
 
