@@ -16,10 +16,10 @@ class DoShowVaccinations extends Command<Hotel> {
   
   @Override
   protected final void execute() {
-    for(int i = 0; i < _receiver.getVaccinationResgistration.size(); i += 3) {
-      String _vaccineId = _receiver.getVaccinationResgistration.get(i);
-      String _vetId = _receiver.getVaccinationResgistration.get(i+1);
-      String _animalId = _receiver.getVaccinationResgistration.get(i+2);
+    for(int i = 0; i < _receiver.getVaccinationResgistration().size(); i += 3) {
+      String _vaccineId = _receiver.getVaccinationResgistration().get(i);
+      String _vetId = _receiver.getVaccinationResgistration().get(i+1);
+      String _animalId = _receiver.getVaccinationResgistration().get(i+2);
 
       String vaccines = String.format("REGISTO-VACINA|%s|%s|%s", 
         _vaccineId,

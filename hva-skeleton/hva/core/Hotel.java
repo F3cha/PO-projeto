@@ -27,12 +27,10 @@ public class Hotel implements Serializable {
     private List<Zookeeper> zookeeperList;
     private List<Habitat> habitatsList;
     private List<Tree> treeList;
-    private List<Vaccine> vaccinesList;
-    private List<String> vaccinationRes;
+    private List<Vaccine> _vaccinesList;
+    private List<String> _vaccinationRes;
 
     private Season _currentSeason;
-
-    // FIXME define contructor(s)
 
     public Hotel() {
         speciesList = new ArrayList<>();
@@ -42,8 +40,8 @@ public class Hotel implements Serializable {
         zookeeperList = new ArrayList<>();
         habitatsList = new ArrayList<>();
         treeList = new ArrayList<>();
-        vaccinesList = new ArrayList<>();
-        vaccinationRes = new ArrayList<>();
+        _vaccinesList = new ArrayList<>();
+        _vaccinationRes = new ArrayList<>();
         _currentSeason = Season.Spring;
 
 
@@ -579,11 +577,11 @@ public class Hotel implements Serializable {
 
     //Functions related to Vaccines
     public List<Vaccine> getVaccines() {
-        return vaccinesList;
+        return _vaccinesList;
     }
 
     public boolean verifyVaccine(String vaccineId) {
-        for (Vaccine tempvaccine : vaccinesList) {
+        for (Vaccine tempvaccine : _vaccinesList) {
             if (tempvaccine.getVaccineId().equalsIgnoreCase(vaccineId)) {
                 return true;
             }
@@ -622,11 +620,11 @@ public class Hotel implements Serializable {
 
 
         Vaccine newVaccine = new Vaccine(vaccineId, name, speciesIdList);
-        vaccinesList.add(newVaccine);
+        _vaccinesList.add(newVaccine);
     }
 
     public boolean verifyVaccineId(String vaccineId) {
-        for (Vaccine vaccine : vaccinesList) {
+        for (Vaccine vaccine : _vaccinesList) {
             if (vaccine.getVaccineId().equalsIgnoreCase(vaccineId)) {
                 return true;
             }
@@ -764,14 +762,14 @@ public class Hotel implements Serializable {
             vaccine.addDamageLog(animalId, "NORMAL");
             
         }
-        vaccinationRes.add(VaccineId);
-        vaccinationRes.add(VeterinaryId);
-        vaccinationRes.add(animalId);
+        _vaccinationRes.add(VaccineId);
+        _vaccinationRes.add(VeterinaryId);
+        _vaccinationRes.add(animalId);
 
     }
 
     public List<String> getVaccinationResgistration() {
-        return vaccinationRes;
+        return _vaccinationRes;
     }
 
     public void addHealthState(String animalId, int num, Vaccine vaccine) {
@@ -834,7 +832,7 @@ public class Hotel implements Serializable {
     }
 
     public Vaccine getVaccineById(String vaccineId) {
-        for (Vaccine vaccine : vaccinesList) {
+        for (Vaccine vaccine : _vaccinesList) {
             if (vaccine.getVaccineId().equalsIgnoreCase(vaccineId)) {
                 return vaccine;
             }
