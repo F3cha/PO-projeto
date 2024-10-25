@@ -232,9 +232,14 @@ public class Hotel implements Serializable {
         Employee employee = getEmployeeById(employeeId);
         if (employee instanceof Zookeeper) {
             return getZookeeperSatisfaction(employeeId);
-        } else {
-            return 0;
+        } else{
+            return getVeterinarySatisfaction(employeeId);
         }
+        
+    }
+
+    public int getVeterinarySatisfaction(String veterinaryId) {
+        return (20);
     }
 
     public int getWorkersInHabitat(String habitatId) {
