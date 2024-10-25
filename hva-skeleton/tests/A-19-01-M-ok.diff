@@ -1,19 +1,35 @@
 *** tests/A-19-01-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-19-01-M-ok.outhyp	2024-10-25 05:44:45.090336781 +0100
+--- tests/A-19-01-M-ok.outhyp	2024-10-25 14:50:25.214502418 +0100
 ***************
-*** 17,23 ****
+*** 17,40 ****
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
 ! Escolha uma opção: Identificador único do funcionário: 20
-  Gestão de Funcionários
-  1 - Visualizar todos os funcionários
-  2 - Registar funcionário
---- 17,23 ----
+! Gestão de Funcionários
+! 1 - Visualizar todos os funcionários
+! 2 - Registar funcionário
+! 3 - Atribuir responsabilidade
+! 4 - Retirar responsabilidade
+! 5 - Calcular satisfação de funcionário
+! 0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Criar ficheiro
+! 2 - Abrir ficheiro
+! 3 - Guardar ficheiro
+! 4 - Avançar estação do ano
+! 5 - Ver satisfação global
+! 6 - Gestão de animais
+! 7 - Gestão de funcionários
+! 8 - Gestão de habitats
+! 9 - Gestão de vacinas
+! 10 - Consultas
+! 0 - Sair
+! Escolha uma opção: 
+\ No newline at end of file
+--- 17,20 ----
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
-! Escolha uma opção: Identificador único do funcionário: 0
-  Gestão de Funcionários
-  1 - Visualizar todos os funcionários
-  2 - Registar funcionário
+! Escolha uma opção: Identificador único do funcionário: 
+\ No newline at end of file

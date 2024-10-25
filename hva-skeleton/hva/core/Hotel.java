@@ -90,7 +90,7 @@ public class Hotel implements Serializable {
     /**
      * Transfers an animal to a new habitat, updating its habitat ID.
      * 
-     * @param animalid The ID of the animal.
+     * @param animalId The ID of the animal.
      * @param habitatId The ID of the habitat
      * @throws CoreUnknownAnimalKeyException if the animal ID is not found in the system.
      * @throws CoreUnknownHabitatKey if the habitat ID is not found in the system.
@@ -161,9 +161,9 @@ public class Hotel implements Serializable {
     /**
      * Retrieves a species from the system by its ID.
      * 
-     * @param animalId The ID of the animal.
+     * @param idSpecies The ID of the animal.
      * @param allSpecies A List of Species
-     * @return The "Species" object with the specified ID if found; `null` otherwise. 
+     * @return The "Species" object with the specified ID if found; `null` otherwise.
      * 
     */
 
@@ -288,7 +288,43 @@ public class Hotel implements Serializable {
     }
 
     public int getVeterinarySatisfaction(String veterinaryId) {
-        return (20);
+        return (20 - VeterinarySpecies(veterinaryId));
+    }
+    public int VeterinarySpecies(String veterinaryId){
+        Veterinary vet = (Veterinary) getEmployeeById(veterinaryId);
+        int totalPopulation = 0;
+        int numberofVets = 0;
+        int responsabilidadevet = vet.getResponsibility().size();
+
+        for (String speciesId : vet.getResponsibility()){
+            totalPopulation+= getPopulationofSpecies(speciesId);
+            numberofVets+= getVeterinarysResponsibleforSpecies(speciesId);
+        }
+        return Math.round((totalPopulation/numberofVets));
+
+    }
+
+    public int getPopulationofSpecies (String speciesId){
+        int total = 0;
+        for (Animals animal : animalList){
+            if (animal.getAnimalSpecie().equalsIgnoreCase(speciesId)){
+                total++;
+            }
+        }
+        return total;
+    }
+
+    public int getVeterinarysResponsibleforSpecies(String speciesId){
+        int total = 0;
+        for (Employee emp : employeesList){
+            if (emp instanceof Veterinary){
+                Veterinary vet = (Veterinary) emp;
+                if (vet.hasResponsibility(speciesId)){
+                    total++;
+                }
+            }
+        }
+        return total;
     }
 
     public int getWorkersInHabitat(String habitatId) {
@@ -563,6 +599,9 @@ public class Hotel implements Serializable {
         if (speciesIds == null || vaccineId.length() == 0) {
             throw new InvalidArgException("Vaccine without any species");
         }
+        if (verifyVaccineId(vaccineId)) {
+            throw new DuplicateKeyException("Vaccine iD already exists");
+        }
 
         // checks if vaccine iD already exists
 
@@ -580,7 +619,14 @@ public class Hotel implements Serializable {
         vaccinesList.add(newVaccine);
     }
 
-
+    public boolean  verifyVaccineId(String vaccineId) {
+        for (Vaccine vaccine : vaccinesList) {
+            if (vaccine.getVaccineId().equalsIgnoreCase(vaccineId)) {
+                return true;
+            }
+        }
+        return false;
+    }
     public void createTree(String TreeId, String name, String type, int age, int diff) throws InvalidArgException {
         // checks if the arguments are correct.
 

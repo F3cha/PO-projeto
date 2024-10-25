@@ -2,13 +2,10 @@ package hva.app.habitat;
 
 import hva.app.exception.CoreUnknownSpeciesIdException;
 import hva.core.Hotel;
-import hva.app.exception.UnknownHabitatKeyException;
-import hva.app.exception.UnknownSpeciesKeyException;
-import hva.core.exception.CoreUnknownHabitatKey;
-import hva.core.exception.UnknownKeyException;
+import hva.app.exception.*;
+import hva.core.exception.*;
 import pt.tecnico.uilib.menus.Command;
 import pt.tecnico.uilib.forms.Form;
-
 
 
 import pt.tecnico.uilib.menus.CommandException;
