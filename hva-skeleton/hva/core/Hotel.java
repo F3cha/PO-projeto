@@ -8,6 +8,7 @@ import hva.core.Species.*;
 import hva.core.Tree.*;
 import hva.core.Vaccine.*;
 import hva.core.exception.*;
+
 import java.io.*;
 import java.util.*;
 
@@ -47,9 +48,16 @@ public class Hotel implements Serializable {
     }
 
     /* Methods Related to Animals*/
+
+    /**
+     * Retrieves the species ID of an animal using its animal ID.
+     *
+     * @param animalid The ID of the animal.
+     * @return The species ID of the animal if found, otherwise null.
+     */
     public String getSpeciesUsingAnimalId(String animalid) {
-        for (Animals animal: animalList) {
-            if (animal.getAnimalId().equals(animalid)) {
+        for (Animals animal : animalList) {
+            if (animal.getAnimalId().equalsIgnoreCase(animalid)) {
                 return animal.getAnimalSpecie();
             }
         }
@@ -58,7 +66,7 @@ public class Hotel implements Serializable {
 
     public boolean hasAnimal(String animalId) {
         for (Animals animal : animalList) {
-            if (animal.getAnimalId().equals(animalId)) {
+            if (animal.getAnimalId().equalsIgnoreCase(animalId)) {
                 return true;
             }
         }
@@ -68,7 +76,7 @@ public class Hotel implements Serializable {
     public void verifyAnimal(String animalId) throws UnknownKeyException {
         boolean found = false;
         for (Animals animal : animalList) {
-            if (animal.getAnimalId().equals(animal)) {
+            if (animal.getAnimalId().equalsIgnoreCase(animalId)) {
                 found = true;
                 break;
             }
@@ -78,49 +86,31 @@ public class Hotel implements Serializable {
         }
     }
 
-    public boolean hasEmployee(String employeeId) {
-        for (Employee emp : employeesList) {
-            if (emp.getEmployeeId().equals(employeeId)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public void transferAnimal(String animalId, String habitatId) throws CoreUnknownAnimalKeyException, CoreUnknownHabitatKey {
-        if (!verifyAnimalExistence(animalId)){
+        if (!verifyAnimalExistence(animalId)) {
             throw new CoreUnknownAnimalKeyException(animalId);
         }
-        if (!verifyHabitatExistence(habitatId)){
+        if (!verifyHabitatExistence(habitatId)) {
             throw new CoreUnknownHabitatKey(habitatId);
         }
         Animals animal = getAnimalById(animalId);
         animal.setAnimalHabitat(habitatId);
+        Habitat habitat = getHabitatById(habitatId);
+        habitat.addAnimalToHabitat(animal);
     }
 
     public boolean verifyHabitatExistence(String habitatId) {
         for (Habitat habitat : habitatsList) {
-            if (habitat.getHabitatId().equals(habitatId)) {
+            if (habitat.getHabitatId().equalsIgnoreCase(habitatId)) {
                 return true;
             }
         }
         return false;
     }
-
-    public boolean verifyAnimalExistence(String animalId){
-        for (Animals animal : animalList) {
-            if (animal.getAnimalId().equals(animalId)) {
-                return true;
-            }
-        }
-        return false;
-
-    }
-
 
     public Animals getAnimalById(String animalId) {
         for (Animals animal : animalList) {
-            if (animal.getAnimalId().equals(animalId)) {
+            if (animal.getAnimalId().equalsIgnoreCase(animalId)) {
                 return animal;
             }
         }
@@ -128,23 +118,57 @@ public class Hotel implements Serializable {
     }
 
     public boolean hasSpecies(String speciesId) {
-        boolean speciesExists = false;
         for (Species specie : speciesList) {
-            if (specie.getSpeciesId().equals(speciesId)) {
-                speciesExists = true;
-                break;
+            if (specie.getSpeciesId().equalsIgnoreCase(speciesId)) {
+                return true;
             }
         }
-        if (speciesExists == false) {
-            return false;
-        }
-
         return false;
+    }
+
+    public Species getSpeciesById(String idSpecies, List<Species> allSpecies) {
+        for (Species species : allSpecies) {
+            if (species.getSpeciesId().equalsIgnoreCase(idSpecies)) {
+                return species; // Retorna o objeto Species correspondente ao ID
+            }
+        }
+        return null; // Retorna null se a espécie não for encontrada
+    }
+
+    public String returnIdbyNameSpecies(String speciesName) throws UnknownKeyException {
+        for (Species specie : speciesList) {
+            if (specie.getSpeciesName().equalsIgnoreCase(speciesName)) {
+                return specie.getSpeciesId();
+            }
+        }
+        throw new UnknownKeyException("Species not found");
+    }
+
+
+    public boolean hasEmployee(String employeeId) {
+        for (Employee emp : employeesList) {
+            if (emp.getEmployeeId().equalsIgnoreCase(employeeId)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /*Verifys*/
+
+    public boolean verifyAnimalExistence(String animalId) {
+        for (Animals animal : animalList) {
+            if (animal.getAnimalId().equalsIgnoreCase(animalId)) {
+                return true;
+            }
+        }
+        return false;
+
     }
 
     public boolean responsibilityIsSpecies(String responsibility) {
         for (Species species : speciesList) {
-            if (species.getSpeciesId().equals(responsibility)) {
+            if (species.getSpeciesId().equalsIgnoreCase(responsibility)) {
                 return true;
             }
         }
@@ -153,7 +177,7 @@ public class Hotel implements Serializable {
 
     public boolean responsibilityIsHabitat(String responsibility) {
         for (Habitat habitat : habitatsList) {
-            if (habitat.getHabitatId().equals(responsibility)) {
+            if (habitat.getHabitatId().equalsIgnoreCase(responsibility)) {
                 return true;
             }
         }
@@ -164,7 +188,7 @@ public class Hotel implements Serializable {
         //FIXME mendonca verificadores nao mandam erros, as funcoes que os utilizam e que mandam
         boolean found = false;
         for (Habitat habitat : habitatsList) {
-            if (habitat.getHabitatId().equals(habitatId)) {
+            if (habitat.getHabitatId().equalsIgnoreCase(habitatId)) {
                 found = true;
                 break;
             }
@@ -174,13 +198,36 @@ public class Hotel implements Serializable {
         }
     }
 
-    public Species getSpeciesById(String idSpecies, List<Species> allSpecies) {
-        for (Species species : allSpecies) {
-            if (species.getSpeciesId().equals(idSpecies)) {
-                return species; // Retorna o objeto Species correspondente ao ID
-            }
+    public int getAnimalSatisfaction(String animalId) throws CoreUnknownAnimalKeyException {
+        if (!verifyAnimalExistence(animalId)) {
+            throw new CoreUnknownAnimalKeyException("Animal not found");
         }
-        return null; // Retorna null se a espécie não for encontrada
+        Animals animal = getAnimalById(animalId);
+        String habitatId = animal.getAnimalHabitat();
+        Habitat habitat = getHabitatById(habitatId);
+
+
+        return Math.round(20 + 3 * getEqualSpeciesInHabitat(habitatId, animalId) - 2 * (getTotalAnimalsInHabitat(habitatId)
+                - getEqualSpeciesInHabitat(habitatId, animalId) - 1) +
+                ((float) habitat.getHabitatArea() / getTotalAnimalsInHabitat(habitatId)) + getInfluenceAnimalInHabiat(animalId, habitatId));
+    }
+
+    public int getTotalAnimalsInHabitat(String habitatId) {
+        Habitat habitat = getHabitatById(habitatId);
+        return habitat.getListAnimalsInHabitat().size();
+    }
+
+    public int getInfluenceAnimalInHabiat(String animalId, String HabitatId) {
+        String SpeciesID = getSpeciesUsingAnimalId(animalId);
+        String Influence = getHabitatById(HabitatId).getInfluenceSpecies(SpeciesID);
+        if (Influence.equals("NEU")) {
+            return 0;
+        } else if (Influence.equals("POS")) {
+            return 20;
+        } else {
+            return -20;
+        }
+
     }
 
     public List<Animals> getAnimals() {
@@ -190,10 +237,6 @@ public class Hotel implements Serializable {
     public boolean tryRegisterAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) throws InvalidArgException, DuplicateKeyException {
         // checks if the arguments are correct.
 
-
-        if (animalId == null || animalId.isEmpty()) {
-            throw new InvalidArgException("Animal's iD can't be null");
-        }
 
         if (nameAnimals == null || nameAnimals.isEmpty()) {
             throw new InvalidArgException("Animal's name can't be null");
@@ -225,11 +268,13 @@ public class Hotel implements Serializable {
     public void registerAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) {
         Animals newAnimal = new Animals(animalId, nameAnimals, habitatId, speciesId);
         animalList.add(newAnimal);
+        Habitat habitat = getHabitatById(habitatId);
+        habitat.addAnimalToHabitat(newAnimal);
     }
 
     public Habitat getHabitatById(String habitatId) {
         for (Habitat habitat : habitatsList) {
-            if (habitat.getHabitatId().equals(habitatId)) {
+            if (habitat.getHabitatId().equalsIgnoreCase(habitatId)) {
                 return habitat;
             }
         }
@@ -251,18 +296,13 @@ public class Hotel implements Serializable {
     }
 
     public List<Employee> getEmployees() {
-        //if (empType.equals("VET")) {
-        //    return veterinaryList;
-        //} else if (empType.equals("TRT")) {
-        //    return zookeeperList;
-        //}
         return employeesList;
     }
 
-    public void verifyVet(String vetId) throws UnknownKeyException{
+    public void verifyVet(String vetId) throws UnknownKeyException {
         boolean found = false;
-        for (Veterinary aux: veterinaryList) {
-            if(aux.getEmployeeId().equals(vetId)) {
+        for (Veterinary aux : veterinaryList) {
+            if (aux.getEmployeeId().equalsIgnoreCase(vetId)) {
                 found = true;
                 break;
             }
@@ -304,13 +344,20 @@ public class Hotel implements Serializable {
         }
     }
 
+    public int getEqualSpeciesInHabitat(String habitatId, String speciesId) {
+        Habitat habitat = getHabitatById(habitatId);
+        List<Animals> animals = habitat.getListAnimalsInHabitat();
+        int count = 0;
+        for (Animals animal : animals) {
+            if (animal.getAnimalSpecie().equalsIgnoreCase(speciesId)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
 
     public void addResponsibility(String employeeId, String responsibility) throws InvalidArgException, UnknownKeyException {
-        // checks if the arguments are correct.
-        if (employeeId == null || employeeId.isEmpty()) {
-            throw new InvalidArgException("The employee iD is not valid");
-        }
-
         if (responsibility == null || responsibility.isEmpty()) {
             throw new InvalidArgException("Employee without any responsibility to add");
         }
@@ -336,13 +383,8 @@ public class Hotel implements Serializable {
 
     }
 
-    public void removeResponsibility(String employeeId, String responsibility) throws InvalidArgException, UnknownKeyException  {
+    public void removeResponsibility(String employeeId, String responsibility) throws InvalidArgException, UnknownKeyException {
         // checks if the arguments are correct.
-
-        if (employeeId == null || employeeId.isEmpty()) {
-            throw new InvalidArgException("The employee iD is not valid");
-        }
-
         if (responsibility == null || responsibility.isEmpty()) {
             throw new InvalidArgException("Employee without any responsibility to add");
         }
@@ -369,7 +411,7 @@ public class Hotel implements Serializable {
 
     public Employee getEmployeeById(String idEmployee) {
         for (Employee emp : employeesList) {
-            if (emp.getEmployeeId().equals(idEmployee)) {
+            if (emp.getEmployeeId().equalsIgnoreCase(idEmployee)) {
                 return emp;
             }
         }
@@ -379,7 +421,7 @@ public class Hotel implements Serializable {
     public boolean hasresponsibility(Employee employee, String responsibility) {
         List<String> responsibilities = employee.getResponsibility();
         for (String res : responsibilities) {
-            if (res.equals(responsibility)) {
+            if (res.equalsIgnoreCase(responsibility)) {
                 return true;
             }
         }
@@ -396,10 +438,10 @@ public class Hotel implements Serializable {
         return vaccinesList;
     }
 
-    public void verifyVaccine(String vaccineId) throws UnknownKeyException{
+    public void verifyVaccine(String vaccineId) throws UnknownKeyException {
         boolean found = false;
-        for (Vaccine aux: vaccinesList) {
-            if(aux.getVaccineId().equals(vaccineId)) {
+        for (Vaccine aux : vaccinesList) {
+            if (aux.getVaccineId().equalsIgnoreCase(vaccineId)) {
                 found = true;
                 break;
             }
@@ -481,7 +523,7 @@ public class Hotel implements Serializable {
 
     public Tree getTreeById(String treeId) {
         for (Tree tree : treeList) {
-            if (tree.getId().equals(treeId)) {
+            if (tree.getId().equalsIgnoreCase(treeId)) {
                 return tree;
             }
         }
@@ -495,7 +537,7 @@ public class Hotel implements Serializable {
 
     public String verifyTree(String treeId) throws DuplicateKeyException {
         for (Tree tree : treeList) {
-            if (tree.getId().equals(treeId)) {
+            if (tree.getId().equalsIgnoreCase(treeId)) {
                 throw new DuplicateKeyException(treeId);
             }
         }
@@ -527,7 +569,7 @@ public class Hotel implements Serializable {
         // checks if habitat iD already exists
 
         for (Habitat auxHabitatId : habitatsList) {
-            if (auxHabitatId.getHabitatId().equals(habitatId)) {
+            if (auxHabitatId.getHabitatId().equalsIgnoreCase(habitatId)) {
                 throw new DuplicateKeyException("The habitat iD already exists");
             }
         }
@@ -546,21 +588,15 @@ public class Hotel implements Serializable {
 
     }
 
-    public String returnIdbyNameSpecies(String speciesName) throws UnknownKeyException {
-        for (Species specie : speciesList) {
-            if (specie.getSpeciesName().equals(speciesName)) {
-                return specie.getSpeciesId();
-            }
-        }
-        throw new UnknownKeyException("Species not found");
-    }
 
     public void changeInfluenceSpecies(String habitatId, String speciesId, String influence) throws CoreUnknownSpeciesIdException, CoreUnknownHabitatKey {
         Habitat habitat = getHabitatById(habitatId);
-        if (habitat == null) { throw new CoreUnknownHabitatKey("Habitat not found");
+        if (habitat == null) {
+            throw new CoreUnknownHabitatKey("Habitat not found");
         }
         if (!hasSpecies(speciesId)) {
-            throw new CoreUnknownSpeciesIdException("Species not found");}
+            throw new CoreUnknownSpeciesIdException("Species not found");
+        }
         habitat.changeInfluenceSpecies(speciesId, influence);
     }
 
@@ -577,6 +613,12 @@ public class Hotel implements Serializable {
         parser.parseFile(filename);
     }
 
+    /**
+     * Advances the current season to the next season in the cycle.
+     * Updates the season for all trees in the tree list.
+     *
+     * @return The new current season after advancing.
+     */
     public Season advanceSeason() {
         for (Tree tree : treeList) {
             tree.treeAdvanceSeason();

@@ -5,10 +5,145 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bef536b5-4d10-4260-96ba-e1e2af6bcacb" name="Changes" comment="DoRegisterAnimal done?">
-      <change afterPath="$PROJECT_DIR$/hva/core/exception/CoreUnknownAnimalKeyException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hva/app/animal/DoTransferToHabitat.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/animal/DoTransferToHabitat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/animal/DoRegisterAnimal.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/animal/DoRegisterAnimal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/animal/DoRegisterAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/animal/DoRegisterAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/animal/DoShowSatisfactionOfAnimal.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/animal/DoShowSatisfactionOfAnimal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/animal/DoShowSatisfactionOfAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/animal/DoShowSatisfactionOfAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/habitat/DoShowAllHabitats.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/habitat/DoShowAllHabitats.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/habitat/DoShowAllHabitats.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/habitat/DoShowAllHabitats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/habitat/DoShowAllTreesInHabitat.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/habitat/DoShowAllTreesInHabitat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/habitat/DoShowAllTreesInHabitat.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/habitat/DoShowAllTreesInHabitat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Habitat/Habitat.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Habitat/Habitat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Habitat/Habitat.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Habitat/Habitat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Hotel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hva/core/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/hva/app/animal/DoRegisterAnimal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/hva/app/animal/DoRegisterAnimal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/hva/app/habitat/DoShowAllTreesInHabitat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/hva/app/habitat/DoShowAllTreesInHabitat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/hva/core/Habitat/Habitat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/hva/core/Habitat/Habitat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/hva/core/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/hva/core/Hotel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-08-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-08-01-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-08-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-08-02-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-09-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-09-01-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-09-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-09-02-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-09-03-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-09-03-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-09-08-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-09-08-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-10-01-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-10-01-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-10-02-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-10-02-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-10-03-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-10-03-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-10-04-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-10-04-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-01-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-01-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-02-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-02-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-04-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-04-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-04-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-04-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-05-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-05-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-05-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-05-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-08-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-08-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-08-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-08-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-11-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-11-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-11-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-11-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-12-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-12-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-12-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-12-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-14-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-11-14-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-17-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-17-02-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-01-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-02-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-03-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-03-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-04-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-04-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-09-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-09-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-10-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-10-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-11-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-11-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-13-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-19-13-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-20-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-20-02-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-20-04-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-20-04-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-03-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-03-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-05-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-05-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-05-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-05-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-06-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-06-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-06-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-06-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-07-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-07-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-07-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-07-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-08-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-08-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-08-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-08-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-10-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-10-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-10-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-10-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-13-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-13-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-13-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-13-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-14-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-14-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-14-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-21-14-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-22-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-22-02-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-23-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-23-01-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-24-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-24-01-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-24-03-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-24-03-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-24-03-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-24-03-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-25-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-25-01-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-25-01-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/target/production/hva-skeleton/tests/A-25-01-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-08-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-08-01-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-08-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-08-02-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-09-01-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-09-01-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-09-02-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-09-02-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-09-03-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-09-03-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-09-08-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-09-08-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-10-03-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-10-03-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-10-04-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-10-04-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-01-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-01-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-02-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-02-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-04-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-04-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-05-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-05-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-08-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-11-08-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-08-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-11-08-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-11-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-11-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-12-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-12-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-14-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-11-14-M-ok.outhyp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-17-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-17-02-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-19-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-19-01-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-19-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-19-02-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-19-03-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-19-03-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-19-04-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-19-04-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-19-09-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-19-09-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-19-10-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-19-10-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-19-11-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-19-11-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-19-13-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-19-13-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-20-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-20-02-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-20-04-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-20-04-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-03-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-03-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-05-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-05-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-05-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-05-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-06-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-06-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-06-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-06-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-07-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-07-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-07-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-07-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-08-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-08-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-08-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-08-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-10-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-10-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-10-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-10-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-13-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-13-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-13-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-13-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-14-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-14-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-21-14-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-14-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-22-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-22-02-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-23-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-23-01-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-24-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-24-01-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-24-03-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-24-03-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-24-03-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-24-03-M-ok.outhyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-25-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-25-01-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-25-01-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-25-01-M-ok.outhyp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

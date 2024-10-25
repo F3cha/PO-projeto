@@ -34,7 +34,7 @@ class DoShowAllHabitats extends Command<Hotel> {
             habitatString = String.format("HABITAT|%s|%s|%d|%d",
                     habitat.getHabitatId(),
                     habitat.getHabitatName(),
-                    habitat.getArea(), habitat.getNumberOfTrees())
+                    habitat.getHabitatArea(), habitat.getNumberOfTrees())
             ;
             _display.addLine(habitatString);
             for (String treeId : habitat.getHabitatTreeList()) {

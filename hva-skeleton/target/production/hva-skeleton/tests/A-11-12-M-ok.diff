@@ -1,5 +1,5 @@
 *** tests/A-11-12-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-11-12-M-ok.outhyp	2024-10-25 00:44:42.990372103 +0100
+--- tests/A-11-12-M-ok.outhyp	2024-10-25 02:08:50.556568988 +0100
 ***************
 *** 18,24 ****
   5 - Plantar árvore
@@ -19,45 +19,19 @@
   2 - Registar habitat
   3 - Alterar área de habitat
 ***************
-*** 64,83 ****
-  3 - Transferir para habitat
-  4 - Calcular satisfação de animal
-  0 - Sair
-! Escolha uma opção: Identificador único do animal: 32
-! Gestão de Animais
-  1 - Visualizar todos os animais
-  2 - Registar animal
+*** 71,77 ****
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
 ! Escolha uma opção: Identificador único do animal: 162
-! Gestão de Animais
+  Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
+--- 72,78 ----
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro
---- 65,84 ----
-  3 - Transferir para habitat
-  4 - Calcular satisfação de animal
-  0 - Sair
-! Escolha uma opção: Gestão de Animais
+! Escolha uma opção: Identificador único do animal: 142
+  Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
-  3 - Transferir para habitat
-  4 - Calcular satisfação de animal
-  0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Gestão de Animais
-  1 - Visualizar todos os animais
-  2 - Registar animal
-  3 - Transferir para habitat
-  4 - Calcular satisfação de animal
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro

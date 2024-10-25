@@ -37,7 +37,7 @@ class DoShowAllTreesInHabitat extends Command<Hotel> {
     }
 
     for (Habitat hab: _receiver.getHabitats()) {
-      if (hab.getHabitatId().equals(_habitatId)) {
+      if (hab.getHabitatId().equalsIgnoreCase(_habitatId)) {
         _auxhabitat = hab;
       }
     }
