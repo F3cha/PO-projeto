@@ -87,14 +87,44 @@ public class Hotel implements Serializable {
         return false;
     }
 
-    public void transferAnimal(String animalId, String habitatId) throws InvalidArgException {
-        //FIXME implemntar adicionar ao habitat
-        for (Animals animal : animalList) {
-            if (animal.getAnimalId().equals(animalId)) {
-                animal.setAnimalHabitat(habitatId);
-                break;
+    public void transferAnimal(String animalId, String habitatId) throws CoreUnknownAnimalKeyException, CoreUnknownHabitatKey {
+        if (!verifyAnimalExistence(animalId)){
+            throw new CoreUnknownAnimalKeyException(animalId);
+        }
+        if (!verifyHabitatExistence(habitatId)){
+            throw new CoreUnknownHabitatKey(habitatId);
+        }
+        Animals animal = getAnimalById(animalId);
+        animal.setAnimalHabitat(habitatId);
+    }
+
+    public boolean verifyHabitatExistence(String habitatId) {
+        for (Habitat habitat : habitatsList) {
+            if (habitat.getHabitatId().equals(habitatId)) {
+                return true;
             }
         }
+        return false;
+    }
+
+    public boolean verifyAnimalExistence(String animalId){
+        for (Animals animal : animalList) {
+            if (animal.getAnimalId().equals(animalId)) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+
+    public Animals getAnimalById(String animalId) {
+        for (Animals animal : animalList) {
+            if (animal.getAnimalId().equals(animalId)) {
+                return animal;
+            }
+        }
+        return null;
     }
 
     public boolean hasSpecies(String speciesId) {
@@ -105,7 +135,6 @@ public class Hotel implements Serializable {
                 break;
             }
         }
-
         if (speciesExists == false) {
             return false;
         }
@@ -132,6 +161,7 @@ public class Hotel implements Serializable {
     }
 
     public void verifyHabitat(String habitatId) throws UnknownKeyException {
+        //FIXME mendonca verificadores nao mandam erros, as funcoes que os utilizam e que mandam
         boolean found = false;
         for (Habitat habitat : habitatsList) {
             if (habitat.getHabitatId().equals(habitatId)) {
