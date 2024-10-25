@@ -1,7 +1,6 @@
 package hva.core;
 
 import hva.app.exception.CoreUnknownSpeciesIdException;
-import hva.app.exception.WrongEmployeeTypeException;
 import hva.core.Animals.*;
 import hva.core.Employee.*;
 import hva.core.Habitat.*;
@@ -29,6 +28,7 @@ public class Hotel implements Serializable {
     private List<Habitat> habitatsList;
     private List<Tree> treeList;
     private List<Vaccine> vaccinesList;
+    private List<String> vaccinationRes;
 
     private Season _currentSeason;
 
@@ -43,7 +43,9 @@ public class Hotel implements Serializable {
         habitatsList = new ArrayList<>();
         treeList = new ArrayList<>();
         vaccinesList = new ArrayList<>();
+        vaccinationRes = new ArrayList<>();
         _currentSeason = Season.Spring;
+
 
     }
 
@@ -623,7 +625,7 @@ public class Hotel implements Serializable {
         vaccinesList.add(newVaccine);
     }
 
-    public boolean  verifyVaccineId(String vaccineId) {
+    public boolean verifyVaccineId(String vaccineId) {
         for (Vaccine vaccine : vaccinesList) {
             if (vaccine.getVaccineId().equalsIgnoreCase(vaccineId)) {
                 return true;
@@ -631,6 +633,7 @@ public class Hotel implements Serializable {
         }
         return false;
     }
+
     public void createTree(String TreeId, String name, String type, int age, int diff) throws InvalidArgException {
         // checks if the arguments are correct.
 
@@ -736,10 +739,10 @@ public class Hotel implements Serializable {
 
     }
 
-    public void VaccinateAnimal(String animalId, String VeterinaryId, String VaccineId) throws InvalidArgException, WrongEmployeeTypeException, CoreUnknownAnimalKeyException {
+    public void VaccinateAnimal(String animalId, String VeterinaryId, String VaccineId) throws InvalidArgException, UnknownKeyException, CoreVaccineNotForVetException {
         Employee employee = getEmployeeById(VeterinaryId);
         if (!(employee instanceof Veterinary)) {
-            throw new WrongEmployeeTypeException("Employee is not a Veterinary");
+            throw new UnknownKeyException("Employee is not a Veterinary");
         }
         
         Vaccine vaccine = getVaccineById(VaccineId);
@@ -759,11 +762,19 @@ public class Hotel implements Serializable {
             throw new CoreVaccineNotForVetException("Veterinary not able to vaccinate");
         } else {
             vaccine.addDamageLog(animalId, "NORMAL");
+            
         }
+        vaccinationRes.add(VaccineId);
+        vaccinationRes.add(VeterinaryId);
+        vaccinationRes.add(animalId);
 
     }
 
-        public void addHealthState(String animalId, int num, Vaccine vaccine) {
+    public List<String> getVaccinationResgistration() {
+        return vaccinationRes;
+    }
+
+    public void addHealthState(String animalId, int num, Vaccine vaccine) {
             String damage = "";
             if (num == 0) {
                 damage = "CONFUSÃO";
@@ -773,9 +784,9 @@ public class Hotel implements Serializable {
                 damage = "ERRO";
             }
             vaccine.addDamageLog(animalId, damage);
-        }
+    }
 
-        public static int countDifferentCharacters(String str1, String str2) {
+    public static int countDifferentCharacters(String str1, String str2) {
         Set<Character> set1 = new HashSet<>();
         Set<Character> set2 = new HashSet<>();
 
@@ -810,7 +821,7 @@ public class Hotel implements Serializable {
     }
 
 
-    public boolean verifyVeterinaryAbleToVaccinate (String veterinaryId, String vaccineId){
+    public boolean verifyVeterinaryAbleToVaccinate (String veterinaryId, String vaccineId) {
        Vaccine vaccine = getVaccineById(vaccineId);
          Veterinary vet = (Veterinary) getEmployeeById(veterinaryId);
             List<String> species = vet.getResponsibility();

@@ -4,6 +4,7 @@ import hva.app.exception.*;
 import hva.core.Hotel;
 import hva.core.exception.InvalidArgException;
 import hva.core.exception.UnknownKeyException;
+import hva.core.exception.CoreVaccineNotForVetException;
 import pt.tecnico.uilib.menus.Command;
 import pt.tecnico.uilib.menus.CommandException;
 //FIXME add more imports if needed
@@ -28,16 +29,18 @@ class DoVaccinateAnimal extends Command<Hotel> {
       _receiver.VaccinateAnimal(_animalId, _vetId, _vaccineId); //Se mexeres aqui e nao fizeres igual levas um carolo
     } catch (InvalidArgException e) {
       throw new VeterinarianNotAuthorizedException(_vetId, _animalId);
-    } catch (WrongEmployeeTypeException e) {
+    } catch (UnknownKeyException e) {
       throw new UnknownVeterinarianKeyException(_vetId);
+    } catch (CoreVaccineNotForVetException e) {
+        Message.wrongVaccine(_vaccineId, _animalId);
     }
 
-    if (_receiver.verifyVeterinaryAbleToVaccinate(_vetId, _vaccineId) == false) {
-      Message.wrongVaccine(_vaccineId, _vetId);
+    
+
       //add dano
     }
 
 
 
   }
-}
+
