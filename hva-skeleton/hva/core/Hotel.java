@@ -11,7 +11,6 @@ import hva.core.exception.*;
 import java.io.*;
 import java.util.*;
 
-// FIXME import classes
 
 public class Hotel implements Serializable {
 
@@ -20,26 +19,26 @@ public class Hotel implements Serializable {
 
     // FIXME define attributes
 
-    private List<Species> speciesList;
-    private List<Animals> animalList;
-    private List<Employee> employeesList;
-    private List<Veterinary> veterinaryList;
-    private List<Zookeeper> zookeeperList;
-    private List<Habitat> habitatsList;
-    private List<Tree> treeList;
+    private List<Species> _speciesList;
+    private List<Animals> _animalList;
+    private List<Employee> _employeesList;
+    private List<Veterinary> _veterinaryList;
+    private List<Zookeeper> _zookeeperList;
+    private List<Habitat> _habitatsList;
+    private List<Tree> _treeList;
     private List<Vaccine> _vaccinesList;
     private List<String> _vaccinationRes;
 
     private Season _currentSeason;
 
     public Hotel() {
-        speciesList = new ArrayList<>();
-        animalList = new ArrayList<>();
-        employeesList = new ArrayList<>();
-        veterinaryList = new ArrayList<>();
-        zookeeperList = new ArrayList<>();
-        habitatsList = new ArrayList<>();
-        treeList = new ArrayList<>();
+        _speciesList = new ArrayList<>();
+        _animalList = new ArrayList<>();
+        _employeesList = new ArrayList<>();
+        _veterinaryList = new ArrayList<>();
+        _zookeeperList = new ArrayList<>();
+        _habitatsList = new ArrayList<>();
+        _treeList = new ArrayList<>();
         _vaccinesList = new ArrayList<>();
         _vaccinationRes = new ArrayList<>();
         _currentSeason = Season.Spring;
@@ -52,7 +51,7 @@ public class Hotel implements Serializable {
 
     public int ShowAllSatisfaction(){
         int totalSatisfaction = 0;
-        for (Employee emp : employeesList){
+        for (Employee emp : _employeesList){
             try {
                 totalSatisfaction += getSatisfactionOfEmployee(emp.getEmployeeId());
             }
@@ -60,7 +59,7 @@ public class Hotel implements Serializable {
                 e.printStackTrace();
             }
         }
-        for (Animals animal : animalList){
+        for (Animals animal : _animalList){
             String animalId = animal.getAnimalId();
             try {
                 totalSatisfaction += getAnimalSatisfaction(animalId);
@@ -73,7 +72,7 @@ public class Hotel implements Serializable {
 
     }
     public String getSpeciesUsingAnimalId(String animalid) {
-        for (Animals animal : animalList) {
+        for (Animals animal : _animalList) {
             if (animal.getAnimalId().equalsIgnoreCase(animalid)) {
                 return animal.getAnimalSpecie();
             }
@@ -82,7 +81,7 @@ public class Hotel implements Serializable {
     }
 
     public boolean hasAnimal(String animalId) {
-        for (Animals animal : animalList) {
+        for (Animals animal : _animalList) {
             if (animal.getAnimalId().equalsIgnoreCase(animalId)) {
                 return true;
             }
@@ -92,7 +91,7 @@ public class Hotel implements Serializable {
 
     public void verifyAnimal(String animalId) throws UnknownKeyException {
         boolean found = false;
-        for (Animals animal : animalList) {
+        for (Animals animal : _animalList) {
             if (animal.getAnimalId().equalsIgnoreCase(animalId)) {
                 found = true;
                 break;
@@ -134,7 +133,7 @@ public class Hotel implements Serializable {
     */
 
     public boolean verifyHabitatExistence(String habitatId) {
-        for (Habitat habitat : habitatsList) {
+        for (Habitat habitat : _habitatsList) {
             if (habitat.getHabitatId().equalsIgnoreCase(habitatId)) {
                 return true;
             }
@@ -150,7 +149,7 @@ public class Hotel implements Serializable {
     */
 
     public Animals getAnimalById(String animalId) {
-        for (Animals animal : animalList) {
+        for (Animals animal : _animalList) {
             if (animal.getAnimalId().equalsIgnoreCase(animalId)) {
                 return animal;
             }
@@ -166,7 +165,7 @@ public class Hotel implements Serializable {
     */
 
     public boolean hasSpecies(String speciesId) {
-        for (Species specie : speciesList) {
+        for (Species specie : _speciesList) {
             if (specie.getSpeciesId().equalsIgnoreCase(speciesId)) {
                 return true;
             }
@@ -202,7 +201,7 @@ public class Hotel implements Serializable {
     */
 
     public String returnIdbyNameSpecies(String speciesName) throws UnknownKeyException {
-        for (Species specie : speciesList) {
+        for (Species specie : _speciesList) {
             if (specie.getSpeciesName().equalsIgnoreCase(speciesName)) {
                 return specie.getSpeciesId();
             }
@@ -212,7 +211,7 @@ public class Hotel implements Serializable {
 
 
     public boolean hasEmployee(String employeeId) {
-        for (Employee emp : employeesList) {
+        for (Employee emp : _employeesList) {
             if (emp.getEmployeeId().equalsIgnoreCase(employeeId)) {
                 return true;
             }
@@ -223,7 +222,7 @@ public class Hotel implements Serializable {
     /*Verifys*/
 
     public boolean verifyAnimalExistence(String animalId) {
-        for (Animals animal : animalList) {
+        for (Animals animal : _animalList) {
             if (animal.getAnimalId().equalsIgnoreCase(animalId)) {
                 return true;
             }
@@ -233,7 +232,7 @@ public class Hotel implements Serializable {
     }
 
     public boolean responsibilityIsSpecies(String responsibility) {
-        for (Species species : speciesList) {
+        for (Species species : _speciesList) {
             if (species.getSpeciesId().equalsIgnoreCase(responsibility)) {
                 return true;
             }
@@ -242,7 +241,7 @@ public class Hotel implements Serializable {
     }
 
     public boolean responsibilityIsHabitat(String responsibility) {
-        for (Habitat habitat : habitatsList) {
+        for (Habitat habitat : _habitatsList) {
             if (habitat.getHabitatId().equalsIgnoreCase(responsibility)) {
                 return true;
             }
@@ -253,7 +252,7 @@ public class Hotel implements Serializable {
     public void verifyHabitat(String habitatId) throws UnknownKeyException {
         //FIXME mendonca verificadores nao mandam erros, as funcoes que os utilizam e que mandam
         boolean found = false;
-        for (Habitat habitat : habitatsList) {
+        for (Habitat habitat : _habitatsList) {
             if (habitat.getHabitatId().equalsIgnoreCase(habitatId)) {
                 found = true;
                 break;
@@ -308,7 +307,7 @@ public class Hotel implements Serializable {
             throw new CoreUnknownHabitatKey(habitatId);
         }
         List<Animals> animais = new ArrayList<>();
-        for (Animals animal : animalList) {
+        for (Animals animal : _animalList) {
             if (animal.getAnimalHabitat().equalsIgnoreCase(habitatId)) {
                 animais.add(animal);
             }
@@ -333,7 +332,7 @@ public class Hotel implements Serializable {
 
     public int getPopulationofSpecies (String speciesId){
         int total = 0;
-        for (Animals animal : animalList){
+        for (Animals animal : _animalList){
             if (animal.getAnimalSpecie().equalsIgnoreCase(speciesId)){
                 total++;
             }
@@ -343,7 +342,7 @@ public class Hotel implements Serializable {
 
     public int getVeterinarysResponsibleforSpecies(String speciesId){
         int total = 0;
-        for (Employee emp : employeesList){
+        for (Employee emp : _employeesList){
             if (emp instanceof Veterinary){
                 if (emp.hasResponsibility(speciesId)){
                     total++;
@@ -358,7 +357,7 @@ public class Hotel implements Serializable {
 
     public int getWorkersInHabitat(String habitatId) {
         int totalworkers = 0;
-        for (Employee emp : employeesList) {
+        for (Employee emp : _employeesList) {
             if (emp instanceof Zookeeper) {
                 if (hasresponsibility(emp, habitatId)) {
                     totalworkers++;
@@ -401,7 +400,7 @@ public class Hotel implements Serializable {
     }
 
     public List<Animals> getAnimals() {
-        return animalList;
+        return _animalList;
     }
 
     public boolean tryRegisterAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) throws InvalidArgException, DuplicateKeyException {
@@ -437,13 +436,13 @@ public class Hotel implements Serializable {
     // create animal
     public void registerAnimal(String animalId, String nameAnimals, String habitatId, String speciesId) {
         Animals newAnimal = new Animals(animalId, nameAnimals, habitatId, speciesId);
-        animalList.add(newAnimal);
+        _animalList.add(newAnimal);
         Habitat habitat = getHabitatById(habitatId);
         habitat.addAnimalToHabitat(newAnimal);
     }
 
     public Habitat getHabitatById(String habitatId) {
-        for (Habitat habitat : habitatsList) {
+        for (Habitat habitat : _habitatsList) {
             if (habitat.getHabitatId().equalsIgnoreCase(habitatId)) {
                 return habitat;
             }
@@ -461,12 +460,12 @@ public class Hotel implements Serializable {
         // create species
 
         Species newEspecies = new Species(speciesId, name);
-        speciesList.add(newEspecies);
+        _speciesList.add(newEspecies);
 
     }
 
     public List<Employee> getEmployees() {
-        return employeesList;
+        return _employeesList;
     }
 
 
@@ -490,12 +489,12 @@ public class Hotel implements Serializable {
 
         if (empType.equals("VET")) {
             Veterinary newVeterinary = new Veterinary(employeeId, name);
-            veterinaryList.add(newVeterinary);
-            employeesList.add(newVeterinary);
+            _veterinaryList.add(newVeterinary);
+            _employeesList.add(newVeterinary);
         } else if (empType.equals("TRT")) {
             Zookeeper newZookeeper = new Zookeeper(employeeId, name);
-            zookeeperList.add(newZookeeper);
-            employeesList.add(newZookeeper);
+            _zookeeperList.add(newZookeeper);
+            _employeesList.add(newZookeeper);
         }
     }
 
@@ -565,7 +564,7 @@ public class Hotel implements Serializable {
     }
 
     public Employee getEmployeeById(String idEmployee) {
-        for (Employee emp : employeesList) {
+        for (Employee emp : _employeesList) {
             if (emp.getEmployeeId().equalsIgnoreCase(idEmployee)) {
                 return emp;
             }
@@ -624,7 +623,7 @@ public class Hotel implements Serializable {
 
         List<String> speciesIdList = new ArrayList<>();
         for (String speciesId : speciesIds) {
-            Species species = getSpeciesById(speciesId, speciesList); // Assumindo que este método existe e retorna um objeto Species
+            Species species = getSpeciesById(speciesId, _speciesList); // Assumindo que este método existe e retorna um objeto Species
             if (species == null) {
                 throw new UnknownKeyException(speciesId);
             }
@@ -675,16 +674,16 @@ public class Hotel implements Serializable {
 
         if (type.equals("CADUCA")) {
             DecidiousTree newTree = new DecidiousTree(_currentSeason, age, diff, TreeId, name);
-            treeList.add(newTree);
+            _treeList.add(newTree);
         } else {
             EvergreenTree newTree = new EvergreenTree(_currentSeason, age, diff, TreeId, name);
-            treeList.add(newTree);
+            _treeList.add(newTree);
         }
 
     }
 
     public Tree getTreeById(String treeId) {
-        for (Tree tree : treeList) {
+        for (Tree tree : _treeList) {
             if (tree.getId().equalsIgnoreCase(treeId)) {
                 return tree;
             }
@@ -698,7 +697,7 @@ public class Hotel implements Serializable {
     }
 
     public String verifyTree(String treeId) throws DuplicateKeyException {
-        for (Tree tree : treeList) {
+        for (Tree tree : _treeList) {
             if (tree.getId().equalsIgnoreCase(treeId)) {
                 throw new DuplicateKeyException(treeId);
             }
@@ -707,11 +706,11 @@ public class Hotel implements Serializable {
     }
 
     public List<Tree> getTrees() {
-        return treeList;
+        return _treeList;
     }
 
     public List<Habitat> getHabitats() {
-        return habitatsList;
+        return _habitatsList;
     }
 
     public Habitat registerHabitat(String habitatId, String name, int area) throws InvalidArgException, DuplicateKeyException {
@@ -730,7 +729,7 @@ public class Hotel implements Serializable {
 
         // checks if habitat iD already exists
 
-        for (Habitat auxHabitatId : habitatsList) {
+        for (Habitat auxHabitatId : _habitatsList) {
             if (auxHabitatId.getHabitatId().equalsIgnoreCase(habitatId)) {
                 throw new DuplicateKeyException("The habitat iD already exists");
             }
@@ -739,7 +738,7 @@ public class Hotel implements Serializable {
         // create habitat
 
         Habitat newHabitat = new Habitat(habitatId, name, area);
-        habitatsList.add(newHabitat);
+        _habitatsList.add(newHabitat);
 
         return newHabitat;
     }
@@ -898,7 +897,7 @@ public class Hotel implements Serializable {
      * @return The new current season after advancing.
      */
     public Season advanceSeason() {
-        for (Tree tree : treeList) {
+        for (Tree tree : _treeList) {
             tree.treeAdvanceSeason();
         }
         if (_currentSeason == Season.Spring) {
