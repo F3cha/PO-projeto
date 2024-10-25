@@ -736,6 +736,14 @@ public class Hotel implements Serializable {
         habitat.addTreeToHabitat(treeKey);
 
     }
+    public boolean existsVaccine(String vaccineId) {
+        for (Vaccine vaccine : _vaccinesList) {
+            if (vaccine.getVaccineId().equalsIgnoreCase(vaccineId)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public void VaccinateAnimal(String animalId, String VeterinaryId, String VaccineId) throws InvalidArgException, UnknownKeyException, CoreVaccineNotForVetException {
         Employee employee = getEmployeeById(VeterinaryId);
@@ -746,7 +754,7 @@ public class Hotel implements Serializable {
         Vaccine vaccine = getVaccineById(VaccineId);
         Animals animal = getAnimalById(animalId);
         
-        if (vaccine == null) {
+        if (!existsVaccine(VaccineId)) {
             throw new InvalidArgException("Vaccine not found");
         }
 

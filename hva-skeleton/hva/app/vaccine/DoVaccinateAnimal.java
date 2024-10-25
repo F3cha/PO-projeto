@@ -28,7 +28,7 @@ class DoVaccinateAnimal extends Command<Hotel> {
     try {
       _receiver.VaccinateAnimal(_animalId, _vetId, _vaccineId); //Se mexeres aqui e nao fizeres igual levas um carolo
     } catch (InvalidArgException e) {
-      throw new VeterinarianNotAuthorizedException(_vetId, _animalId);
+      throw new UnknownVaccineKeyException(_vaccineId);
     } catch (UnknownKeyException e) {
       throw new UnknownVeterinarianKeyException(_vetId);
     } catch (CoreVaccineNotForVetException e) {
