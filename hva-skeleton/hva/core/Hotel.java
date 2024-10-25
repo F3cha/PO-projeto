@@ -288,19 +288,17 @@ public class Hotel implements Serializable {
     }
 
     public int getVeterinarySatisfaction(String veterinaryId) {
-        return (20 - VeterinarySpecies(veterinaryId));
+        return Math.round(20 - VeterinarySpecies(veterinaryId));
     }
-    public int VeterinarySpecies(String veterinaryId){
+    public float VeterinarySpecies(String veterinaryId){
         Veterinary vet = (Veterinary) getEmployeeById(veterinaryId);
-        int totalPopulation = 0;
-        int numberofVets = 0;
-        int responsabilidadevet = vet.getResponsibility().size();
-
+        float totaldivisions=0;
         for (String speciesId : vet.getResponsibility()){
-            totalPopulation+= getPopulationofSpecies(speciesId);
-            numberofVets+= getVeterinarysResponsibleforSpecies(speciesId);
+            int totalPopulation = getPopulationofSpecies(speciesId);
+            int numberofVets = getVeterinarysResponsibleforSpecies(speciesId);
+            totaldivisions += (totalPopulation/numberofVets);
         }
-        return Math.round((totalPopulation/numberofVets));
+        return totaldivisions;
 
     }
 
@@ -318,11 +316,13 @@ public class Hotel implements Serializable {
         int total = 0;
         for (Employee emp : employeesList){
             if (emp instanceof Veterinary){
-                Veterinary vet = (Veterinary) emp;
-                if (vet.hasResponsibility(speciesId)){
+                if (emp.hasResponsibility(speciesId)){
                     total++;
                 }
             }
+        }
+        if (total == 0){
+            return 1;
         }
         return total;
     }
@@ -358,12 +358,12 @@ public class Hotel implements Serializable {
         return habitat.getListAnimalsInHabitat().size();
     }
 
-    public int getInfluenceAnimalInHabiat(String animalId, String HabitatId) {
-        String SpeciesID = getSpeciesUsingAnimalId(animalId);
-        String Influence = getHabitatById(HabitatId).getInfluenceSpecies(SpeciesID);
-        if (Influence.equals("NEU")) {
+    public int getInfluenceAnimalInHabiat(String animalId, String habitatId) {
+        String speciesUsingAnimalId = getSpeciesUsingAnimalId(animalId);
+        String influence = getHabitatById(habitatId).getInfluenceSpecies(speciesUsingAnimalId);
+        if (influence.equals("NEU")) {
             return 0;
-        } else if (Influence.equals("POS")) {
+        } else if (influence.equals("POS")) {
             return 20;
         } else {
             return -20;
@@ -440,18 +440,6 @@ public class Hotel implements Serializable {
         return employeesList;
     }
 
-    public void verifyVet(String vetId) throws UnknownKeyException {
-        boolean found = false;
-        for (Veterinary aux : veterinaryList) {
-            if (aux.getEmployeeId().equalsIgnoreCase(vetId)) {
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            throw new UnknownKeyException(vetId);
-        }
-    }
 
 
     public void registerEmployee(String employeeId, String name, String empType) throws InvalidArgException, DuplicateKeyException {

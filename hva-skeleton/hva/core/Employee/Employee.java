@@ -9,6 +9,7 @@ public abstract class Employee implements Serializable {
     private String _nameEmployee;
     private List<String> _responsibility;
 
+
     public Employee(String idEmployee, String nameEmployee) {
         _idEmployee = idEmployee;
         _nameEmployee = nameEmployee;
