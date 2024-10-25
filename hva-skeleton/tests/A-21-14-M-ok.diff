@@ -1,87 +1,103 @@
-*** tests/A-21-14-M-ok.out	2024-10-18 19:27:35.000000000 +0100
---- tests/A-21-14-M-ok.outhyp	2024-10-25 15:33:14.773441463 +0100
+*** tests/A-21-14-M-ok.out	2024-10-23 19:58:54.294995495 +0100
+--- tests/A-21-14-M-ok.outhyp	2024-10-25 16:12:54.685715108 +0100
 ***************
-*** 17,30 ****
+*** 17,108 ****
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
 ! Escolha uma opção: Identificador da vacina: Identficador do veterinário a ministrar a vacina: Identificador único do animal: A vacina 'Vac1' não é apropiada para o animal 'AA3'.
-  Gestão de Vacinas
-  1 - Visualizar todas as vacinas
-  2 - Registar vacina
-  3 - Vacinar animal
-  4 - Mostrar vacinações
-  0 - Sair
+! Gestão de Vacinas
+! 1 - Visualizar todas as vacinas
+! 2 - Registar vacina
+! 3 - Vacinar animal
+! 4 - Mostrar vacinações
+! 0 - Sair
 ! Escolha uma opção: Identificador da vacina: Identficador do veterinário a ministrar a vacina: Identificador único do animal: A vacina 'Vac2' não é apropiada para o animal 'AA1'.
-  Gestão de Vacinas
-  1 - Visualizar todas as vacinas
-  2 - Registar vacina
---- 17,30 ----
-  3 - Vacinar animal
-  4 - Mostrar vacinações
-  0 - Sair
-! Escolha uma opção: Identificador da vacina: Identficador do veterinário a ministrar a vacina: Identificador único do animal: Vacinar animal: Operação inválida: O veterinário 'Vet2' não pode ministrar vacinas à espécie 'AA3'
-  Gestão de Vacinas
-  1 - Visualizar todas as vacinas
-  2 - Registar vacina
-  3 - Vacinar animal
-  4 - Mostrar vacinações
-  0 - Sair
-! Escolha uma opção: Identificador da vacina: Identficador do veterinário a ministrar a vacina: Identificador único do animal: Vacinar animal: Operação inválida: O veterinário 'Vet1' não pode ministrar vacinas à espécie 'AA1'
-  Gestão de Vacinas
-  1 - Visualizar todas as vacinas
-  2 - Registar vacina
-***************
-*** 49,57 ****
-  3 - Transferir para habitat
-  4 - Calcular satisfação de animal
-  0 - Sair
+! Gestão de Vacinas
+! 1 - Visualizar todas as vacinas
+! 2 - Registar vacina
+! 3 - Vacinar animal
+! 4 - Mostrar vacinações
+! 0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Criar ficheiro
+! 2 - Abrir ficheiro
+! 3 - Guardar ficheiro
+! 4 - Avançar estação do ano
+! 5 - Ver satisfação global
+! 6 - Gestão de animais
+! 7 - Gestão de funcionários
+! 8 - Gestão de habitats
+! 9 - Gestão de vacinas
+! 10 - Consultas
+! 0 - Sair
+! Escolha uma opção: Gestão de Animais
+! 1 - Visualizar todos os animais
+! 2 - Registar animal
+! 3 - Transferir para habitat
+! 4 - Calcular satisfação de animal
+! 0 - Sair
 ! Escolha uma opção: ANIMAL|AA1|Patudo|E1|ACIDENTE|H1
-  ANIMAL|AA2|Patudo 2|E1|VOID|H1
+! ANIMAL|AA2|Patudo 2|E1|VOID|H1
 ! ANIMAL|AA3|Malhado|E2|ACIDENTE|H1
-  Gestão de Animais
-  1 - Visualizar todos os animais
-  2 - Registar animal
---- 49,57 ----
-  3 - Transferir para habitat
-  4 - Calcular satisfação de animal
-  0 - Sair
-! Escolha uma opção: ANIMAL|AA1|Patudo|E1|VOID|H1
-  ANIMAL|AA2|Patudo 2|E1|VOID|H1
-! ANIMAL|AA3|Malhado|E2|VOID|H1
-  Gestão de Animais
-  1 - Visualizar todos os animais
-  2 - Registar animal
-***************
-*** 76,91 ****
-  3 - Vacinar animal
-  4 - Mostrar vacinações
-  0 - Sair
+! Gestão de Animais
+! 1 - Visualizar todos os animais
+! 2 - Registar animal
+! 3 - Transferir para habitat
+! 4 - Calcular satisfação de animal
+! 0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Criar ficheiro
+! 2 - Abrir ficheiro
+! 3 - Guardar ficheiro
+! 4 - Avançar estação do ano
+! 5 - Ver satisfação global
+! 6 - Gestão de animais
+! 7 - Gestão de funcionários
+! 8 - Gestão de habitats
+! 9 - Gestão de vacinas
+! 10 - Consultas
+! 0 - Sair
+! Escolha uma opção: Gestão de Vacinas
+! 1 - Visualizar todas as vacinas
+! 2 - Registar vacina
+! 3 - Vacinar animal
+! 4 - Mostrar vacinações
+! 0 - Sair
 ! Escolha uma opção: REGISTO-VACINA|Vac1|Vet2|E2
 ! REGISTO-VACINA|Vac2|Vet1|E1
 ! Gestão de Vacinas
-  1 - Visualizar todas as vacinas
-  2 - Registar vacina
-  3 - Vacinar animal
-  4 - Mostrar vacinações
-  0 - Sair
+! 1 - Visualizar todas as vacinas
+! 2 - Registar vacina
+! 3 - Vacinar animal
+! 4 - Mostrar vacinações
+! 0 - Sair
 ! Escolha uma opção: VACINA|Vac1|nome 1|1|E1
 ! VACINA|Vac2|nome 2|1|E2
-  VACINA|Vac3|nome 3|0|E1,E2
-  Gestão de Vacinas
-  1 - Visualizar todas as vacinas
---- 76,89 ----
+! VACINA|Vac3|nome 3|0|E1,E2
+! Gestão de Vacinas
+! 1 - Visualizar todas as vacinas
+! 2 - Registar vacina
+! 3 - Vacinar animal
+! 4 - Mostrar vacinações
+! 0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Criar ficheiro
+! 2 - Abrir ficheiro
+! 3 - Guardar ficheiro
+! 4 - Avançar estação do ano
+! 5 - Ver satisfação global
+! 6 - Gestão de animais
+! 7 - Gestão de funcionários
+! 8 - Gestão de habitats
+! 9 - Gestão de vacinas
+! 10 - Consultas
+! 0 - Sair
+! Escolha uma opção: 
+\ Sem newline no fim do ficheiro
+--- 17,20 ----
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
-! Escolha uma opção: Gestão de Vacinas
-  1 - Visualizar todas as vacinas
-  2 - Registar vacina
-  3 - Vacinar animal
-  4 - Mostrar vacinações
-  0 - Sair
-! Escolha uma opção: VACINA|Vac1|nome 1|0|E1
-! VACINA|Vac2|nome 2|0|E2
-  VACINA|Vac3|nome 3|0|E1,E2
-  Gestão de Vacinas
-  1 - Visualizar todas as vacinas
+! Escolha uma opção: Identificador da vacina: Identficador do veterinário a ministrar a vacina: Identificador único do animal: 
+\ Sem newline no fim do ficheiro

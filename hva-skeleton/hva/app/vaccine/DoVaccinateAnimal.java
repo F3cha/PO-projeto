@@ -32,6 +32,10 @@ class DoVaccinateAnimal extends Command<Hotel> {
       throw new UnknownVeterinarianKeyException(_vetId);
     }
 
+    if (_receiver.verifyVeterinaryAbleToVaccinate(_vetId, _vaccineId) == false) {
+      Message.wrongVaccine(_vaccineId, _vetId);
+      //add dano
+    }
 
 
 

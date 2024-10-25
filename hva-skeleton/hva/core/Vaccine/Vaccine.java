@@ -1,8 +1,8 @@
 package hva.core.Vaccine;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
-import java.io.Serializable;
 
 public class Vaccine implements Serializable {
     private String _idVaccine;
@@ -60,6 +60,7 @@ public class Vaccine implements Serializable {
         }
         return false;
     }
+
 
 }
 

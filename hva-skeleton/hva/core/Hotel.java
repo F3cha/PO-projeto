@@ -741,28 +741,65 @@ public class Hotel implements Serializable {
         if (!(employee instanceof Veterinary)) {
             throw new WrongEmployeeTypeException("Employee is not a Veterinary");
         }
+        
         Vaccine vaccine = getVaccineById(VaccineId);
+        Animals animal = getAnimalById(animalId);
+        
         if (vaccine == null) {
             throw new InvalidArgException("Vaccine not found");
         }
+
         if (!verifyVeterinaryAbleToVaccinate(VeterinaryId, VaccineId)) {
+            int count = 0;
+            for(String aux: vaccine.getSpecies()) {
+                count += countDifferentCharacters(animal.getAnimalSpecie(), aux);
+            }
+
+            addHealthState(animalId, count, vaccine);
             throw new CoreVaccineNotForVetException("Veterinary not able to vaccinate");
+        } else {
+            vaccine.addDamageLog(animalId, "NORMAL");
         }
 
-
-
-
-        //FIXME do vaccine command
     }
 
-    public int  damage(String vaccineId,String animalId){
-        return 0;
+        public void addHealthState(String animalId, int num, Vaccine vaccine) {
+            String damage = "";
+            if (num == 0) {
+                damage = "CONFUSÃO";
+            } else if (num >= 1 && num <= 4) {
+                damage = "ACIDENTE";
+            } else if (num >= 5) {
+                damage = "ERRO";
+            }
+            vaccine.addDamageLog(animalId, damage);
+        }
 
-    }
-    public int nameSize(String specieId1, String specieId2){
+        public static int countDifferentCharacters(String str1, String str2) {
+        Set<Character> set1 = new HashSet<>();
+        Set<Character> set2 = new HashSet<>();
 
-    return 0;
+        // Add characters of each string to their respective sets
+        for (char ch : str1.toCharArray()) {
+            set1.add(ch);
+        }
+
+        for (char ch : str2.toCharArray()) {
+            set2.add(ch);
+        }
+
+        //
+        Set<Character> commonCharacters = new HashSet<>(set1);
+
+        // same characteres 
+        commonCharacters.retainAll(set2);
+
+        int totalUniqueCharacteres = Math.max(str1.length(), str2.length()) - commonCharacters.size();
+
+        // Total number of distinct characters
+        return totalUniqueCharacteres;
     }
+    
 
     public int differentSpeciesName(String specieIdvaccine, String specieId2){
         HashMap<String, Integer> vaccine = new HashMap<>();
@@ -804,6 +841,9 @@ public class Hotel implements Serializable {
         }
         habitat.changeInfluenceSpecies(speciesId, influence);
     }
+
+
+
 
 
     /**
