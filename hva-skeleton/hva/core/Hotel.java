@@ -736,7 +736,7 @@ public class Hotel implements Serializable {
 
     }
 
-    public void VaccinateAnimal(String animalId, String VeterinaryId, String VaccineId) throws InvalidArgException, WrongEmployeeTypeException {
+    public void VaccinateAnimal(String animalId, String VeterinaryId, String VaccineId) throws InvalidArgException, WrongEmployeeTypeException, CoreUnknownAnimalKeyException {
         Employee employee = getEmployeeById(VeterinaryId);
         if (!(employee instanceof Veterinary)) {
             throw new WrongEmployeeTypeException("Employee is not a Veterinary");
@@ -745,16 +745,40 @@ public class Hotel implements Serializable {
         if (vaccine == null) {
             throw new InvalidArgException("Vaccine not found");
         }
-        Veterinary vet = (Veterinary) employee;
-        for (String speciesid: vet.getResponsibility()){
-            if (!vaccine.vaccineContainsSpecies(speciesid)){
-                throw new InvalidArgException("Invalid vaccine for Veterinary");
-            }
+        if (!verifyVeterinaryAbleToVaccinate(VeterinaryId, VaccineId)) {
+            throw new CoreVaccineNotForVetException("Veterinary not able to vaccinate");
         }
 
 
 
+
         //FIXME do vaccine command
+    }
+
+    public int  damage(String vaccineId,String animalId){
+        return 0;
+
+    }
+    public int nameSize(String specieId1, String specieId2){
+
+    return 0;
+    }
+
+    public int differentSpeciesName(String specieId1, String specieId2){
+        return 0;
+    }
+
+
+    public boolean verifyVeterinaryAbleToVaccinate (String veterinaryId, String vaccineId){
+       Vaccine vaccine = getVaccineById(vaccineId);
+         Veterinary vet = (Veterinary) getEmployeeById(veterinaryId);
+            List<String> species = vet.getResponsibility();
+            for (String specie : species){
+                if (vaccine.getSpecies().contains(specie)){
+                    return true;
+                }
+            }
+            return false;
     }
 
     public Vaccine getVaccineById(String vaccineId) {

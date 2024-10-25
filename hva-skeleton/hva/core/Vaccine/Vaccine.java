@@ -60,5 +60,6 @@ public class Vaccine implements Serializable {
         }
         return false;
     }
+
 }
 
