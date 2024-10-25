@@ -31,19 +31,31 @@ public class HotelManager implements Serializable {
         return new Hotel();
     }
 
-    public int showGlobalSatisfaction() {
-        return _hotel.ShowAllSatisfaction();
-    }
+   /**
+ * Shows the global satisfaction of the zoo hotel.
+ *
+ * @return the global satisfaction value
+ */
+public int showGlobalSatisfaction() {
+    return _hotel.ShowAllSatisfaction();
+}
 
-    public void save() throws FileNotFoundException, MissingFileAssociationException, IOException {
-        if (_filename == null || _filename.isEmpty()) {
-            throw new MissingFileAssociationException();
-        }
-        try (ObjectOutputStream obOut = new ObjectOutputStream(new FileOutputStream(_filename))) {
-            obOut.writeObject(_hotel);
-            obOut.writeObject(_filename);
-        }
+    /**
+ * Saves the serialized application's state into the associated file.
+ *
+ * @throws FileNotFoundException if the file cannot be created or opened
+ * @throws MissingFileAssociationException if the current network does not have a file
+ * @throws IOException if there is an error while serializing the state of the network to disk
+ */
+public void save() throws FileNotFoundException, MissingFileAssociationException, IOException {
+    if (_filename == null || _filename.isEmpty()) {
+        throw new MissingFileAssociationException();
     }
+    try (ObjectOutputStream obOut = new ObjectOutputStream(new FileOutputStream(_filename))) {
+        obOut.writeObject(_hotel);
+        obOut.writeObject(_filename);
+    }
+}
 
     /**
      * Saves the serialized application's state into the specified file. The current network is
