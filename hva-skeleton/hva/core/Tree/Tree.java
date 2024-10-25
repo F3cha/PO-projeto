@@ -1,6 +1,7 @@
 package hva.core.Tree;
 
 import java.io.Serializable;
+import java.lang.Math;
 
 public abstract class Tree implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -66,12 +67,12 @@ public abstract class Tree implements Serializable {
         return Type;
     }
 
+    abstract public int getSeasonalCleaningEffort();
 
 
 
-
-    public Season getSeasonBorn() {
-        return _seasonBorn;
+    public long getCleaningEffort() {
+        return Math.round((getSeasonalCleaningEffort() * _difficulty * Math.log(_age + 1)));
     }
 
     public void treeAdvanceSeason() {

@@ -42,4 +42,15 @@ public void removeResponsibility(String responsibility) {
     _responsibility.remove(responsibility);
 }
 
+public boolean hasResponsibility(String responsibility) {
+    if (_responsibility.contains(responsibility.toLowerCase())) {
+        return true;
+    }
+    else if (_responsibility.contains(responsibility.toUpperCase())) {
+        return true;
+    }
+    else {
+        return false;
+    }}
+
 }

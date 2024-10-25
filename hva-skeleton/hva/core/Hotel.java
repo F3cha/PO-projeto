@@ -212,6 +212,59 @@ public class Hotel implements Serializable {
                 ((float) habitat.getHabitatArea() / getTotalAnimalsInHabitat(habitatId)) + getInfluenceAnimalInHabiat(animalId, habitatId));
     }
 
+    public int getZookeeperSatisfaction(String zookeeperId)   {
+
+        Zookeeper zookeeper = (Zookeeper) getEmployeeById(zookeeperId);
+        float totalSatisfaction = 0;
+        for (String habitatId: zookeeper.getResponsibility()){
+            totalSatisfaction += (workInHabitat(habitatId)/getWorkersInHabitat(habitatId));
+        }
+
+
+
+
+        return Math.round(300 - totalSatisfaction );
+    }
+
+    public int getSatisfactionOfEmployee(String employeeId) throws UnknownKeyException {
+        if (!hasEmployee(employeeId)) {
+            throw new UnknownKeyException("Employee not found");
+        }
+        Employee employee = getEmployeeById(employeeId);
+        if (employee instanceof Zookeeper) {
+            return getZookeeperSatisfaction(employeeId);
+        } else {
+            return 0;
+        }
+    }
+
+    public int getWorkersInHabitat(String habitatId){
+        int totalworkers = 0;
+     for (Employee emp : employeesList){
+         if (emp instanceof Zookeeper){
+             if (hasresponsibility(emp, habitatId)){
+                    totalworkers++;
+
+             }
+         }
+     }
+        return totalworkers;
+    }
+
+    public int workInHabitat(String habitatID){
+        Habitat habitat = getHabitatById(habitatID);
+        int area = habitat.getHabitatArea();
+        int population = habitat.getListAnimalsInHabitat().size();
+        int CleaningEffort = 0;
+        for (String treeID: habitat.getHabitatTreeList()){
+            Tree tree = getTreeById(treeID);
+            CleaningEffort += tree.getCleaningEffort();
+            }
+        return (area + population*3 + CleaningEffort);
+    }
+
+
+
     public int getTotalAnimalsInHabitat(String habitatId) {
         Habitat habitat = getHabitatById(habitatId);
         return habitat.getListAnimalsInHabitat().size();
