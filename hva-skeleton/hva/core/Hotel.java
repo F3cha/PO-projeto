@@ -774,6 +774,7 @@ public class Hotel implements Serializable {
         _vaccinationRes.add(VaccineId);
         _vaccinationRes.add(VeterinaryId);
         _vaccinationRes.add(animalSpecie);
+        vaccine.addVaccineAplication();
 
     }
 

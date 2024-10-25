@@ -35,15 +35,16 @@ class DoShowAllVaccines extends Command<Hotel> {
             String speciesString = String.join(",", vac.getSpecies());
 
             if (speciesString.length() > 0) {
-            vaccinesString = String.format("VACINA|%s|%s|0|%s",
+            vaccinesString = String.format("VACINA|%s|%s|%d|%s",
                     vac.getVaccineId(),
                     vac.getVaccineName(),
+                    vac.getVaccinesTotal(),
                     speciesString);
             } else {
-                vaccinesString = String.format("VACINA|%s|%s|0",
+                vaccinesString = String.format("VACINA|%s|%s|%d",
                 vac.getVaccineId(),
                 vac.getVaccineName(),
-                speciesString);
+                vac.getVaccinesTotal());
             }
             _display.addLine(vaccinesString);
 
