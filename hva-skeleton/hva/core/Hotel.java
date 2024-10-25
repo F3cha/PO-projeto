@@ -273,8 +273,8 @@ public class Hotel implements Serializable {
         Habitat habitat = getHabitatById(habitatId);
 
 
-        return Math.round(20 + 3 * getEqualSpeciesInHabitat(habitatId, animalId) - 2 * (getTotalAnimalsInHabitat(habitatId)
-                - getEqualSpeciesInHabitat(habitatId, animalId) - 1) +
+        return Math.round(20 + (3 * getEqualSpeciesInHabitat(habitatId, animalId)) - (2*(getTotalAnimalsInHabitat(habitatId)
+                - getEqualSpeciesInHabitat(habitatId, animalId) - 1)) +
                 ((float) habitat.getHabitatArea() / getTotalAnimalsInHabitat(habitatId)) + getInfluenceAnimalInHabiat(animalId, habitatId));
     }
 
@@ -301,6 +301,19 @@ public class Hotel implements Serializable {
             return getVeterinarySatisfaction(employeeId);
         }
 
+    }
+
+    public List<Animals> returnAnimaisInHabitat(String habitatId) throws CoreUnknownHabitatKey {
+        if (!verifyHabitatExistence(habitatId)) {
+            throw new CoreUnknownHabitatKey(habitatId);
+        }
+        List<Animals> animais = new ArrayList<>();
+        for (Animals animal : animalList) {
+            if (animal.getAnimalHabitat().equalsIgnoreCase(habitatId)) {
+                animais.add(animal);
+            }
+        }
+        return animais;
     }
 
     public int getVeterinarySatisfaction(String veterinaryId) {
