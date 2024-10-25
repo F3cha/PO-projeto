@@ -31,6 +31,10 @@ public class HotelManager implements Serializable {
         return new Hotel();
     }
 
+    public int showGlobalSatisfaction() {
+        return _hotel.ShowAllSatisfaction();
+    }
+
     public void save() throws FileNotFoundException, MissingFileAssociationException, IOException {
         if (_filename == null || _filename.isEmpty()) {
             throw new MissingFileAssociationException();

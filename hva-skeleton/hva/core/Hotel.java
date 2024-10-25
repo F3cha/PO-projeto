@@ -47,15 +47,31 @@ public class Hotel implements Serializable {
 
     }
 
-    /* Methods Related to Animals*/
 
-    /**
-     * Retrieves the species ID of an animal using its animal ID.
-     *
-     * @param animalid The ID of the animal.
-     * @return The species ID of the animal if found, otherwise null.
-     */
 
+
+    public int ShowAllSatisfaction(){
+        int totalSatisfaction = 0;
+        for (Employee emp : employeesList){
+            try {
+                totalSatisfaction += getSatisfactionOfEmployee(emp.getEmployeeId());
+            }
+            catch (UnknownKeyException e){
+                e.printStackTrace();
+            }
+        }
+        for (Animals animal : animalList){
+            String animalId = animal.getAnimalId();
+            try {
+                totalSatisfaction += getAnimalSatisfaction(animalId);
+            } catch (CoreUnknownAnimalKeyException e) {
+                e.printStackTrace();
+            }
+        }
+    return totalSatisfaction;
+
+
+    }
     public String getSpeciesUsingAnimalId(String animalid) {
         for (Animals animal : animalList) {
             if (animal.getAnimalId().equalsIgnoreCase(animalid)) {
@@ -490,7 +506,7 @@ public class Hotel implements Serializable {
 
         Employee employee = getEmployeeById(employeeId);
 
-        if (employee == null) {
+        if (getEmployeeById(employeeId) == null) {
             throw new UnknownKeyException(employeeId);
         }
         if (!responsibilityIsHabitat(responsibility) && !responsibilityIsSpecies(responsibility)) {

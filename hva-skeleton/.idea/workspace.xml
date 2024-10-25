@@ -6,24 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="bef536b5-4d10-4260-96ba-e1e2af6bcacb" name="Changes" comment="DoRegisterAnimal done?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hva/core/Employee/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Employee/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hva/core/Employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Employee/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hva/core/Employee/Veterinary.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Employee/Veterinary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hva/core/Employee/Veterinary.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Employee/Veterinary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hva/core/Employee/Zookeeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Employee/Zookeeper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/main/DoShowGlobalSatisfaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/main/DoShowGlobalSatisfaction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/app/main/DoShowGlobalSatisfaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/app/main/DoShowGlobalSatisfaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hva/core/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Hotel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hva/core/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hva/core/Species/Species.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Species/Species.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hva/core/Species/Species.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/Species/Species.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-08-01-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-08-01-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/HotelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/HotelManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hva/core/HotelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/hva/core/HotelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-08-01-M-ok.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-08-01-M-ok.outhyp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/A-08-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-08-02-M-ok.diff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/A-08-02-M-ok.outhyp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-08-02-M-ok.outhyp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/A-10-03-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-10-03-M-ok.diff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/A-10-04-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-10-04-M-ok.diff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/A-11-08-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-11-08-M-ok.diff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/A-17-02-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-17-02-M-ok.diff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-19-01-M-ok.diff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-19-01-M-ok.outhyp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/A-19-04-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-19-04-M-ok.diff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/A-21-03-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-03-M-ok.diff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/A-21-05-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-05-M-ok.diff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/A-21-06-M-ok.diff" beforeDir="false" afterPath="$PROJECT_DIR$/tests/A-21-06-M-ok.diff" afterDir="false" />
@@ -160,7 +156,7 @@
       <workItem from="1729690172140" duration="2547000" />
       <workItem from="1729709407259" duration="7814000" />
       <workItem from="1729721111724" duration="488000" />
-      <workItem from="1729858427609" duration="5617000" />
+      <workItem from="1729858427609" duration="6335000" />
     </task>
     <task id="LOCAL-00001" summary="gooofy ah classes">
       <option name="closed" value="true" />
