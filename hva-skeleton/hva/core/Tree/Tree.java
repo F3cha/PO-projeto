@@ -23,7 +23,6 @@ public abstract class Tree implements Serializable {
 
     }
 
-    abstract public void cleaningEffort();
 
     public Season getSeason() {
         return _seasonAtual;
@@ -70,7 +69,6 @@ public abstract class Tree implements Serializable {
     abstract public int getSeasonalCleaningEffort();
 
 
-
     public long getCleaningEffort() {
         return Math.round((getSeasonalCleaningEffort() * _difficulty * Math.log(_age + 1)));
     }
@@ -84,7 +82,8 @@ public abstract class Tree implements Serializable {
             _seasonAtual = Season.Autumn;
         } else {
             _seasonAtual = Season.Winter;
-        } if (_seasonAtual == _seasonBorn) {
+        }
+        if (_seasonAtual == _seasonBorn) {
             _age++;
         }
 

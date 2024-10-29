@@ -5,23 +5,22 @@ public class EvergreenTree extends Tree {
     private Season _seasonAtual;
 
 
-    public EvergreenTree (Season season, int age, int difficulty,String idTree, String nameTree){
+    public EvergreenTree(Season season, int age, int difficulty, String idTree, String nameTree) {
         super(season, age, difficulty, idTree, nameTree);
         _type = "PERENE";
     }
 
-    public void cleaningEffort() {
-        //meter a função
-    }
-    public String getType(){
+
+    public String getType() {
         return _type;
     }
-    public int getSeasonalCleaningEffort(){
-        if (_seasonAtual == Season.Summer){
+
+    public int getSeasonalCleaningEffort() {
+        if (_seasonAtual == Season.Summer) {
             return 1;
-        } else if (_seasonAtual == Season.Autumn){
+        } else if (_seasonAtual == Season.Autumn) {
             return 1;
-        } else if (_seasonAtual == Season.Winter){
+        } else if (_seasonAtual == Season.Winter) {
             return 2;
         } else {
             return 1;

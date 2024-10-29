@@ -4,10 +4,12 @@ import hva.core.Employee.Employee;
 import hva.core.Employee.Veterinary;
 import hva.core.Employee.Zookeeper;
 import hva.core.Hotel;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Collections;
+
 import pt.tecnico.uilib.menus.Command;
 
 /**
@@ -26,7 +28,7 @@ class DoShowAllEmployees extends Command<Hotel> {
 
         for (Employee emp : employees) {
 
-            String speciesString = String.join(",",emp.getResponsibility());
+            String speciesString = String.join(",", emp.getResponsibility());
 
             if (emp instanceof Veterinary) {
                 if (!speciesString.isEmpty()) {

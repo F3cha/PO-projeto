@@ -15,7 +15,7 @@ class DoShowMedicalActsByVeterinarian extends Command<Hotel> {
 
   DoShowMedicalActsByVeterinarian(Hotel receiver) {
     super(Label.MEDICAL_ACTS_BY_VET, receiver);
-    addStringField("veterinaryId", "Identificador único do funcionário: ");
+    addStringField("veterinaryId", hva.app.employee.Prompt.employeeKey());
   }
 
   @Override
